@@ -1,6 +1,6 @@
 ## Requisitos funcionais
 
-- O site deve ter fórmulas dos conteúdos de termoquímica e ótica básica que são ensinadas no Colégio Pedro II Duque de Caxias.
+- O site deve conter fórmulas dos conteúdos de termoquímica e ótica básica que são ensinadas no Colégio Pedro II Duque de Caxias.
 - O site deve utilizar as listas de exercício produzidas pelo o cliente.
 - O site deve mostrar todas as listas presentes no site com os exercícios resolvidos.
 - O site deve fazer referências de video aulas e experimentos do youtube que estejam relacionados com o conteúdo abordado pelo site.
