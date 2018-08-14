@@ -6,4 +6,4 @@
 - O site deve fazer referências de video aulas e experimentos do youtube que estejam relacionados com o conteúdo abordado pelo site.
 - O site deve conter exemplos do cotidiano de como a física e aplicada na nossa vida.
 - O site deve conter 4 áreas( inicial , lista de exercicios,matéria explicada, área do administrador e área de experimentos). 
-- O cliente deve conseguir modificar e adicionar conteúdos com facilidade.
+- O cliente deve conseguir modificar e adicionar conteúdos com facilidade..
