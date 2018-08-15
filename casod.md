@@ -6,19 +6,17 @@
  Atores: Professor e Aluno
  Pré-Condições: Não há
  Fluxo principal:
-1. Usuário solicita acesso ao link
-2.
-3. b
-4. c
+  1.Usuário solicita acesso ao link
+  2.
+  3.
 
 ### CDU 02 - Visualizar arquivos
 Atores: Professor e Aluno
 Pré-Condições: Não há
 Fluxo principal:
-1. Usuário solicita acesso ao arquivo
-2.
-3.
-4.
+  1.Usuário solicita acesso ao arquivo
+  2.
+  3.
 
 
 ## D3-Wyctor
