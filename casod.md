@@ -1,10 +1,22 @@
-# Dever.CasodeUso
-## D1-Leandro
+CDU 01 - Cadastro
 
-## D2-Gustavo
+Atores: Aluno
 
-## D3-Wyctor
+Pré-condicoes: Não há
 
-## D4-Nat
+Fluxo principal:
 
-## D5-João
+  1. Cadastro realizado no site servirá para gerar comentários.
+
+
+
+CDU 02 - Autenticar
+
+Atores: Professor e aluno
+
+Pré-condicoes: Ter realizado cadastro no site ou ter cadastro master.
+
+Fluxo principal:
+
+  1.Informar o nome de usuário e a senha.
+  
