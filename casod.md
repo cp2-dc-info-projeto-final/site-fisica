@@ -4,14 +4,14 @@
 - [CDU 01 - Cadastro](#-CDU-01---Cadastro)
 - [CDU 02 - Autenticar](#-CDU-02---Autenticar)
 - [CDU 03 - Visualizar Links](#-CDU-03---Visualizar-Links)
-- [CDU 04 - Visualizar arquivos](#-CDU-04---Visualizar-arquivos)
+- [CDU 04 - Visualizar Arquivos](#-CDU-04---Visualizar-arquivos)
 - [CDU 05 - Pesquisar Duvidas](#-CD5-Pesquisar-Duvidas)
 - [CDU 06 - Indicar Duplicatas](#-CD6-Indicar-duplicatas)
 - [CDU 07 - Votar](#-CD7-Votar)
 - [CDU 08 - Responder Duvidas](#-CDU-08---Responder-Dúvidas)
 - [CDU 09 - Postar Duvidas](#CDU-09---Postar-Dúvidas)
 - [CDU 10 - Gerenciamnto de Links](#-CDU-10---Gerenciamento-de-links)
-- [CDU 11 - Gerenciamento de arquivos](#-CDU-11---Gerenciamento-de-arquivos)
+- [CDU 11 - Gerenciamento de Arquivos](#-CDU-11---Gerenciamento-de-arquivos)
 
 
 # CDU 01 - Cadastro
@@ -44,7 +44,7 @@
  
    1. Usuário solicita acesso ao link.
 
-# CDU 04 - Visualizar arquivos
+# CDU 04 - Visualizar Arquivos
 
 **Atores**: Professor e Aluno
 
@@ -64,7 +64,7 @@
  
    1. Informar os duvidas perguntadas.
 
-# CD6-Indicar duplicatas
+# CD6-Indicar Duplicatas
  
  **Autores**: Aluno e Professor
  
@@ -113,7 +113,7 @@
 3. Aluno escreve a dúvida.
 4. Sistema salva dúvida.
 
-# CDU 10 - Gerenciamento de links
+# CDU 10 - Gerenciamento de Links
 
 **Atores**: professor
 
@@ -128,7 +128,7 @@
   5. Sistema recebe os novos links.
   6. Sistema armazena as modificações e mostra o site atualizado ao Aluno.
 
-# CDU 11 - Gerenciamento de arquivos
+# CDU 11 - Gerenciamento de Arquivos
 
 **Atores**: professor
 
