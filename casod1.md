@@ -18,7 +18,7 @@
  
    1. Mostrar que a pergunta (Que foi indicada como duplicata) ja tem resposta.
 
-# CD2-Votar
+# CD3-Votar
  
  **Autores**: Aluno e Professor.
  
