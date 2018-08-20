@@ -1,4 +1,4 @@
-# Especifocações de Casos de Usos
+# Especificações de Casos de Usos
 
 # Sumário
 - [CDU 01 - Cadastro](#-CDU-01---Cadastro)
@@ -58,11 +58,11 @@
  
  **Autores**: Aluno e Professor
  
- **Pré-Codições**: O aluno estar cadastrado para acessar as dúvidas.
+ **Pré-Codições**: Estar cadastrado para acessar as dúvidas.
  
  **Fluxo Principal**:
  
-   1. Informar os duvidas perguntadas.
+   1. Informar as dúvidas perguntadas.
 
 # CD6-Indicar Duplicatas
  
@@ -72,13 +72,13 @@
  
  **Fluxo Principal**:
  
-   1. Mostrar que a pergunta (Que foi indicada como duplicata) ja tem resposta.
+   1. Mostrar que a pergunta (Que foi indicada como duplicata) já tem resposta.
 
 # CD7-Votar
  
 **Autores**: Aluno e Professor
  
-**Pré-Codições**: O aluno estar cadastrado para acessar as dúvidas.
+**Pré-Codições**: Estar cadastrado para acessar as dúvidas.
  
 **Fluxo Principal**:
  
@@ -88,7 +88,7 @@
 
 **Atores**: Aluno e o Professor
 
-**Pré-condições**: Está cadastrado e logado.
+**Pré-condições**: Estar cadastrado e logado.
 
 **Fluxo principal***:
 
@@ -104,7 +104,7 @@
 
 **Atores**: Aluno
 
-**Pré-condições**: Está cadastrado.
+**Pré-condições**: Estar cadastrado.
 
 **Fluxo principal**:
 
