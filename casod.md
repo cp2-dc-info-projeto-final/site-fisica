@@ -32,17 +32,19 @@
 
 **Fluxo principal**:
 
-   1. Informar o nome de usuário e a senha.
+   1. Usuário clica no link.
+   2. Sistema redireciona o Usuário.
+   3. Usuário é redirecionado para o link escolhido.
 
 # CDU 03 - Visualizar Links
- 
-**Atores**: Professor e Aluno
- 
-**Pré-Condições**: Não há.
- 
-**Fluxo principal**:
- 
-   1. Usuário solicita acesso ao link.
+  **Atores**: Professor e Aluno
+
+   **Pré-Condições**: Não há.
+
+   **Fluxo principal**:
+
+   1. Usuário clica no link
+   2. Sistema redireciona o Usuário para o link
 
 # CDU 04 - Visualizar Arquivos
 
@@ -52,29 +54,31 @@
 
 **Fluxo principal**:
 
-  1. Usuário solicita acesso ao arquivo
+  1. Usuário clica no arquivo.
+  2. Sistema redireciona o Usuario para a visualização ou descarregamento do arquivo.
+  3. Usuário é redirecionado para a interação escolhida com o arquivo.
 
 # CDU 05 - Pesquisar Duvidas
- 
+
  **Autores**: Aluno e Professor
- 
+
  **Pré-Codições**: Estar cadastrado para acessar as dúvidas.
- 
+
  **Fluxo Principal**:
- 
+
    1. Aluno ou Professor seleciona a área de  dúvidas.
-   2. Sistema mostrará uma área para o aluno ou o professor escolher qual a matéria da dúvida desejada. 
-   3. Aluno ou professor clicará na área do seu interesse e tera acesso a essa dúvidas. 
+   2. Sistema mostrará uma área para o aluno ou o professor escolher qual a matéria da dúvida desejada.
+   3. Aluno ou professor clicará na área do seu interesse e tera acesso a essa dúvidas.
    4. Informar os dúvidas perguntadas.
 
 # CDU 06 - Indicar Duplicatas
- 
+
  **Autores**: Aluno e Professor
- 
+
  **Pré-Codições**: Não há.
- 
+
  **Fluxo Principal**:
- 
+
    1. O usuário de clicar no botão de reprotar pergunta.
    2. O sistema informará qual erro deve ser reportado.
    3. O usuário deve indicar a duplicata.
@@ -82,13 +86,13 @@
    5. O sistema Mostrará que a pergunta (Que foi indicada como duplicata) ja tem resposta e então a deletara.
 
 # CDU 07 - Votar
- 
+
 **Autores**: Aluno e Professor
- 
+
 **Pré-Codições**: Estar cadastrado para acessar as dúvidas.
- 
+
 **Fluxo Principal**:
- 
+
    1. O aluno ou o professor deve clicar no joinha para votar.
    2. O aluno ou o professor clicara no joinha positivo ou no joinha negativo.
    3. Quanto mais votos positivos em respostas melhor posição se encontrará.
