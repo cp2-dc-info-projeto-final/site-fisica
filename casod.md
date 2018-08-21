@@ -1,9 +1,9 @@
 # Especificações de Casos de Usos
 
 # Sumário
-- [CDU 01 - Cadastro](#-CDU-01---Cadastro)
-- [CDU 02 - Autenticar](#-CDU-02---Autenticar)
-- [CDU 03 - Visualizar Links](#-CDU-03---Visualizar-Links)
+- [CDU 01 - Cadastro](#cdu-01---cadastro)
+- [CDU 02 - Autenticar](#cdu-02---autenticar)
+- [CDU 03 - Visualizar Links](#cdu-03---visualizar-links)
 - [CDU 04 - Visualizar Arquivos](#-CDU-04---Visualizar-arquivos)
 - [CDU 05 - Pesquisar Duvidas](#-CD5-Pesquisar-Duvidas)
 - [CDU 06 - Indicar Duplicatas](#-CD6-Indicar-duplicatas)
