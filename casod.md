@@ -4,14 +4,14 @@
 - [CDU 01 - Cadastro](#cdu-01---cadastro)
 - [CDU 02 - Autenticar](#cdu-02---autenticar)
 - [CDU 03 - Visualizar Links](#cdu-03---visualizar-links)
-- [CDU 04 - Visualizar Arquivos](#-CDU-04---Visualizar-arquivos)
-- [CDU 05 - Pesquisar Duvidas](#-CD5-Pesquisar-Duvidas)
-- [CDU 06 - Indicar Duplicatas](#-CD6-Indicar-duplicatas)
-- [CDU 07 - Votar](#-CD7-Votar)
-- [CDU 08 - Responder Duvidas](#-CDU-08---Responder-Dúvidas)
-- [CDU 09 - Postar Duvidas](#CDU-09---Postar-Dúvidas)
-- [CDU 10 - Gerenciamnto de Links](#-CDU-10---Gerenciamento-de-links)
-- [CDU 11 - Gerenciamento de Arquivos](#-CDU-11---Gerenciamento-de-arquivos)
+- [CDU 04 - Visualizar Arquivos](#cdu-04---Visualizar-arquivos)
+- [CDU 05 - Pesquisar Duvidas](#cdu-05---Pesquisar-Duvidas)
+- [CDU 06 - Indicar Duplicatas](#cdu-06---Indicar-duplicatas)
+- [CDU 07 - Votar](#cdu-07---Votar)
+- [CDU 08 - Responder Duvidas](#cdu-08---Responder-Dúvidas)
+- [CDU 09 - Postar Duvidas](#cdu-09---Postar-Dúvidas)
+- [CDU 10 - Gerenciamnto de Links](#cdu-10---Gerenciamento-de-links)
+- [CDU 11 - Gerenciamento de Arquivos](#cdu-11---Gerenciamento-de-arquivos)
 
 
 # CDU 01 - Cadastro
@@ -54,7 +54,7 @@
 
   1. Usuário solicita acesso ao arquivo
 
-# CD5-Pesquisar Duvidas
+# CDU 05-Pesquisar Duvidas
  
  **Autores**: Aluno e Professor
  
@@ -64,7 +64,7 @@
  
    1. Informar as dúvidas perguntadas.
 
-# CD6-Indicar Duplicatas
+# CDU 06-Indicar Duplicatas
  
  **Autores**: Aluno e Professor
  
@@ -74,7 +74,7 @@
  
    1. Mostrar que a pergunta (Que foi indicada como duplicata) já tem resposta.
 
-# CD7-Votar
+# CDU 07-Votar
  
 **Autores**: Aluno e Professor
  
