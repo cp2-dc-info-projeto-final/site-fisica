@@ -62,7 +62,10 @@
  
  **Fluxo Principal**:
  
-   1. Informar as dúvidas perguntadas.
+   1. Aluno ou Professor seleciona a área de  dúvidas.
+   2. Sistema mostrará uma área para o aluno ou o professor escolher qual a matéria da dúvida desejada. 
+   3. Aluno ou professor clicará na área do seu interesse e tera acesso a essa dúvidas. 
+   4. Informar os dúvidas perguntadas.
 
 # CDU 06 - Indicar Duplicatas
  
@@ -72,7 +75,11 @@
  
  **Fluxo Principal**:
  
-   1. Mostrar que a pergunta (Que foi indicada como duplicata) já tem resposta.
+   1. O usuário de clicar no botão de reprotar pergunta.
+   2. O sistema informará qual erro deve ser reportado.
+   3. O usuário deve indicar a duplicata.
+   4. Se a pergunta for reportada mais de 7 vezes pelos alunos ou o professor reporta o usuario sera levada para a resposta da outra           pergunta ja respondida
+   5. O sistema Mostrará que a pergunta (Que foi indicada como duplicata) ja tem resposta e então a deletara.
 
 # CDU 07 - Votar
  
@@ -82,7 +89,9 @@
  
 **Fluxo Principal**:
  
-   1. Quanto mais votos em respostas melhor posição se encontra.
+   1. O aluno ou o professor deve clicar no joinha para votar.
+   2. O aluno ou o professor clicara no joinha positivo ou no joinha negativo.
+   3. Quanto mais votos positivos em respostas melhor posição se encontrará.
 
 # CDU 08 - Responder Dúvidas
 
