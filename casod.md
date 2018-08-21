@@ -35,6 +35,6 @@ Pré-condicoes: Ter realizado cadastro no site ou ter cadastro master.
 Fluxo principal:
 
   1. Informar o nome de usuário e a senha.
-  2. Clicar no botao "Entrar".
+  2. Clicar no botao de autenticaçao.
 
 cadastro e autenticar
