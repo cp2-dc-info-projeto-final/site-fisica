@@ -18,7 +18,7 @@
 
 **Atores**: Aluno
 
-**Pré-condicoes**: Não há
+**Pré-condicoes**: Não há.
 
 **Fluxo principal**:
 
@@ -28,7 +28,7 @@
   4. O sistema verificará se há duplicatas no nome de usuario e email.
   5. Cadastro realizado no site servirá para gerar comentários.
   6. Cadastro realizado será utilizado na autenticaçao.
-  7. Clicar no botao de "Registro"
+  7. Clicar no botao de "Registro".
 
 
 # CDU 02 - Autenticar
@@ -49,14 +49,14 @@
 
    **Fluxo principal**:
 
-   1. Usuário clica no link
-   2. Sistema redireciona o Usuário para o link
-
+   1. Usuário clica no link.
+   2. Sistema redireciona o Usuário para o link.
+   
 # CDU 04 - Visualizar Arquivos
 
 **Atores**: Professor e Aluno
 
-**Pré-Condições**: Não há
+**Pré-Condições**: Não há.
 
 **Fluxo principal**:
 
@@ -88,7 +88,7 @@
    1. O usuário de clicar no botão de reprotar pergunta.
    2. O sistema informará qual erro deve ser reportado.
    3. O usuário deve indicar a duplicata.
-   4. Se a pergunta for reportada mais de 7 vezes pelos alunos ou o professor reporta o usuario sera levada para a resposta da outra           pergunta ja respondida
+   4. Se a pergunta for reportada mais de 7 vezes pelos alunos ou o professor reporta o usuario sera levada para a resposta da outra           pergunta ja respondida.
    5. O sistema Mostrará que a pergunta (Que foi indicada como duplicata) ja tem resposta e então a deletara.
 
 # CDU 07 - Votar
@@ -114,7 +114,7 @@
  1. Aluno ou Professor seleciona a área de responder dúvidas.
  2. Sistema lista as dúvidas salvas.
  3. Aluno ou professor seleciona a dúvida que ele deseja responder.
- 4. Sistema mostra janela de perguntas e respostas
+ 4. Sistema mostra janela de perguntas e respostas.
  5. Aluno ou Professor responde as dúvidas.
  6. Sistema salva a resposta para a dúvida.
 
