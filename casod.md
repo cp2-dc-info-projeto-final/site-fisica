@@ -39,9 +39,8 @@
 
 **Fluxo principal**:
 
-   1. Usuário clica no link.
-   2. Sistema redireciona o Usuário.
-   3. Usuário é redirecionado para o link escolhido.
+  1. Informar o nome de usuário e a senha.
+  2. Clicar no botao de autenticaçao.
 
 # CDU 03 - Visualizar Links
   **Atores**: Professor e Aluno
