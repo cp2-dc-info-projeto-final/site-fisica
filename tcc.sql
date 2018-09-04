@@ -46,7 +46,8 @@ create table resposta(
 	dia date ,
 	id_usuario int,
 	primary key (id_resposta),
-	foreign key (id_usuario) references (aluno)
+	foreign key (id_usuario) references (aluno),
+	foreign key (id_professor) references (professor)
 );
 
 create table avaliacao (
