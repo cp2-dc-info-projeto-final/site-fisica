@@ -30,7 +30,7 @@ create table usuario(
 
 create table aluno(
 	id_aluno int,
-	primary key (id_professor),
+	primary key (id_aluno),
 	foreign key (id_usuario) references (usuario)
 );
 
