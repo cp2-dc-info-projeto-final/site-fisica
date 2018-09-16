@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+
+  <style>
+  .gallery .control-button {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .gallery .control-button:hover {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /*
+  	Theme controls how everything looks in Gallery CSS.
+  */
+  .gallery {
+    position: relative;
+  }
+  .gallery .item {
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    background: #4d87e2;
+  }
+  .gallery .controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .gallery .control-button {
+    display: inline-block;
+    margin: 0 .02em;
+    font-size: 3em;
+    text-align: center;
+    text-decoration: none;
+    transition: color .1s;
+  }
+</style>
+<head>
+
+  <title>Demo of gallery.css</title>
+  <link rel="stylesheet" href="./css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/dist/gallery.prefixed.css">
+  <link rel="stylesheet" href="css/dist/gallery.theme.css">
+</head>
+<body>
+
+  <div class="gallery autoplay items-3">
+    <div id="item-1" class="control-operator"></div>
+    <div id="item-2" class="control-operator"></div>
+    <div id="item-3" class="control-operator"></div>
+
+    <figure class="item">
+      <h1>Item 1</h1>
+    </figure>
+
+    <figure class="item">
+      <h1>Item 2</h1>
+    </figure>
+
+    <figure class="item">
+      <h1>Item 3</h1>
+    </figure>
+
+    <div class="controls">
+      <a href="#item-1" class="control-button">•</a>
+      <a href="#item-2" class="control-button">•</a>
+      <a href="#item-3" class="control-button">•</a>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
