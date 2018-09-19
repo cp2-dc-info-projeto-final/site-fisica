@@ -1,0 +1,43 @@
+<?php
+
+function CriaConexãoBd()
+{
+  $bd = new PDO('mysql:host=localhost; dbname=fisica_com_higino; charset=utf8',
+  'fisica_com_higino',
+  'fisica');
+
+		$bd->setAttribute(PDO::ATTR_ERRMODE,
+		                  PDO::ERRMODE_EXCEPTION);
+
+	return $bd;
+}
+
+function ListaContatos()
+{
+	$bd = CriaConexãoBd();
+
+	$resultados = $bd->query('SELECT * FROM Contatos ORDER BY nome ASC');
+
+	return $resultados->fetchAll();
+}
+
+function   ($dadosNovoContato)
+{
+	$bd = CriaConexãoBd();
+
+	$nome = $dadosNovoContato['nome'];
+
+
+  $sql = $bd->prepare('INSERT INTO usuarios (nome, login, email, senha, confirmarsenha, visibilidadedePublicacoes)
+  VALUES (:nome, :login, :email, :senha, :confirmarsenha, :visibilidadedePublicacoes);');
+
+    $sql->bindValue(':nome', $nome);
+    $sql->bindValue(':login', $dadosNovoContato['login']);
+    $sql->bindValue(':email', $dadosNovoContato['email']);
+    $sql->bindValue(':senha', $dadosNovoContato['senha']);
+    $sql->bindValue(':confirmarsenha', $dadosNovoContato['confirmarsenha']);
+    $sql->bindValue(':visibilidadedePublicacoes', $dadosNovoContato['visibilidadedePublicacoes']);
+
+  $sql->execute();
+}
+?>
