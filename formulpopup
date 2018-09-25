@@ -46,7 +46,7 @@
   display: none;
   position: fixed;
   bottom: 0;
-  right: 120px;
+  right: 320px;
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
@@ -62,7 +62,7 @@
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -108,11 +108,11 @@
 }
 .form- {
   max-width: 300px;
-  padding: 20px;
-  background-color: purple;
+  padding: 10px;
+  background-color: white;
 }
 .form- input[type=text], .form- input[type=password] {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -165,6 +165,7 @@
 
 <button class="open-button" onclick="openForm()">Cadastro</button>
 
+
   <div class="form-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
       <h1 class= "cor" >Cadastro</h1>
@@ -184,7 +185,7 @@
       <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br><br><br>
 
 
-      <button type="submit" class="btn2">Casdatrar</button>
+      <button type="submit" class="btn2">Cadastrar</button>
       <button type="submit" class="btn cancel" onclick="closeForm()">Fechar</button>
     </form>
 </div>
@@ -204,8 +205,8 @@
 
       <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br><br><br>
 
-      <button type="submit" class="btn2">Casdatrar</button>
-      <button type="submit" class="btn cancel" onclick="closeForm2()">Fechar</button>
+      <button type="submit" class="btn2">Logar</button>
+            <button type="submit" class="btn cancel" onclick="closeForm2()">Fechar</button>
     </form>
   </div>
   <script>
