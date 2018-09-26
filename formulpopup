@@ -182,11 +182,11 @@
       <label for="confpsw"><b>Confirma Senha</b></label>
       <input type="password" placeholder="Digite sua Senha" name="confpsw" required>
 
-      <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br><br><br>
+      <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br>
 
 
       <button type="submit" class="btn2">Cadastrar</button>
-      <button type="submit" class="btn cancel" onclick="closeForm()">Fechar</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
     </form>
 </div>
 
@@ -203,10 +203,10 @@
       <label for="psw"><b>Senha</b></label>
       <input type="password" placeholder="Digite sua Senha" name="psw" required>
 
-      <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br><br><br>
+      <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br>
 
       <button type="submit" class="btn2">Logar</button>
-            <button type="submit" class="btn cancel" onclick="closeForm2()">Fechar</button>
+            <button type="button" class="btn cancel" onclick="closeForm2()">Fechar</button>
     </form>
   </div>
   <script>
