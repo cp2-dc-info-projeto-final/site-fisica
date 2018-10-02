@@ -1,5 +1,6 @@
 # Especificações de Casos de Usos
 
+<<<<<<< HEAD
 # Sumário
 - [CDU 01 - Cadastro](#cdu-01---cadastro)
 - [CDU 02 - Autenticar](#cdu-02---autenticar)
@@ -12,6 +13,25 @@
 - [CDU 09 - Postar Duvidas](#cdu-09---postar-dúvidas)
 - [CDU 10 - Gerenciamnto de Links](#cdu-10---gerenciamento-de-links)
 - [CDU 11 - Gerenciamento de Arquivos](#cdu-11---gerenciamento-de-arquivos)
+=======
+## D2-Gustavo
+### CDU 01 - Visualizar Links
+ Atores: Professor e Aluno
+ Pré-Condições: Não há
+ Fluxo principal:
+  1.Usuário solicita acesso ao link
+  2.
+  3.
+
+### CDU 02 - Visualizar arquivos
+Atores: Professor e Aluno
+Pré-Condições: Não há
+Fluxo principal:
+  1.Usuário solicita acesso ao arquivo
+  2.
+  3.
+
+>>>>>>> origin/Gustavo
 
 
 # CDU 01 - Cadastro

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+
+.open {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 320px;
+  width: 280px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 320px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form- {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.form- input[type=text], .form- input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form- input[type=text]:focus, .form- input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form- .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form- .btn2  {
+  background-color: #2CAFFF;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+</style>
+
+<head>
+  <meta charset="utf-8">
+<body>
+ <button class="open" onclick="openForm2()">Login</button>
+
+
+  <div class="popup" id="Form">
+    <form action="/action_page.php" class="form-">
+      <h1 class= "cor" >Login</h1>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Digite seu Email" name="email" required>
+
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Digite sua Senha" name="psw" required>
+
+      <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br>
+
+      <button type="submit" class="btn2">Logar</button>
+            <button type="button" class="btn cancel" onclick="closeForm2()">Fechar</button>
+    </form>
+  </div>
+
+  <script>
+
+function openForm2() {
+  document.getElementById("Form").style.display = "block";
+  }
+
+function closeForm2() {
+  document.getElementById("Form").style.display = "none";
+  }
+  </script>
+
+
+  </body>
+</head>
+</html>
