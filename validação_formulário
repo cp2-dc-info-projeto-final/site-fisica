@@ -12,7 +12,7 @@ function CriaConexãoBd()
 	return $bd;
 }
 
-function ListaContatos()
+function dados do usuario()
 {
 	$bd = CriaConexãoBd();
 
@@ -21,11 +21,11 @@ function ListaContatos()
 	return $resultados->fetchAll();
 }
 
-function   ($dadosNovoContato)
+function   ($dados_do_usuario_novo)
 {
 	$bd = CriaConexãoBd();
 
-	$nome = $dadosNovoContato['nome'];
+	$nome = $dados_do_usuario_novo['nome'];
 
 
   $sql = $bd->prepare('INSERT INTO usuarios (nome, login, email, senha, confirmarsenha, visibilidadedePublicacoes)
