@@ -7,7 +7,8 @@
 .open {
   background-color: #555;
   color: white;
-  padding: 16px 20px;
+  padding: 10px ;
+  width: 10px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
@@ -15,6 +16,11 @@
   bottom: 23px;
   right: 320px;
   width: 280px;
+}
+.cor{
+  color:white;
+  text-align: center;
+  font-family: Courier;
 }
 .popup {
   display: none;
@@ -28,6 +34,7 @@
   max-width: 300px;
   padding: 10px;
   background-color: white;
+    background: url(db.jpg);
 }
 .form- input[type=text], .form- input[type=password] {
   width: 90%;
@@ -55,14 +62,45 @@
   opacity: 0.8;
 }
 .form- .btn2  {
-  background-color: #2CAFFF;
-  color: white;
+  background-color: #82FA58;
+  color: black;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
+  font-family: Courier;
+  font-size: 20px;
+  font-weight: bold;
+}
+.form- .btn3  {
+  background-color: red;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 10;
+  font-family: Courier;
+  font-size: 20px;
+  font-weight: bold;
+}
+.form- .cancel {
+  background-color: red;
+}
+.form- .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.textcol {
+  color:white;
+}
+.form-c .cancel {
+  background-color: red;
+}
+.form-c .btn:hover, .open-button:hover {
+  opacity: 1;
 }
 </style>
 
@@ -76,16 +114,13 @@
     <form action="/action_page.php" class="form-">
       <h1 class= "cor" >Login</h1>
 
-      <label for="email"><b>Email</b></label>
+      <label for="email"><b class="textcol">Email</b></label>
       <input type="text" placeholder="Digite seu Email" name="email" required>
 
-      <label for="psw"><b>Senha</b></label>
+      <label for="psw"><b class="textcol">Senha</b></label>
       <input type="password" placeholder="Digite sua Senha" name="psw" required>
-
-      <input type="checkbox" name= "termo" value= "botao"checked> Você aceita os termos de uso ?<br>
-
       <button type="submit" class="btn2">Logar</button>
-            <button type="button" class="btn cancel" onclick="closeForm2()">Fechar</button>
+            <button type="button" class="btn3" onclick="closeForm2()">Fechar</button>
     </form>
   </div>
 
