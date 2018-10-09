@@ -12,32 +12,86 @@ function CriaConexãoBd()
 	return $bd;
 }
 
-function dados do usuario()
-{
-	$bd = CriaConexãoBd();
+function PesquisaEmail($email){
 
-	$resultados = $bd->query('SELECT * FROM Contatos ORDER BY nome ASC');
+    $bd = CriarConexao();
 
-	return $resultados->fetchAll();
-}
+    $sql = $bd -> prepare('SELECT email FROM usuario WHERE email = :email;');
+    $sql -> bindValue(':email', $email);
+    $sql -> execute();
 
-function   ($dados_do_usuario_novo)
-{
-	$bd = CriaConexãoBd();
+    if ($sql -> rowCount() == 0){
 
-	$nome = $dados_do_usuario_novo['nome'];
+      return 0;
 
+    } else {
 
-  $sql = $bd->prepare('INSERT INTO usuarios (nome, login, email, senha, confirmarsenha, visibilidadedePublicacoes)
-  VALUES (:nome, :login, :email, :senha, :confirmarsenha, :visibilidadedePublicacoes);');
+      return 1;
 
-    $sql->bindValue(':nome', $nome);
-    $sql->bindValue(':login', $dadosNovoContato['login']);
-    $sql->bindValue(':email', $dadosNovoContato['email']);
-    $sql->bindValue(':senha', $dadosNovoContato['senha']);
-    $sql->bindValue(':confirmarsenha', $dadosNovoContato['confirmarsenha']);
-    $sql->bindValue(':visibilidadedePublicacoes', $dadosNovoContato['visibilidadedePublicacoes']);
+    }
 
-  $sql->execute();
-}
+  }
+
+  function InsereUsuario($novousuario){
+
+    $bd = CriarConexao();
+
+    $sql = $bd -> prepare('
+
+      INSERT INTO usuarios (nome, usuario, email, senha, confirmarsenha, termos_uso) VALUES
+
+      (:nome, :usuario, :email, :senha, :confirmarsenha, :termos_uso);
+
+    ');
+
+    $novousuario['senha'] = password_hash($novousuario['senha'], PASSWORD_DEFAULT);
+
+    $sql -> bindValue(':nome', $novousuario['nomeProprio']);
+    $sql -> bindValue(':usuario', $novousuario['usuario']);
+    $sql -> bindValue(':email', $novousuario['email']);
+    $sql -> bindValue(':senha', $novousuario['senha']);
+    $sql -> bindValue(':confirmarsenha', $novousuario['visibilidade']);
+
+    $sql -> bindValue(':termos_uso', $novousuario['termosUso']);
+
+    $sql -> execute();
+
+  }
+  
+  function ProucuraHash($email){
+    
+    $bd = CriarConexao();
+    
+    $sql = $bd -> prepare('SELECT senha FROM usuario WHERE email = :email');
+    $sql -> bindValue(':email', $email);
+    $sql -> execute();
+    
+    if($sql -> rowCount() == 0){
+      
+      return 0;
+      
+    } else {
+            
+      $sql = $sql -> fetch();
+      return $sql['senha'];
+      
+    }
+    
+  }
+  
+  function RelacionaNome($email){
+    
+    $bd = CriarConexao();
+    
+    $sql = $bd -> prepare('SELECT nome FROM usuario WHERE email = :email');
+    $sql -> bindValue(':email', $email);
+    $sql -> execute();
+    
+    $sql = $sql -> fetch();
+    
+    return($sql['nome']);
+    
+  }
+
 ?>
+
