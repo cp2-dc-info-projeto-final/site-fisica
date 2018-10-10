@@ -1,0 +1,114 @@
+html{
+	height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0;
+	}
+body{
+	
+	width:100%;
+	margin: 0px;
+	padding: 0;
+	background-color:grey;
+	background-size:cover;
+	
+	height: 100vh;
+	display: table;
+	}
+#D1{
+		width:100%;
+		height:15%;
+    background-color: blue;
+		position:relative;
+		}
+ ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+ a:link,a:visited{
+    display: block;
+    front-weight: bold;
+    color: #FFFFFF;
+    background-color: black;
+    text-align: center;
+    padding: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+ a:hover,a:active{
+    background-color:none;
+  }
+ ul li{
+    opacity: .8;
+    width: 25%;
+    line-height: 100%;
+    text-align: center;
+    float: left;
+  }
+*{margin:0; padding:0;}
+
+body{
+  background:#F1F1F1;
+}
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */
