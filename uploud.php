@@ -25,10 +25,11 @@
 	
 	?>
 			
-			<form action ="<?php echo $_SERVER['PHP-SELF']; ?>" method 	="	POST"  enctype="multpart/form-data">
-			<input type="file" name = "arquivo"><br>
-			<input type="submit" name="enviar-lista">
-		</form>
+			<form action ="<?php echo $_SERVER['PHP-SELF']; ?>" method ="POST"  enctype="multpart/form-data">
+				
+				<input type="file" name = "arquivo"><br>
+				<input type="submit" name="enviar-lista">
+			</form>
 
 	</body>
 </html> 
