@@ -62,6 +62,17 @@ body{
 	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	border: 1px solid black;
+	color: black;
+	padding: 16px 42px;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+.success {
+  border-color: white rgb(150,150,150);
+  color: black;
 }
 
 
