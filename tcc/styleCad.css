@@ -24,6 +24,7 @@ body{
 	transform: translate(-50%, -50%);
 	width: 40%;
 	height: 90%;
+	background: hsla(0, 100%, 0%, 0.6);
 }
 
 h2{
@@ -86,8 +87,10 @@ button{
 .Aceita{
 	position: absolute;
 	left: 33%;
-	top: 67%;
+	top: 67.9%;
 	font-size: 110%;
+	line-height:-100%;
+	color:white;
 	
 }
 .btn2{
