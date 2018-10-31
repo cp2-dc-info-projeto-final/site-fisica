@@ -1,3 +1,8 @@
+<?php
+
+session_start()
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -7,8 +12,15 @@
 </head>
 <body> 
 	<div class="Cadastro">
-		<form>
+		<form method="post" action="CADASTROUSUARIO.php">
 								<h2>Cadastro</h2>
+
+								<?php 
+								if(isset($_SESSION['msg']))
+									echo $_SESSION['msg'];
+									unset($_SESSION['msg'])
+
+								 ?>
 			<label for="user"><b class="textcol">Nome</b></label>
 			<input type="text" placeholder="Digite seu nome">
 			

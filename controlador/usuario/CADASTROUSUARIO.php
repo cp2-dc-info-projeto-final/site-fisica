@@ -1,6 +1,11 @@
   <?php
 
-require_once('../Modelo/TabelaUsuarios.php');
+session_start(); 
+
+
+
+include_once("../acesso_ao_banco.php");
+require_once('../../modelo/tabelausuario.php');
 
   $request = array_map('trim', $_REQUEST);
 
@@ -8,17 +13,17 @@ require_once('../Modelo/TabelaUsuarios.php');
   $request = filter_var_array(
     $request,
     [
-      'nome' => FILTER_DEFAULT_VARCHAR
-      'usuario' => FILTER_DEFAULT_VARCHAR,
+      'nome' => 'FILTER_DEFAULT_VARCHAR',
+      'usuario' => 'FILTER_DEFAULT_VARCHAR',
       'email' => FILTER_VALIDATE_EMAIL,
-      'senha' => FILTER_VALIDATE_DEFAULT_PASSWORD,
-      'confirmaSenha' => FILTER_VALIDATE_DEFAULT_PASSWORD,
+      'senha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
+      'confirmaSenha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
       'aceitaTermos'=> FILTER_VALIDATE_BOOLEAN,
     ]
   );
         
 
-  $nome = $request['nomePróprio'];
+  $nome = $request['nome'];
     if ($nome == false)
     {
       $erros[] = "A quantidade de caracteres informada não é válida.";
@@ -29,7 +34,7 @@ require_once('../Modelo/TabelaUsuarios.php');
     }
 
   
-  $usuario = $request['nomePróprio'];
+  $usuario = $request['usuario'];
     if ($nome == false)
     {
       $erros[] = "A quantidade de caracteres informada não é válida.";
@@ -41,7 +46,7 @@ require_once('../Modelo/TabelaUsuarios.php');
 
 
   $email = $request['email'];
-    if ($qtde == false)
+    if ($email == false)
     {
       $erros[] = "A quantidade de caracteres informada não é válida.";
     }
@@ -52,7 +57,7 @@ require_once('../Modelo/TabelaUsuarios.php');
 
 
   $senha = $request['senha'];
-    if ($qtde == false)
+    if ($senha == false)
     {
       $erros[] = "A quantidade de caracteres informada não é válida.";
     }
@@ -62,28 +67,56 @@ require_once('../Modelo/TabelaUsuarios.php');
     }
 
 
-  $confimaSenha = $request['confirmaSenha'];
-    if ($qtde == false)
+  $confirmaSenha = $request['confirmaSenha'];
+    if ($confirmaSenha == false)
     {
       $erros[] = "A quantidade de caracteres informada não é válida.";
     }
-    else if (strlen($confimaSenha < 7) || 12 < strlen($confimaSenha))
+    else if (strlen($confirmaSenha < 7) || 12 < strlen($confirmaSenha))
     {
       $erros[] = "A quantidade deve ser entre 3 e 35.";
+    }
+    if ($confirmaSenha =! $senha)
+    {
+      $erros[] = "A senha informada e diferente da de cima";
     }
 
 
   $aceitaTermos = $request['aceitaTermos'];
-    if ($qtde == false)
+    if ($aceitaTermos == false)
     {
       $erros[] = "Deve-se aceitar os termos para poder aceitar.";
     }
 
+  if (empty($erros))
+  
+  {
+    $id = InsereAluno($request);
+    $_SESSION['idAlunoConectao'] = $id;
 
-
- 
-
-   
+    header("Location: Cadastro.php");
+  }
+  
+  else
+  
+  {
+    $_SESSION['errosCadastrado'] = $erros;
+    header("Location: Cadastro.php");
+  }
+  
+  if (mysql_insert_id($bd)) 
+  
+  {
+   $_SESSION['msg'] = "Usuario cadastrado com sucesso";
+    header("Location: Cadastro.php");
+  }
+  
+  else
+  
+  {
+    header ("Location: Cadastro.php");
+  }
+  
   ?>
 
   <?php foreach($erros as $msg) { ?>
