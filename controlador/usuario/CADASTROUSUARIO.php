@@ -4,7 +4,7 @@ session_start();
 
 
 
-include_once("../acesso_ao_banco.php");
+
 require_once('../../modelo/tabelausuario.php');
 
   $request = array_map('trim', $_REQUEST);
@@ -15,14 +15,14 @@ require_once('../../modelo/tabelausuario.php');
     [
       'nome' => 'FILTER_DEFAULT_VARCHAR',
       'usuario' => 'FILTER_DEFAULT_VARCHAR',
-      'email' => FILTER_VALIDATE_EMAIL,
+      'email' => 'FILTER_VALIDATE_EMAIL',
       'senha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
       'confirmaSenha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
-      'aceitaTermos'=> FILTER_VALIDATE_BOOLEAN,
+      'aceitaTermos'=> 'FILTER_VALIDATE_BOOLEAN',
     ]
   );
         
-
+$erros = [];
   $nome = $request['nome'];
     if ($nome == false)
     {
@@ -54,6 +54,10 @@ require_once('../../modelo/tabelausuario.php');
     {
       $erros[] = "A quantidade do campo email deve ser entre 3 e 10.";
     }
+    else if (BuscaUsuárioPorEmail($email) != false)
+	{
+		$erros[] = "Já existe um usuário cadastrado com esse e-mail";
+	}
 
 
   $senha = $request['senha'];
@@ -96,30 +100,15 @@ require_once('../../modelo/tabelausuario.php');
    	 	$id = InsereAluno($request);
    		$_SESSION['idAlunoConectao'] = $id;
 
-    	header("Location: Cadastro.php");
+    	
   	}
-  
-  
   else
   
   {
     $_SESSION['errosCadastrado'] = $erros;
-    header("Location: Cadastro.php");
+    
   }
-  	if (mysql_insert_id($bd)) 
-  
-  	{	
-   		$_SESSION['msg'] = "Usuario cadastrado com sucesso";
-    	header("Location: Cadastro.php");
-  	}
-  
-  
-  else
-  
-  {
-    $_SESSION['errosCadastrado'] = $erros;
-    header("Location: Cadastro.php");
-  }
+  	
 
   if (count($erros) != 0){
 
@@ -137,7 +126,10 @@ require_once('../../modelo/tabelausuario.php');
 
   
   ?>
+<html>
 
-  <?php foreach($erros as $msg) { ?>
-    <li><?= $msg ?></li>
-  <?php } ?>
+  <h1><?php if(count($erros) == 0){echo("Cadastro realizado com Sucesso");} ?></h1>
+  <a href="../../index.php">Retornar para Página Inicial</a>
+
+</html>
+ 
