@@ -26,57 +26,57 @@ require_once('../../modelo/tabelausuario.php');
   $nome = $request['nome'];
     if ($nome == false)
     {
-      $erros[] = "A quantidade de caracteres informada não é válida.";
+      $erros[] = "O campo nome deve ser preenchido.";
     }
     else if (strlen($nome < 6) || 16 < strlen($nome))
     {
-      $erros[] = "A quantidade deve ser entre 3 e 10.";
+      $erros[] = "A quantidade do campo nome deve ser entre 3 e 10.";
     }
 
   
   $usuario = $request['usuario'];
     if ($nome == false)
     {
-      $erros[] = "A quantidade de caracteres informada não é válida.";
+      $erros[] = "O campo usuário deve ser preenchido.";
     }
     else if (strlen($nome < 6) || 16 < strlen($nome))
     {
-      $erros[] = "A quantidade deve ser entre 3 e 10.";
+      $erros[] = "A quantidade do campo usuário deve ser entre 3 e 10.";
     }
 
 
   $email = $request['email'];
     if ($email == false)
     {
-      $erros[] = "A quantidade de caracteres informada não é válida.";
+      $erros[] = "O campo email deve ser preenchido.";
     }
     else if (strlen($email < 16) || 30 < strlen($email))
     {
-      $erros[] = "";
+      $erros[] = "A quantidade do campo email deve ser entre 3 e 10.";
     }
 
 
   $senha = $request['senha'];
     if ($senha == false)
     {
-      $erros[] = "A quantidade de caracteres informada não é válida.";
+      $erros[] = "O campo senha deve ser preenchido.";
     }
     else if (strlen($senha < 7) || 12 < strlen($senha))
     {
-      $erros[] = "A quantidade deve ser entre 3 e 35.";
+      $erros[] = "A quantidade do campo senha deve ser entre 3 e 35.";
     }
 
 
   $confirmaSenha = $request['confirmaSenha'];
     if ($confirmaSenha == false)
     {
-      $erros[] = "A quantidade de caracteres informada não é válida.";
+      $erros[] = "O campo confirmar senha deve ser preenchido.";
     }
     else if (strlen($confirmaSenha < 7) || 12 < strlen($confirmaSenha))
     {
-      $erros[] = "A quantidade deve ser entre 3 e 35.";
+      $erros[] = "A quantidade do campo confirmarsenha deve ser entre 3 e 35.";
     }
-    if ($confirmaSenha =! $senha)
+    else if ($confirmaSenha =! $senha)
     {
       $erros[] = "A senha informada e diferente da de cima";
     }
@@ -88,14 +88,17 @@ require_once('../../modelo/tabelausuario.php');
       $erros[] = "Deve-se aceitar os termos para poder aceitar.";
     }
 
-  if (empty($erros))
-  
-  {
-    $id = InsereAluno($request);
-    $_SESSION['idAlunoConectao'] = $id;
+ 	 
 
-    header("Location: Cadastro.php");
-  }
+ 	 if (empty($erros))
+  
+ 	{
+   	 	$id = InsereAluno($request);
+   		$_SESSION['idAlunoConectao'] = $id;
+
+    	header("Location: Cadastro.php");
+  	}
+  
   
   else
   
@@ -103,19 +106,35 @@ require_once('../../modelo/tabelausuario.php');
     $_SESSION['errosCadastrado'] = $erros;
     header("Location: Cadastro.php");
   }
+  	if (mysql_insert_id($bd)) 
   
-  if (mysql_insert_id($bd)) 
+  	{	
+   		$_SESSION['msg'] = "Usuario cadastrado com sucesso";
+    	header("Location: Cadastro.php");
+  	}
   
-  {
-   $_SESSION['msg'] = "Usuario cadastrado com sucesso";
-    header("Location: Cadastro.php");
-  }
   
   else
   
   {
-    header ("Location: Cadastro.php");
+    $_SESSION['errosCadastrado'] = $erros;
+    header("Location: Cadastro.php");
   }
+
+  if (count($erros) != 0){
+
+    foreach ($erros as $erro) {
+
+      echo($erro);
+
+    }
+
+  } else {
+
+    InsereUsuario($request);
+
+  }
+
   
   ?>
 
