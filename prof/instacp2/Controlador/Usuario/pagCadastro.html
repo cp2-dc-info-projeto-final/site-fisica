@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+	<head>		
+
+		<title> instacp2</title>
+		<meta charset="UTF-8">
+
+
+
+	</head>
+
+	<body>
+
+		<h1> instacp2 </h1>
+		<br>
+
+		<form method="post" action="cadastraUsuario.php">
+
+		<div id="conteudo">
+
+				<input type = "text" placeholder = "Nome Próprio" name = "nomeProprio"
+				minlength = "3" maxlength = "35" required class = "campo" ></input>
+				
+				<input type = "text" placeholder = "Sobrenome" name = "sobrenome"minlength = "3"
+		        maxlength = "35" required class = "campo" ></input>
+				<br>
+				
+				<input type = "email" placeholder = "E-mail" name = "email" minlength = "5"
+				maxlength= "63" required class = "campo" ></input>
+				<br>
+				
+				<input type = "password" placeholder = "Senha" name = "senha" minlength = "6"maxlength = "12" required class = "campo"></input>
+				<br>
+				
+				<input type = "password" placeholder = "Confirmar Senha" name = "confirmarSenha"
+				min = "6" max = "12" required class = "campo" ></input>
+				<br>
+				
+				<label>Data de Nascimento: </label> <input type = "Date" name = "dataNasc" required class = "campo"></input>
+				<br>
+				
+				<label>Quem pode ver suas publicações? </label>
+				<select required name = "visibilidade" class = "campo">
+
+					<option value = "" selected disabled>Selecione</option>
+					<option value = "1">Amigos</option>
+					<option value = "2">Amigos de Amigos</option>
+					<option value = "3">Todos</option>
+
+				</select>
+				<br>
+				<input type = "checkbox" name = "alertas_email" >Receber alertas por e-mail</input>
+				<br>
+				<input type = "checkbox" name = "termosUso" >Li e concordo com os temos de uso e com a política de privacidade</input>
+				<br>
+				<input type = "submit" value = "Cadastrar" id = "botaoCadastrar"></input>
+				<br>
+				<a href="../../index.php">Voltar a Página Inicial</a>
+
+			</div>
+
+		</form>
+
+	</body>
+
+</html>
