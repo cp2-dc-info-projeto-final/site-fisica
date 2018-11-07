@@ -1,0 +1,90 @@
+html{
+	margin:0;
+	padding: 0;
+	width: 100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: url(images/fis.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	height: 100vh;
+	display: table;	
+}
+
+.EsqueceSenha{
+	border: 1px solid rgba(255,255,255, 0.3);
+	border-radius: 3px;
+	padding: 0px;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width: 20%;
+	height: 50%;
+	background: hsla(0, 100%, 0%, 0.6);
+}
+
+h2{
+	font-family: Times New Roman;
+	font-weight: lighter;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+}
+
+input{
+	display: block;
+	width: 90%;
+	height: 10%;
+	background: rgba(0,0,0,0.3);
+	outline: none;
+	border: 1px solid rgba(0,0,0,0.3);
+	font-family: Times New Roman;
+	font-weight: lighter;
+	font-size: 100%;
+	margin-bottom: 5%;
+	padding-left: 0%;
+	border-radius: 14px;
+	text-align: left;
+	color: #E5E5E5;
+	margin-left: 5%;
+}
+
+button{
+	
+	width: 50%;
+	height: 50%;
+	font-size: 16px;
+	background: #000;
+	font-weight: lighter;
+	color: #fff;
+	border-color:solid #fff;
+	border: 0px;
+	border-radius: 0%;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Times New Roman;
+	background-color: rgba(0,0,0,0);
+	margin-left: 25%;
+
+}
+
+.textcol{
+	color: #fff;
+	position: relative;
+	left: 5%;
+	
+}
+
+.linkpi{
+	position:absolute;
+	height: 7%;
+	top: 80%;
+	left:30%;
+	transform:translate(-10%, -15%);
+
+}
+
