@@ -2,7 +2,7 @@
 
   function CriarConexao(){
 
-    $bd =  new PDO('mysql:host=localhost;dbname= instacpii ;charset=utf8','instacpii','123456');
+    $bd =  new PDO('mysql:host=localhost;dbname= fisica ;charset=utf8','fisica','');
 
     $bd -> setAttribute(PDO::ATTR_ERRMODE,
                       PDO::ERRMODE_EXCEPTION);
