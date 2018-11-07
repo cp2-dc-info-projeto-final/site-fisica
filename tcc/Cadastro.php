@@ -69,8 +69,8 @@ if($botao){
 								<h2>Cadastro</h2>
 				<?php
 				if(isset($_SESSION['msg'])){
-					unset($_SESSION['msg']
-					echo $_SESSION['msg']);
+					unset($_SESSION['msg']);
+					echo ($_SESSION['msg']);
 				}
 		?>					
 			<label ><b class="textcol" >Nome</b></label>
