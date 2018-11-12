@@ -1,13 +1,12 @@
 <?php
+ require_once('../acesso_ao_banco.php');
   
-require_once('acesso_ao_banco.php');
-   
   function BuscaUsuárioPorId(int $id)
   {
   
     $bd = CriaConexãoBd();
 
-    $sql = $bd->prepare('SELECT * FROM usuarios WHERE id = :valId');
+    $sql = $bd->prepare('SELECT * FROM Usuários WHERE id = :valId');
 
     $sql->bindValue(':valId', $id);
 
@@ -21,7 +20,7 @@ require_once('acesso_ao_banco.php');
   
     $bd = CriaConexãoBd();
 
-    $sql = $bd->prepare('SELECT * FROM usuarios WHERE email = :valEmail');
+    $sql = $bd->prepare('SELECT * FROM Usuários WHERE email = :valEmail');
 
     $sql->bindValue(':valEmail', $email);
 
@@ -35,8 +34,9 @@ require_once('acesso_ao_banco.php');
   function PesquisaEmail($email)
   {
 
-    $bd = CriaConexãoBd();
-    $sql = $bd -> prepare('SELECT email FROM usuarios WHERE email = :email;');
+    $bd = CriarConexao();
+
+    $sql = $bd -> prepare('SELECT email FROM usuario WHERE email = :email;');
     $sql -> bindValue(':email', $email);
     $sql -> execute();
 
@@ -55,18 +55,27 @@ require_once('acesso_ao_banco.php');
 
   }
 
-  function InsereAluno($novousuario)
+  function InsereUsuario($novousuario)
   {
 
-       $bd = CriaConexãoBd();
-    $sql = $bd -> prepare('INSERT INTO usuarios(nome, usuario, email, senha) VALUES (:valnome, :valusuario, :valemail, :valsenha)');
+    $bd = CriarConexao();
 
-    $hash = password_hash($novousuario['senha'], PASSWORD_DEFAULT);
+    $sql = $bd -> prepare('
 
-    $sql -> bindValue(':valnome', $novousuario['nome']);
-    $sql -> bindValue(':valusuario', $novousuario['usuario']);
-    $sql -> bindValue(':valemail', $novousuario['email']);
-    $sql -> bindValue(':valsenha', $hash);
+      INSERT INTO usuarios (nome, usuario, email, senha, confirmarsenha, termos_uso) VALUES
+
+      (:nome, :usuario, :email, :senha, :confirmarsenha, :termos_uso);
+
+    ');
+
+    $novousuario['senha'] = password_hash($novousuario['senha'], PASSWORD_DEFAULT);
+
+    $sql -> bindValue(':nome', $novousuario['nome']);
+    $sql -> bindValue(':usuario', $novousuario['usuario']);
+    $sql -> bindValue(':email', $novousuario['email']);
+    $sql -> bindValue(':senha', $novousuario['senha']);
+    $sql -> bindValue(':confirmarsenha', $novousuario['confirmarsenha']);
+    $sql -> bindValue(':termos_uso', $novousuario['termos_uso']);
     $sql -> execute();
 
     return $bd->lastInsertid();
@@ -76,7 +85,7 @@ require_once('acesso_ao_banco.php');
   function ProucuraHash($email)
   {
       
-       $bd = CriaConexãoBd();
+    $bd = CriarConexao();
       
     $sql = $bd -> prepare('SELECT senha FROM usuario WHERE email = :email');
     $sql -> bindValue(':email', $email);
@@ -100,7 +109,8 @@ require_once('acesso_ao_banco.php');
     
   function RelacionaNome($email)
   {
-         $bd = CriaConexãoBd(); 
+      
+    $bd = CriarConexao(); 
     $sql = $bd -> prepare('SELECT nome FROM usuario WHERE email = :email');
     $sql -> bindValue(':email', $email);
     $sql -> execute();

@@ -1,11 +1,8 @@
   <?php
 
-session_start(); 
-
-
-
-
 require_once('../../modelo/tabelausuario.php');
+
+$erros = [];
 
   $request = array_map('trim', $_REQUEST);
 
@@ -17,12 +14,12 @@ require_once('../../modelo/tabelausuario.php');
       'usuario' => 'FILTER_DEFAULT_VARCHAR',
       'email' => 'FILTER_VALIDATE_EMAIL',
       'senha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
-      'confirmasenha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
-      'termo'=> 'FILTER_VALIDATE_BOOLEAN',
+      'confirmaSenha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
+      'aceitaTermos'=> 'FILTER_VALIDATE_BOOLEAN',
     ]
   );
         
-$erros = [];
+
   $nome = $request['nome'];
     if ($nome == false)
     {
@@ -71,7 +68,7 @@ $erros = [];
     }
 
 
-  $confirmaSenha = $request['confirmasenha'];
+  $confirmaSenha = $request['confirmaSenha'];
     if ($confirmaSenha == false)
     {
       $erros[] = "O campo confirmar senha deve ser preenchido.";
@@ -86,13 +83,14 @@ $erros = [];
     }
 
 
-  $aceitaTermos = $request['termo'];
+  $aceitaTermos = $request['aceitaTermos'];
     if ($aceitaTermos == false)
     {
       $erros[] = "Deve-se aceitar os termos para poder aceitar.";
     }
 
- 	 
+ 	 session_start(); 
+
 
  	 if (empty($erros))
   

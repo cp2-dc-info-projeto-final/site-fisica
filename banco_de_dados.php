@@ -14,16 +14,16 @@ function CriaConexãoBd()
 
 
 function dados do usuario(){
-$sql = 'CREATE TABLE Usuario (
+$sql = 'CREATE TABLE Contatoss (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL UNIQUE,
-    usuario VARCHAR(255) NOT NULL UNIQUE,
+    login VARCHAR(255) NOT NULL UNIQUE,
     email VARCHAR(255),
     senha VARCHAR (60),
     confirmarsenha VARCHAR (60),
     visibilidadedePublicacoes int not NULL
 
-) '; 
+) ';
 
 
 
