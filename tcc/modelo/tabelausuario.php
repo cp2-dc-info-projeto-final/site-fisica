@@ -2,7 +2,7 @@
   
 require_once('acesso_ao_banco.php');
    
-  function BuscaUsuárioPorId(int $id)
+  function BuscaUsuarioPorId(int $id)
   {
   
     $bd = CriaConexãoBd();
@@ -16,7 +16,7 @@ require_once('acesso_ao_banco.php');
     return $sql->fetch();
   }
 
-  function BuscaUsuárioPorEmail(string $email)
+  function BuscaUsuarioPorEmail(string $email)
   {
   
     $bd = CriaConexãoBd();

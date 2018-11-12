@@ -93,7 +93,8 @@ if (empty($erros))
 {
 	$id = InsereAluno($request);
    	$_SESSION['idAlunoConectado'] = $id;
-   	header('Location: ../paginInc.html');	
+    $_SESSION['username'] = $usuario;
+   	header('Location: ../paginInc.php');	
 }
 
 else
@@ -102,4 +103,5 @@ else
     header('Location: ../Cadastro.php');
   }
 
+  
 ?>

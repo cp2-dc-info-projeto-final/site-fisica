@@ -1,0 +1,80 @@
+<?php
+ 
+
+ session_start();
+ $user_name = $_SESSION['username'];
+ echo $user_name;
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylePaginInc.css">
+  <title>higino0910</title>
+
+</head>
+
+  <body>
+    <div id="D1">	
+      <div class="prof">
+      <br>
+      <br>
+            <a id= "linkpi" href="loginAluno.html"> <button id="loginButton" > Fazer Login </button> </a>  
+      <br> 
+      <br>
+            <a id= "linkpi" href="Cadastro.html"> <button id="CadButton" > Fazer o Cadastro </button> </a>
+             
+      </div>				
+    </div>
+	  
+        <ul>
+          <li><a href="formulas.html">Formulas</a></li>
+          <li><a href="Exercicios.html">Exercicios</a></li>
+          <li><a href="#Videos">Videos</a></li>
+          <li><a href="#Perguntas">Perguntas</a></li>
+        </ul>
+	  
+          <div class="Slides">
+
+      <slider>
+          <slide><p></p></slide>
+          <slide><p></p></slide>
+          <slide><p></p></slide>
+          <slide><p></p></slide>
+      </slider>
+    </div>
+
+    <div id="D2">
+        
+    </div>
+
+    <div id="D3">
+        
+    </div>
+
+  <div id="D4">
+     
+  </div>
+
+  <div id="D5">
+      
+  </div>
+
+  <div id="D6">
+     
+  </div>
+
+  <div id="D7">
+      
+  </div>
+
+  <div id="D8">
+      <p></p>
+  </div>
+
+</body>
+</html>

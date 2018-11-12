@@ -1,7 +1,7 @@
 <?php
 
-require_once('../Utils.php');
-require_once('../Modelo/TabelaUsuários.php');
+
+require_once('../modelo/tabelausuario.php');
 
 $erro = "";
 
@@ -10,7 +10,7 @@ $request = filter_var_array(
                $request,
                [ 'email' => FILTER_VALIDATE_EMAIL,
                  'senha' => FILTER_DEFAULT,
-                 'local' => FILTER_DEFAULT ]
+                 ]
            );
 
 
@@ -25,14 +25,14 @@ else if ($senha == false)
 {
 	$erro = "Senha inválida ou não informada";
 }
-else
+
 {
-	$usuário = BuscaUsuárioPorEmail($email);
-	if ($usuário == false)
+	$usuario = BuscaUsuarioPorEmail($email);
+	if ($usuario == false)
 	{
 		$erro = "Usuário não cadastrado";
 	}
-	else if (password_verify($senha, $usuário['senha']) == false)
+	else if (password_verify($senha, $usuario['senha']) == false)
 	{
 		$erro = "Senha inválida";
 	}
@@ -42,14 +42,19 @@ else
 session_start();
 if ($erro == null)
 {
-	$_SESSION['idUsuárioConectado'] = $usuário['id'];
+	$_SESSION['idUsuárioConectado'] = $usuario['id']; 
+	$user_name = $usuario['email'];
+	$_SESSION['username'] = $user_name;
+	header('Location: ../paginInc.php');
+
+
 }
 else
 {
 	$_SESSION['erroLogin'] = $erro;
+	header('Location: ../loginAluno.php');
 }
 
-$local = $request['local'];
-Redireciona($local);
-
+echo $erro;
+echo $erroLogin;
 ?>
