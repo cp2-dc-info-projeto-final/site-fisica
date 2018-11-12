@@ -17,8 +17,8 @@ require_once('../../modelo/tabelausuario.php');
       'usuario' => 'FILTER_DEFAULT_VARCHAR',
       'email' => 'FILTER_VALIDATE_EMAIL',
       'senha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
-      'confirmaSenha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
-      'aceitaTermos'=> 'FILTER_VALIDATE_BOOLEAN',
+      'confirmasenha' => 'FILTER_VALIDATE_DEFAULT_PASSWORD',
+      'termo'=> 'FILTER_VALIDATE_BOOLEAN',
     ]
   );
         
@@ -71,7 +71,7 @@ $erros = [];
     }
 
 
-  $confirmaSenha = $request['confirmaSenha'];
+  $confirmaSenha = $request['confirmasenha'];
     if ($confirmaSenha == false)
     {
       $erros[] = "O campo confirmar senha deve ser preenchido.";
@@ -86,7 +86,7 @@ $erros = [];
     }
 
 
-  $aceitaTermos = $request['aceitaTermos'];
+  $aceitaTermos = $request['termo'];
     if ($aceitaTermos == false)
     {
       $erros[] = "Deve-se aceitar os termos para poder aceitar.";
