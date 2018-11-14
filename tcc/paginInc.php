@@ -27,7 +27,8 @@
       <br> 
       <br>
             <a id= "linkpi" href="Cadastro.html"> <button id="CadButton" > Fazer o Cadastro </button> </a>
-             
+      <br>
+            <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
       </div>				
     </div>
 	  
