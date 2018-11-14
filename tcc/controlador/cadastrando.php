@@ -41,6 +41,10 @@ $erros = [];
     {
       $erros[] = "A quantidade do campo usuário deve ser entre 6 e 16.";
     }
+    else if (PesquisaUsuario($usuario) != false )
+    {
+      $erros[] = "O usuario ja foi cadastrado";
+    }
 
 
   $email = $request['email'];

@@ -30,6 +30,22 @@ require_once('acesso_ao_banco.php');
     return $sql->fetch();
   }
 
+  function buscaporidentificador(string $matricula)
+  {
+  
+    $bd = CriaConexãoBd();
+
+    $sql = $bd->prepare('SELECT * FROM usuarios WHERE email = :valid OR maticula = :valid');
+
+    $sql->bindValue(':valid', $matricula);
+
+    $sql->execute();
+
+    return $sql->fetch();
+  }
+
+
+
 
 
   function PesquisaEmail($email)
@@ -52,6 +68,28 @@ require_once('acesso_ao_banco.php');
       return 1;
 
     }
+  }
+      function PesquisaUsuario($usuario)
+  {
+
+    $bd = CriaConexãoBd();
+    $sql = $bd -> prepare('SELECT email FROM usuarios WHERE usuario = :usuario;');
+    $sql -> bindValue(':usuario', $usuario);
+    $sql -> execute();
+
+    if ($sql -> rowCount() == 0)
+    {
+
+      return 0;
+
+    } 
+    else 
+    { 
+
+      return 1;
+
+    }
+
 
   }
 
@@ -59,7 +97,7 @@ require_once('acesso_ao_banco.php');
   {
 
        $bd = CriaConexãoBd();
-    $sql = $bd -> prepare('INSERT INTO usuarios(nome, usuario, email, senha) VALUES (:valnome, :valusuario, :valemail, :valsenha)');
+    $sql = $bd -> prepare('INSERT INTO usuarios(nome, usuario, email, senha , matricula) VALUES (:valnome, :valusuario, :valemail, :valsenha , NULL)');
 
     $hash = password_hash($novousuario['senha'], PASSWORD_DEFAULT);
 
