@@ -27,30 +27,13 @@
           <li><a href="#Videos">Videos</a></li>
           <li><a href="#Perguntas">Perguntas</a></li>
         </ul>
-	<select>
-    <option disabled selected style="display: none">Assunto</option>
-    <option value="ME">Mecânica</option>
-    <option value="TE">Termologia</option>
-    <option value="ON">Onda</option>
-    <option value="EL">Eletromagnetismo</option>
-    <option value="OP">Óptica</option>
-</select>
-	
-	<select>
-    <option disabled selected style="display: none">Nível de dificuldade</option>
-    <option value="FA">Fácil</option>
-    <option value="ME">Médio</option>
-    <option value="DI">Díficil</option>	
-</select>
-	 
-	<select>
-    <option disabled selected style="display: none">Tema do assunto</option>
 
-</select>
-	
-	<select>
-    <option disabled selected style="display: none">Gabarito provisório</option>
-</select>
-	
+    <a href="https://www.google.com.br">Mecânica</a>
+    <a href="https://www.google.com.br">Termologia</a>
+    <a href="https://www.google.com.br">Onda</a>
+    <a href="https://www.google.com.br">Eletromagnetismo</a>
+    <a href="https://www.google.com.br">Óptica</a>
+
+</select>	
 </body>
 </html>
