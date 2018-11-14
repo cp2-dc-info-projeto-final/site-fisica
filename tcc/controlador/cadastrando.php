@@ -49,7 +49,7 @@ $erros = [];
       $erros[] = "O campo email deve ser preenchido.";
     }
    
-    else if (BuscaUsuárioPorEmail($email) != false)
+    else if (BuscaUsuarioPorEmail($email) != false)
 	   {
 		    $erros[] = "Já existe um usuário cadastrado com esse e-mail";
       }
