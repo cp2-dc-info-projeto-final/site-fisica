@@ -5,14 +5,28 @@ session_start();
 	{
 		$erros = $_SESSION['errosCadastrado'];
 		unset($_SESSION['errosCadastrado']);
-
-		
+	
 	}
 	else
 	{
 		$erros = null;
 	}
+	require_once('modelo/tabelausuario.php');
 
+ 	
+	$user_name = $_SESSION['username'];
+ 	echo $user_name;
+
+ 	if (array_key_exists('idUsuárioConectado',$_SESSION)) {
+ 		
+ 	
+ 	$id = $_SESSION['idUsuárioConectado'];
+ 	$usuario = BuscaUsuarioPorId($id);
+ }
+ else
+ {
+ 	$usuario = null;
+ }
 
 ?>
 
@@ -38,7 +52,7 @@ session_start();
 		<?php } ?>
 
 			<label><b class="textcol">Nome</b></label>
-			<input type="text" placeholder="Digite seu nome" name="nome" required="">
+			<input type="text"minlength="3" maxlength="255" placeholder="Digite seu nome" name="nome" required="">
 								
 			<label><b class="textcol">Usuário</b></label>
 			<input type="text" minlength="6" maxlength="16" placeholder="Digite seu usuário" name="usuario" required="">
@@ -47,17 +61,20 @@ session_start();
 			<input type="email " placeholder="Digite seu email" name="email" required="">
 			
 			<label><b class="textcol">Senha</b></label>
-			<input type="password" minlength="7" maxlength="12" placeholder="Digite sua senha" name="senha" required="">
+			<input type="password" minlength="7" maxlength="16" placeholder="Digite sua senha" name="senha" required="">
 			
 			<label><b class="textcol">Confirma senha</b></label>
-			<input type="password" minlength="7	" maxlength="12" placeholder="Digite novamente sua senha" name="confirmasenha" required="">
+			<input type="password" minlength="7	" maxlength="16" placeholder="Digite novamente sua senha" name="confirmasenha" required="">
 			<br>
-			
+			<?php if($usuario !=null  ||  $usuario['matricula'] != null){ ?>
+			<label><b class="textcol">Matrícula</b></label>
+			<input type="text" minlength="7" maxlength="9" placeholder="Digite sua matricula" name="matricula" required="">
+			<?php } ?> 
 			<input type="checkbox" name= "termo" value= "botao" checked class="checkbox" required><p class="Aceita">Você aceita os termos de uso ?</p>
 			<br>
 			
 			<button type="submit" class="btn2">Cadastrar</button>
-      		<button type="button" class="btn3" onclick="closeForm()">Fechar</button>
+      		<a href="loginAluno.php"> <button type="button" class="btn3" onclick="closeForm()">Fechar</button></a>
 
     
       		

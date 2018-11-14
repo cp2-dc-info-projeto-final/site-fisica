@@ -1,3 +1,19 @@
+<?php 
+	session_start();
+
+	if (array_key_exists('erroLogin', $_SESSION))
+	{
+		$erros = $_SESSION['erroLogin'];
+		unset($_SESSION['erroLogin']);
+
+		
+	}
+	else
+	{
+		$erros = null;
+	}
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -10,7 +26,7 @@
 		<form name="Login" method="post" action="controlador/Entrar.php">
 								<h2>Login</h2>
 			<label for="user"><b class="textcol">Email ou Matricula</b></label>
-			<input type="text" name="email" placeholder="Digite seu email ou matrícula ">
+			<input type="text" name="emailmatricula" placeholder="Digite seu email ou matrícula ">
 
 			<label for="senha"><b class="textcol">Senha</b></label>
 			<input type="password" name="senha" placeholder="Digite sua senha">

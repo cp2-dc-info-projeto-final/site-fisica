@@ -9,6 +9,7 @@
 			$temporario	= $_FILES['arquivo']['tmp_name'];
 			$novoNome =$_FILES['arquivo']['name'].".$extensao";
 
+
 			if(move_uploaded_file($temporario,$pasta.$novoNome)):
 				$menssagem = "Upload feito com sucesso!";
 			else:
@@ -19,7 +20,7 @@
 		endif;
 		echo $menssagem;
 		
-	endif;
+	endif; 
 	
 
 	?>

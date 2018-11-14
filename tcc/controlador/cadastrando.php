@@ -16,7 +16,8 @@ require_once('../modelo/tabelausuario.php');
       'email' => 'FILTER_VALIDATE_EMAIL',
       'senha' => 'FILTER_DEFAULT',
       'confirmasenha' => 'FILTER_DEFAULT',
-      'termo'=> 'FILTER_DEFAULT'
+      'termo'=> 'FILTER_DEFAULT',
+      'matricula' => 'FILTER_DEFAULT'
     ]
   );
         
@@ -26,9 +27,9 @@ $erros = [];
     {
       $erros[] = "O campo nome deve ser preenchido.";
     }
-     if (strlen($nome) < 6 || strlen($nome )>16)
+     if (strlen($nome) < 3 || strlen($nome )>255)
     {
-      $erros[] = "A quantidade do campo nome deve ser entre 6 e 16.";
+      $erros[] = "A quantidade do campo nome deve ser entre 3 e 255.";
     }
 
   
@@ -89,6 +90,17 @@ $erros = [];
     if ($aceitaTermos == false)
     {
       $erros[] = "Deve-se aceitar os termos para poder aceitar.";
+    }
+
+
+  $matricula = $request['matricula'];
+    if ($aceitaTermos == false)
+    {
+      $erros[] = "Deve-se preencher o campo matricula.";
+    }
+    if (strlen($matricula)< 7 || strlen($matricula) >9)
+    {
+      $erros[] = strlen($matricula);//"A quantidade do campo matricula deve ser entre 7 e 9.";
     }
 
  	 

@@ -2,6 +2,22 @@
   
 require_once('acesso_ao_banco.php');
    
+  
+function BuscaUsuarioPorMatricula(string $matricula)
+  {
+  
+    $bd = CriaConexãoBd();
+
+    $sql = $bd->prepare('SELECT * FROM usuarios WHERE matricula = :valmatricula');
+
+    $sql->bindValue(':valmatricula', $matricula);
+
+    $sql->execute();
+
+    return $sql->fetch();
+  }
+
+  
   function BuscaUsuarioPorId(int $id)
   {
   
@@ -35,7 +51,7 @@ require_once('acesso_ao_banco.php');
   
     $bd = CriaConexãoBd();
 
-    $sql = $bd->prepare('SELECT * FROM usuarios WHERE email = :valid OR maticula = :valid');
+    $sql = $bd->prepare('SELECT * FROM usuarios WHERE email = :valid OR matricula = :valid');
 
     $sql->bindValue(':valid', $matricula);
 
@@ -97,14 +113,17 @@ require_once('acesso_ao_banco.php');
   {
 
        $bd = CriaConexãoBd();
-    $sql = $bd -> prepare('INSERT INTO usuarios(nome, usuario, email, senha , matricula) VALUES (:valnome, :valusuario, :valemail, :valsenha , NULL)');
+    $sql = $bd -> prepare('INSERT INTO usuarios(nome, usuario, email, senha , matricula) VALUES (:valnome, :valusuario, :valemail, :valsenha , :valmatricula)');
 
     $hash = password_hash($novousuario['senha'], PASSWORD_DEFAULT);
+
 
     $sql -> bindValue(':valnome', $novousuario['nome']);
     $sql -> bindValue(':valusuario', $novousuario['usuario']);
     $sql -> bindValue(':valemail', $novousuario['email']);
+    $sql -> bindValue(':valmatricula', $novousuario['matricula']);
     $sql -> bindValue(':valsenha', $hash);
+    
     $sql -> execute();
 
     return $bd->lastInsertid();

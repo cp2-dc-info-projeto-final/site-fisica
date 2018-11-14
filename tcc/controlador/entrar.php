@@ -8,19 +8,17 @@ $erro = "";
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
                $request,
-               [ 'email' => FILTER_VALIDATE_EMAIL,
-                 'senha' => FILTER_DEFAULT,
-                 'matricula' =>FILTER_DEFAULT,
+               [ 'emailmatricula' => FILTER_DEFAULT,
+                 'senha' => FILTER_DEFAULT
                  ]
            );
 
 
-$email = $request['email'];
+$emailmatricula = $request['emailmatricula'];
 $senha = $request['senha'];
-$matricula = $request['matricula']
 
 
-if ($email == false)
+if ($emailmatricula == false)
 {
 	$erro = "E-mail inválido ou não informado";
 }
@@ -30,12 +28,13 @@ else if ($senha == false)
 }
 else
 {
-	$usuario = buscaporidentificador($email);
+	$usuario = buscaporidentificador($emailmatricula);
 	if ($usuario == false)
 	{
 		$erro = "Usuário não cadastrado";
 	}
 	else if (password_verify($senha, $usuario['senha']) == false)
+	
 	{
 		$erro = "Senha inválida";
 	}
@@ -43,16 +42,13 @@ else
 
 
 session_start();
- 	$ident = $_REQUEST['ident'];
- 	$usuario = buscaporidentificador($ident);
- 	$_SESSION[idUsuario] = $usuario['id'];
 
 if ($erro == null)
 {
 	$_SESSION['idUsuárioConectado'] = $usuario['id']; 
 	$user_name = $usuario['nome'];
 	$_SESSION['username'] = $user_name;
-	header('Location: ../paginInc.php');
+	 header('Location: ../paginInc.php');
 
 
 }
@@ -62,6 +58,4 @@ else
 	header('Location: ../loginAluno.php');
 }
 
-echo $erro;
-echo $erroLogin;
 ?>

@@ -1,9 +1,13 @@
 <?php
  
+require_once('modelo/tabelausuario.php');
 
  session_start();
  $user_name = $_SESSION['username'];
  echo $user_name;
+
+ $id = $_SESSION['idUsuárioConectado'];
+ $usuario = BuscaUsuarioPorId($id);
 
 ?>
 
@@ -22,16 +26,15 @@
     <div id="D1">	
       <div class="prof">
       <br>
-      <br>
-            <a id= "linkpi" href="loginAluno.html"> <button id="loginButton" > Fazer Login </button> </a>  
-      <br> 
-      <br>
-            <a id= "linkpi" href="Cadastro.html"> <button id="CadButton" > Fazer o Cadastro </button> </a>
+     <br>
+          <?php if($usuario['matricula'] != null){ ?>
+             <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
+                   <?php } ?> 
       <br>
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
       </div>				
     </div>
-	  
+	       
         <ul>
           <li><a href="formulas.html">Formulas</a></li>
           <li><a href="Exercicios.html">Exercicios</a></li>
