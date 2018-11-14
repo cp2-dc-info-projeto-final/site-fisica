@@ -28,11 +28,11 @@
           <li><a href="#Perguntas">Perguntas</a></li>
         </ul>
 
-    <a href="https://www.google.com.br">Mecânica</a>
-    <a href="https://www.google.com.br">Termologia</a>
-    <a href="https://www.google.com.br">Onda</a>
-    <a href="https://www.google.com.br">Eletromagnetismo</a>
-    <a href="https://www.google.com.br">Óptica</a>
+    <a href="AssuntosF/Mecânica.php">Mecânica</a>
+    <a href="AssuntosF/Termologia.php">Termologia</a>
+    <a href="AssuntosF/Onda.php">Onda</a>
+    <a href="AssuntosF/Eletromagnetismo.php">Eletromagnetismo</a>
+    <a href="AssuntosF/Óptica.php">Óptica</a>
 
 </select>	
 </body>
