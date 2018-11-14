@@ -60,7 +60,7 @@
 				</svg>
 	</div>
 	
-	<a href="../tcc/paginInc.html" class="btn success">Entrar</button>
+	<a href="paginInc.php" class="btn success">Entrar</button>
 	
 			
 </body>

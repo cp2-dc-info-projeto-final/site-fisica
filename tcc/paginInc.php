@@ -2,13 +2,22 @@
  
 require_once('modelo/tabelausuario.php');
 
- session_start();
- $user_name = $_SESSION['username'];
- echo $user_name;
+session_start();
 
- $id = $_SESSION['idUsuárioConectado'];
- $usuario = BuscaUsuarioPorId($id);
+  if (array_key_exists('username', $_SESSION) &&
+      array_key_exists('idUsuárioConectado', $_SESSION))
+  {
+   
+    $user_name = $_SESSION['username'];
+    echo $user_name;
 
+    $id = $_SESSION['idUsuárioConectado'];
+    $usuario = BuscaUsuarioPorId($id);
+  }
+  else
+  {
+    header('Location:loginAluno.php');
+  }
 ?>
 
 
@@ -34,10 +43,10 @@ require_once('modelo/tabelausuario.php');
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
       </div>				
     </div>
-	       
+	        
         <ul>
-          <li><a href="formulas.html">Formulas</a></li>
-          <li><a href="Exercicios.html">Exercicios</a></li>
+          <li><a href="formulas.php">Formulas</a></li>
+          <li><a href="Exercicios.php">Exercicios</a></li>
           <li><a href="#Videos">Videos</a></li>
           <li><a href="#Perguntas">Perguntas</a></li>
         </ul>
