@@ -60,7 +60,7 @@
 				</svg>
 	</div>
 	
-	<a href="paginInc.php" class="btn success">Entrar</button>
+	<a href="login.php" class="btn success">Entrar</button>
 	
 			
 </body>

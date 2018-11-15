@@ -74,7 +74,7 @@ session_start();
 			<br>
 			
 			<button type="submit" class="btn2">Cadastrar</button>
-      		<a href="loginAluno.php"> <button type="button" class="btn3" onclick="closeForm()">Fechar</button></a>
+      		<a href="login.php"> <button type="button" class="btn3" onclick="closeForm()">Fechar</button></a>
 
     
       		

@@ -2,6 +2,6 @@
 
   session_start();
   unset($_SESSION['idUsuárioConectado']);
-  header("Location: ../loginAluno.php")
+  header("Location: ../login.php")
 
 ?>

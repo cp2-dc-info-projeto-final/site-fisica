@@ -55,7 +55,7 @@ if ($erro == null)
 else
 {
 	$_SESSION['erroLogin'] = $erro;
-	header('Location: ../loginAluno.php');
+	header('Location: ../login.php');
 }
 
 ?>
