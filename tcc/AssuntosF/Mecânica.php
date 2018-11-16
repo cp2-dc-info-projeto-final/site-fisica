@@ -13,7 +13,12 @@ pdf</a>
     <a href="Exercícios/2Ano/Mecânica/IeQ.pdf">2ª série Int - Fis  - Lista 07 - Impulso e Quantidade de movimento</a>
     <a href="Exercícios/2Ano/Mecânica/Rev09.pdf">2ª série Int - Fis  - Lista 09 - Revisão</a>
 
-  
+3o Ano
+
+<a href="Exercícios/3Ano/Mecânica/Eletre.pdf">3ª série - Fis 1 - Lista 01 - Eletrização</a>
+    <a href="Exercícios/3Ano/Mecânica/Hidro2017.pdf">3º ANO - Fis 2 - Lista 2 - Hidrostática 1 - 2017</a>
+    <a href="Exercícios/3Ano/Mecânica/Hidro2018.pdf">3º ANO - Fis 2 - Lista 2 - Hidrostática 1 - 2018</a>
+    <a href="Exercícios/3Ano/Mecânica/Hidro2018Emp.pdf">3º ANO - Fis 2 - Lista 3 - Hidrostática 2  - 2018 - EMPUXO</a>
 
 </head>
 <body>

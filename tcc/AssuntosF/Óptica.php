@@ -6,12 +6,11 @@
 <link rel="stylesheet" type="text/css" href="styleExer.css">
 Listas de Mecânica:
 
-<a href="https://www.google.com.br">2ª série Int - Fis  - Lista 04 - Vetores - 
-pdf</a>
-    <a href="Exercícios/2Ano/Mecânica/DinamicaeL.pdf">2ª série Int - Fis  - Lista 05 - Dinâmica e Leis de Newton</a>
-    <a href="https://www.google.com.br">2ª série Int - Fis  - Lista 06 - Trabalho e Energia</a>
-    <a href="https://www.google.com.br">2ª série Int - Fis  - Lista 07 - Impulso e Quantidade de movimento</a>
-    <a href="https://www.google.com.br">2ª série Int - Fis  - Lista 09 - Revisão</a>
+<a href="Exercícios/3Ano/Óptica/Acustic.pdf">Acústica 3a Série</a>
+
+2o Ano
+
+    <a href="Exercícios/2Ano/Óptica/Acust2.pdf">2ª série Int -lista 01 - Lentes Esféricas e Optica da Visão</a>
 
   
 
