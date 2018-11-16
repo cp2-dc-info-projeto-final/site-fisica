@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>exercicios</title>
-<link rel="stylesheet" type="text/css" href="styleExer.css">
+<link rel="stylesheet" type="text/css" href="../styleExer.css">
 Listas de Mecânica:
 
 <a href="Exercícios/3Ano/Eletromagnetismo/EletroAp.pdf">3° ANO Lista_de_Aprofundamento_Enem_Uerj_Eletromagnetismo
