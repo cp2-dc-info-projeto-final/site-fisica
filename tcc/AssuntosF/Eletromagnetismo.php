@@ -6,12 +6,11 @@
 <link rel="stylesheet" type="text/css" href="styleExer.css">
 Listas de Mecânica:
 
-<a href="https://www.google.com.br">2ª série Int - Fis  - Lista 04 - Vetores - 
+<a href="Exercícios/2Ano/Eletromagnetismo/EletroAp.pdf">3° ANO Lista_de_Aprofundamento_Enem_Uerj_Eletromagnetismo
 pdf</a>
-    <a href="Exercícios/2Ano/Mecânica/DinamicaeL.pdf">2ª série Int - Fis  - Lista 05 - Dinâmica e Leis de Newton</a>
-    <a href="https://www.google.com.br">2ª série Int - Fis  - Lista 06 - Trabalho e Energia</a>
-    <a href="https://www.google.com.br">2ª série Int - Fis  - Lista 07 - Impulso e Quantidade de movimento</a>
-    <a href="https://www.google.com.br">2ª série Int - Fis  - Lista 09 - Revisão</a>
+    <a href="Exercícios/2Ano/Eletromagnetismo/Imas.pdf">3º ANO - Fis 2 - Lista 5 -Ímãs e Fontes de Campo- 2018</a>
+    <a href="Exercícios/2Ano/Eletromagnetismo/Maglev.pdf">3º ANO - Fis 2 - Lista 6 -Força Magnética de Lorentz- 2018</a>
+    <a href="Exercícios/2Ano/Eletromagnetismo/Eletromag.pdf">3º ANO - Fis 2 - Lista 7 -Indução eletromagnética- 2018</a>
 
   
 
