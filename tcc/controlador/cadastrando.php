@@ -1,8 +1,9 @@
-
 <?php
 require_once('../modelo/acesso_ao_banco.php');
 require_once('../modelo/tabelausuario.php');
 
+
+session_start();
 
 
   $request = array_map('trim', $_REQUEST);
@@ -93,22 +94,52 @@ $erros = [];
     }
 
 
-  $matricula = $request['matricula'];
+
+if (array_key_exists('idUsuárioConectado' , $_SESSION) )
+{
+  $id = $_SESSION['idUsuárioConectado'];
+  $master = BuscaUsuarioPorId($id);
+  if ($master['matricula'] != null) 
+  {
+    $matricula = $request['matricula'];
     if ($aceitaTermos == false)
     {
       $erros[] = "Deve-se preencher o campo matricula.";
     }
     if (strlen($matricula)< 7 || strlen($matricula) >9)
     {
-      $erros[] = strlen($matricula);//"A quantidade do campo matricula deve ser entre 7 e 9.";
+      $erros[] = "A quantidade do campo matricula deve ser entre 7 e 9.";
     }
+  }
+  else 
+  {
+    $request['matricula'] = null;
+  }
+}
+else 
+{
+  $request['matricula'] = null;
+}
 
+// Ver se já tem usuário logado e se ele é o professor
+// Se SIM: Faz o código abaixo.
+// Se NÃO: $request['matricula'] = null
+
+   /* $matricula = $request['matricula'];
+    if ($aceitaTermos == false)
+    {
+      $erros[] = "Deve-se preencher o campo matricula.";
+    }
+    if (strlen($matricula)< 7 || strlen($matricula) >9)
+    {
+      $erros[] = "A quantidade do campo matricula deve ser entre 7 e 9.";
+    }
+*/
  	 
-session_start();
 if (empty($erros))
 {
 	$id = InsereAluno($request);
-   	$_SESSION['idAlunoConectado'] = $id;
+   	$_SESSION['idUsuárioConectado'] = $id;
     $_SESSION['username'] = $usuario;
    	header('Location: ../paginInc.php');	
 }

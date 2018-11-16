@@ -48,9 +48,8 @@ if ($erro == null)
 	$_SESSION['idUsuárioConectado'] = $usuario['id']; 
 	$user_name = $usuario['nome'];
 	$_SESSION['username'] = $user_name;
-	 header('Location: ../paginInc.php');
-
-
+	header('Location: ../paginInc.php');
+	
 }
 else
 {

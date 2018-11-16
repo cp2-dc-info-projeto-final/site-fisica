@@ -14,19 +14,18 @@ session_start();
 	require_once('modelo/tabelausuario.php');
 
  	
-	$user_name = $_SESSION['username'];
- 	echo $user_name;
+ 	if (array_key_exists('idUsuárioConectado',$_SESSION))
+ 	 {
+ 	 	$user_name = $_SESSION['username'];
+ 		$id = $_SESSION['idUsuárioConectado'];
+ 		$usuario = BuscaUsuarioPorId($id);
+		echo $user_name;
 
- 	if (array_key_exists('idUsuárioConectado',$_SESSION)) {
- 		
- 	
- 	$id = $_SESSION['idUsuárioConectado'];
- 	$usuario = BuscaUsuarioPorId($id);
- }
- else
- {
- 	$usuario = null;
- }
+ 	 }
+ 	else
+ 	 {
+ 		$usuario = null;
+ 	 }
 
 ?>
 
