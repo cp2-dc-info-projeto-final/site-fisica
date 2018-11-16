@@ -48,7 +48,7 @@ session_start();
           <li><a href="formulas.php">Formulas</a></li>
           <li><a href="Exercicios.php">Exercicios</a></li>
           <li><a href="#Videos">Videos</a></li>
-          <li><a href="#Perguntas">Perguntas</a></li>
+         
         </ul>
 	  
           <div class="Slides">
