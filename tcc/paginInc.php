@@ -16,7 +16,7 @@ session_start();
   }
   else
   {
-    header('Location:loginAluno.php');
+    header('Location:login.php');
   }
 ?>
 
@@ -45,6 +45,7 @@ session_start();
     </div>
 	        
         <ul>
+           <li><a href="paginInc.php">Pagina Inicial</a></li>
           <li><a href="formulas.php">Formulas</a></li>
           <li><a href="Exercicios.php">Exercicios</a></li>
           <li><a href="#Videos">Videos</a></li>

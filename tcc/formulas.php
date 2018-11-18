@@ -1,3 +1,26 @@
+<?php
+ 
+require_once('modelo/tabelausuario.php');
+
+session_start();
+
+  if (array_key_exists('username', $_SESSION) &&
+      array_key_exists('idUsuárioConectado', $_SESSION))
+  {
+   
+    $user_name = $_SESSION['username'];
+    echo $user_name;
+
+    $id = $_SESSION['idUsuárioConectado'];
+    $usuario = BuscaUsuarioPorId($id);
+  }
+  else
+  {
+    header('Location:login.php');
+  }
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +30,23 @@
   <link rel="stylesheet" type="text/css" href="styleFor.css">		
 </head>
 <body>
-	<div id="D1">
-  </div>
+	<div id="D1">	
+      <div class="prof">
+      <br>
+     <br>
+          <?php if($usuario['matricula'] != null){ ?>
+             <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
+                   <?php } ?> 
+      <br>
+            <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
+      </div>				
+    </div>
+  
       <ul>
-        <li><a href="paginInc.html">Home</a></li>
-        <li><a href="exercicios.html">Exercicios</a></li>
-        <li><a href="#home">Videos</a></li>
-        <li><a href="#home">Perguntas</a></li>
+        <li><a href="paginInc.php">Pagina Inicial</a></li>
+          <li><a href="formulas.php">Formulas</a></li>
+          <li><a href="Exercicios.php">Exercicios</a></li>
+          <li><a href="#Videos">Videos</a></li>
       </ul>
 <br><br><br><br><br>
 	<div class="box">
