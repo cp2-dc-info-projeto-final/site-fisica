@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>exercicios</title>
-<link rel="stylesheet" type="text/css" href="styleExer.css">
+<link rel="stylesheet" type="text/css" href="../styleExer.css">
 Listas de Mecânica:
 
 <a href="Exercícios/2Ano/Mecânica/Vet.pdf">2ª série Int - Fis  - Lista 04 - Vetores - 

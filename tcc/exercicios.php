@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -26,9 +26,9 @@
           <li><a href="formulas.php">Formulas</a></li>
           <li><a href="#Videos">Videos</a></li>
           <li><a href="#Perguntas">Perguntas</a></li>
-        </ul>
+        </ul>s
 
-    <a href="AssuntosF/Mecânica.php">Mecânica</a>
+    <a href="AssuntosF/mecanica.php">Mecânica</a>
     <a href="AssuntosF/Termologia.php">Termologia</a>
     <a href="AssuntosF/Onda.php">Onda</a>
     <a href="AssuntosF/Eletromagnetismo.php">Eletromagnetismo</a>
