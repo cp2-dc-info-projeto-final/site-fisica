@@ -24,13 +24,14 @@ O site deve conter exemplos do cotidiano de como a física e aplicada na nossa v
 
 ### RF 06
 
-O site deve conter 5 áreas:
+O site deve conter 6 áreas.
 
-- Inicial.
-- Lista de exercicios.
-- Matéria explicada.
-- Área do administrador.
-- Área de experimentos.
+- Área Inicial.
+- Área de Exercícios.
+- Área de Fórmulas.
+- Área de Vídeos.
+- Área de Cadastro.
+- Área de Login.
 
 ### RF 07
 
@@ -44,7 +45,7 @@ A velocidade do site dependerá diretamente do servidor escolhido pelo usuário 
 
 ### RNF 02
 
-O site deve ser de fácil acesso para o cliente.
+O site deve ser de fácil acesso para o cliente e os usuários.
 
 ### RNF 03
 
