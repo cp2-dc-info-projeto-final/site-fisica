@@ -1,6 +1,6 @@
 <?php
-require_once('modelo/tabelaupload.php');
-require_once('modelo/tabelausuario.php');
+require_once('../modelo/tabelaupload.php');
+require_once('../modelo/tabelausuario.php');
 
 
 $request = array_map('trim', $_REQUEST);
