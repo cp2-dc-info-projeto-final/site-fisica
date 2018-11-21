@@ -25,6 +25,7 @@
 - ### Diagrama de classes:
    ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/diagramaDeClasse.PNG?raw=true)
 - ### Banco de dados:
+   ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/DiagramaMER.PNG?raw=true)
 
 ## Manual:
 - ### Breve manual de utilização com prints:
