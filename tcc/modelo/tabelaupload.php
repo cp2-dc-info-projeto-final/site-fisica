@@ -45,5 +45,20 @@ function /*ApagarTarefa*/ApagarUpload(int $usuarioid, int $idUpload)
 	$sql->execute();
 }
 
+  
+  function BuscaUploadPorId($id)
+  {
+  
+    $bd = CriaConexãoBd();
+
+    $sql = $bd->prepare('SELECT * FROM upload WHERE id = :valId');
+
+    $sql->bindValue(':valId', $id);
+
+    $sql->execute();
+
+    return $sql->fetch();
+  }
+
 
 ?>
