@@ -19,18 +19,17 @@ session_start();
     header('Location:login.php');
   }
 ?>
-     <!DOCTYPE html>
+     
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="stylePaginInc.css">
-  <title>higino0910</title>
-
+  <title>Formulas</title>
+  <link rel="stylesheet" type="text/css" href="styleFor_1.css">		
 </head>
-
-  <body>
-    <div id="D1">	
+<body>
+	<div id="D1">	
         
       <div class="prof">
       <br>
@@ -42,52 +41,14 @@ session_start();
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
       </div>				
     </div>
-	        
-        <ul>
-          <li><a href="paginInc.php">Home</a></li>
+      <ul>
+        
+        <li><a href="paginInc.php">Home</a></li>
           <li><a href="formulas.php">Formulas</a></li>
           <li><a href="Exercicios.php">Exercicios</a></li>
           <li><a href="videos.php">Videos</a></li>
-         
-        </ul>
-	  
-          <div class="Slides">
-
-      <slider>
-          <slide><p></p></slide>
-          <slide><p></p></slide>
-          <slide><p></p></slide>
-          <slide><p></p></slide>
-      </slider>
-    </div>
-
-    <div id="D2">
-        
-    </div>
-
-    <div id="D3">
-        
-    </div>
-
-  <div id="D4">
-     
-  </div>
-
-  <div id="D5">
-      
-  </div>
-
-  <div id="D6">
-     
-  </div>
-
-  <div id="D7">
-      
-  </div>
-
-  <div id="D8">
-      <p></p>
-  </div>
-
+      </ul>
+	
+	
 </body>
 </html>

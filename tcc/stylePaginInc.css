@@ -113,7 +113,7 @@ body{
   }
   ul li{
     opacity: .8;
-    width: 25%;
+    width: 33.33%;
 
   }
   p{
@@ -197,11 +197,7 @@ body{
 }
   
   
-.aluno {
-	width: 50%;
-	height: 100%;
-	background: #A31A1D;
-}
+
 
 .prof {
 	position: absolute;

@@ -102,7 +102,7 @@ if (array_key_exists('idUsuárioConectado' , $_SESSION) )
   if ($master['matricula'] != null) 
   {
     $matricula = $request['matricula'];
-    if ($aceitaTermos == false)
+    if ($matricula == false)
     {
       $erros[] = "Deve-se preencher o campo matricula.";
     }
@@ -123,9 +123,9 @@ else
 
 // Ver se já tem usuário logado e se ele é o professor
 // Se SIM: Faz o código abaixo.
-// Se NÃO: $request['matricula'] = null
+// Se NÃO:// $request['matricula'] = null
 
-   /* $matricula = $request['matricula'];
+/*    $matricula = $request['matricula'];
     if ($aceitaTermos == false)
     {
       $erros[] = "Deve-se preencher o campo matricula.";

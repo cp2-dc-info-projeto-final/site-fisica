@@ -18,7 +18,7 @@ function BuscaUsuarioPorMatricula(string $matricula)
   }
 
   
-  function BuscaUsuarioPorId(int $id)
+  function BuscaUsuarioPorId($id)
   {
   
     $bd = CriaConexãoBd();

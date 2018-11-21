@@ -9,17 +9,16 @@ session_start();
   {
    
     $user_name = $_SESSION['username'];
-    echo $user_name;
-
     $id = $_SESSION['idUsuárioConectado'];
     $usuario = BuscaUsuarioPorId($id);
+    echo $user_name;
   }
   else
   {
+    $usuario = null;
     header('Location:login.php');
   }
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -27,10 +26,11 @@ session_start();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formulas</title>
-  <link rel="stylesheet" type="text/css" href="styleFor.css">		
+  <link rel="stylesheet" type="text/css" href="styleFor_1.css">		
 </head>
 <body>
 	<div id="D1">	
+
       <div class="prof">
       <br>
      <br>
@@ -41,14 +41,12 @@ session_start();
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
       </div>				
     </div>
-  
       <ul>
-        <li><a href="paginInc.php">Pagina Inicial</a></li>
+        <li><a href="paginInc.php">Home</a></li>
           <li><a href="formulas.php">Formulas</a></li>
           <li><a href="Exercicios.php">Exercicios</a></li>
-          <li><a href="#Videos">Videos</a></li>
+          <li><a href="videos.php">Videos</a></li>
       </ul>
-<br><br><br><br><br>
 	<div class="box">
 		<a class="button" href="#popup1">Mecanica</a>
 	</div>
@@ -60,7 +58,8 @@ session_start();
 					<div class="content">
 					    Formula de fisica
 						Formula de fisica
-						Formula de fisicaFormula de fisica
+						Formula de fisica
+						Formula de fisica
 					</div>
 				</div>
 			</div>
@@ -75,7 +74,8 @@ session_start();
 					<div class="content">
 						Formula de fisica
 						Formula de fisica
-						Formula de fisicaFormula de fisica
+						Formula de fisica
+						Formula de fisica
 					</div>
 				</div>
 			</div>
@@ -90,7 +90,8 @@ session_start();
 					<div class="content">
 						Formula de fisica
 						Formula de fisica
-						Formula de fisicaFormula de fisica
+						Formula de fisica
+						Formula de fisica
 					</div>
 				</div>
 			</div>
@@ -105,7 +106,8 @@ session_start();
 					<div class="content">
 						Formula de fisica
 						Formula de fisica
-						Formula de fisicaFormula de fisica
+						Formula de fisica
+						Formula de fisica
 					</div>
 				</div>
 			</div>
@@ -120,7 +122,8 @@ session_start();
 					<div class="content">
 						Formula de fisica
 						Formula de fisica
-						Formula de fisicaFormula de fisica
+						Formula de fisica
+						Formula de fisica
 					</div>
 				</div>
 			</div>

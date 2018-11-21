@@ -25,6 +25,7 @@ session_start();
  	else
  	 {
  		$usuario = null;
+    	header('Location:login.php');
  	 }
 
 ?>
@@ -37,6 +38,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="styleCad.css">
 </head>
 <body> 
+ 
 	<div class="Cadastro">
 		<form name="signup" method="post" action="controlador/cadastrando.php">
 								<h2>Cadastro</h2>
