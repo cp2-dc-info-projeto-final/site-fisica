@@ -1,6 +1,6 @@
 <?php
-require_once('../modelo/tabelaupload.php');
-require_once('../modelo/tabelausuario.php');
+require_once('modelo/tabelaupload.php');
+require_once('modelo/tabelausuario.php');
 
 
 $request = array_map('trim', $_REQUEST);
@@ -55,7 +55,7 @@ if(isset($_FILES['arquivo'])):
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
    			
-   			header('Location: ../exercicios.php');	
+   			
 		else:
 			$menssagem = "Erro, não foi possivel fazer o upload!";
 

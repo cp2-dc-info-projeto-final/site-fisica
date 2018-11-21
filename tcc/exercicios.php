@@ -75,7 +75,7 @@ require_once('controlador/upload.php');
                         <a href="exercicios/IDS.docx">Integrado 1ª série - Fís - Lista 02 - Dilatação dos sólidos</a>
                         <a href="exercicios/ICSTC.docx">Integrado 1ª série - Fís - Lista 03 - Calor sensível e trocas de calor</a>
                         <a href="exercicios/IcalorLatente.doc">Integrado 1ª série - Fís - Lista 04 - Calor latente</a>
-                        <a href="<?= $upload['arquivo'] ?>"> baixar</a>
+                        <a href="htdocs/<?= $upload['arquivo'] ?>"> baixar</a>
                 
 					</div>
           

@@ -25,7 +25,6 @@ session_start();
  	else
  	 {
  		$usuario = null;
-    	header('Location:login.php');
  	 }
 
 ?>
