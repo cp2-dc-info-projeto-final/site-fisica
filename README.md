@@ -2,10 +2,10 @@
 ## Projeto Final do Curso Técnico em Informática do Colégio Pedro II – Campus Duque de Caxias – 2018
 ## Integrantes:
 - Wyctor Hugo de Souza Sabino
-- Leandro machado Cardoso da cunha
+- Leandro Machado Cardoso da Cunha
 - João Victor Souza Ximenes do Prado
 - Nathalia Drummond Rodriguês Mendonça
-- Gustavo
+- Gustavo Crispin
 
 ## Proposta: 
 - ### Descrição da proposta: 

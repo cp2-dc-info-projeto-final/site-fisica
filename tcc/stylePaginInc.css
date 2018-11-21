@@ -9,7 +9,7 @@ body{
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color:grey;
+	background-color:dimgrey;
 	background-size:cover;
 	}
 
@@ -35,27 +35,27 @@ body{
   slide:nth-child(1){
     left: 0%;
     animation-delay: -1s;
-    background-image: url(images/f1.jpg);
+    background-image: url(images/f1.png);
     background-size: cover;
     background-position: center;
   }
   slide:nth-child(2){
     animation-delay: 2s;
-    background-image: url(images/f2.jpg);
+    background-image: url(images/f2.png);
     background-size: cover;
     background-position: center;
   }
   slide:nth-child(3){
 
     animation-delay: 5s;
-    background-image: url(images/f3.jpg);
+    background-image: url(images/f3.png);
     background-size: cover;
     background-position: center;
   }
   slide:nth-child(4){
     left: 0%;
     animation-delay: 8s;
-    background-image: url(images/f4.jpg);
+    background-image: url(images/f4.png);
     background-size: cover;
     background-position: center;
   }
@@ -81,10 +81,17 @@ body{
   #D1{
 		width:100%;
 		height:15%;
-    	background-color: blue;
 		position:relative;  
+        background-color: darkgrey;
 	}
-	
+.logo img {
+    max-width:100%;
+    max-height:100%;
+    width: auto;
+    height: auto;
+    left: 40%;
+    position: absolute;
+}
   ul{
     list-style: none;
     margin: 0;
@@ -142,48 +149,53 @@ body{
     height: 50%;
     margin-left: 55%;
     top: 32.3%;
+    color: black;
+    font-size: 20px;  
+    background-color: white;   
   }
 
   #D4{
     position: absolute;
     width: 40%;
     height: 30%;
-    background-color: blue;
     margin-left: 3%;
     top: 95%;
+    color: black;
+    font-size: 20px;  
+    background-color: white;  
   }
 
   #D5{
     position: absolute;
     width: 40%;
     height: 30%;
-    background-color: black;
     margin-left: 55%;
     top: 95%;
+    color: black;
+    font-size: 20px;  
+    background-color: white;  
   }
+ 
+ 
   #D6{
     position: absolute;
     width: 40%;
     height: 30%;
-    background-color: pink;
-    margin-left: 3%;
-    top: 135%;
-
-  }
-  #D7{
-    position: absolute;
-    width: 40%;
-    height: 30%;
-    background-color: red;
     margin-left: 55%;
     top: 135%;
+    left: -25%;  
+    color: black;
+    font-size: 20px;  
+    background-color: white;  
   }
   #D8{
     position: absolute;
-    width: 40%;
-    height: 30%;
-    margin-left: 55%;
-    top: 150%;
+    width: 100%;
+    height: 5%;
+    top: 175%;
+    background-color: black;
+    color: white;  
+    text-align: center;
   }
 
 .login {
