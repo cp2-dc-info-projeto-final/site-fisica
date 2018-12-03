@@ -85,6 +85,7 @@ border-radius: 30px;
 		height:15%;
 		position:relative;  
         background-color: #0E1635;
+        text-align: center;
 	}
 .logo img {
     max-width:100%;
@@ -142,6 +143,7 @@ border-radius: 30px;
     background-color: black;
     margin-left: 55%;
 	top: 32.3%;
+  text-align: center;
 	}
 
   

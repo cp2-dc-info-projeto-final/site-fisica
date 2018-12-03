@@ -77,7 +77,7 @@ session_start();
     </div>
 
     <div id="D3">
-        <h1>ATENÇAO</h1>
+        <h1>ATENÇÃO</h1>
       Este é um site com o intuito de ajudar os alunos do Colégio Pedro II na matéria de física.<br>
       (OBS.: Ainda estamos em fase de desenvolvimento.)    
     </div>
@@ -89,7 +89,7 @@ session_start();
   </div>
 
   <div id="D5">
-      <h1><a href="videos.php">Videos</a></h1><br>
+      <h1><a href="videos.php">Vídeos</a></h1><br>
       Poderá assistir videos de experimentos.
   </div>
 
