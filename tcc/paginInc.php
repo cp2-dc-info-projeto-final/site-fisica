@@ -1,6 +1,16 @@
 
 <!DOCTYPE html>
 <html>
+<style>
+
+.d4 {
+background-color: black;
+
+
+
+}
+
+</style>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,7 +77,7 @@ session_start();
     </div>
 
     <div id="D3">
-        <h1>ATENÇAO</h1><br>
+        <h1>ATENÇAO</h1>
       Este é um site com o intuito de ajudar os alunos do Colégio Pedro II na matéria de física.<br>
       (OBS.: Ainda estamos em fase de desenvolvimento.)    
     </div>
