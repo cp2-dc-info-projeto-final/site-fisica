@@ -1,6 +1,6 @@
 <?php
-require_once('modelo/tabelaupload.php');
-require_once('modelo/tabelausuario.php');
+require_once('../modelo/tabelaupload.php');
+require_once('../modelo/tabelausuario.php');
 
 
 $request = array_map('trim', $_REQUEST);
@@ -10,7 +10,7 @@ $request = filter_var_array(
              	
                	'arquivo' => FILTER_DEFAULT,
                	'nome' =>FILTER_DEFAULT,
-               	'usuariosid'=>FILTER_VALIDATE_INT
+               	'usuariosid' =>FILTER_VALIDATE_INT
                  
 
                  ]

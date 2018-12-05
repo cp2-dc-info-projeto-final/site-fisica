@@ -2,17 +2,18 @@
  
 require_once('modelo/tabelausuario.php');
 require_once('modelo/tabelaupload.php');
-require_once('controlador/upload.php');
 
+
+session_start();
 
 
   if (array_key_exists('username', $_SESSION) &&
       array_key_exists('idUsuárioConectado', $_SESSION))
   {
-    $upload = BuscauploadPorId($id);
-    $user_name = $_SESSION['username'];
     $id = $_SESSION['idUsuárioConectado'];
     $master = BuscaUsuarioPorId($id);
+	$upload = BuscauploadPorId($id);
+    $user_name = $_SESSION['username'];
     echo $user_name;
   }
   else
@@ -75,7 +76,8 @@ require_once('controlador/upload.php');
                         <a href="exercicios/IDS.docx">Integrado 1ª série - Fís - Lista 02 - Dilatação dos sólidos</a>
                         <a href="exercicios/ICSTC.docx">Integrado 1ª série - Fís - Lista 03 - Calor sensível e trocas de calor</a>
                         <a href="exercicios/IcalorLatente.doc">Integrado 1ª série - Fís - Lista 04 - Calor latente</a>
-                        <a href="htdocs/<?= $upload['arquivo'] ?>"> baixar</a>
+                        
+						<a href="htdocs/<?= $upload['arquivo'] ?>"> <?= $upload['nome']?></a>
                 
 					</div>
           

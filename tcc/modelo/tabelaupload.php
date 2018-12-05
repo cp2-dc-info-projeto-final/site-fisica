@@ -16,7 +16,7 @@ function /*BuscaArquivoEntregue*/BuscaUpload(int $usuariosid, int $idUpload) : s
 }
 
 
-function /*EntregaTarefa*/upload_feito($upload )
+function /*EntregaTarefa*/upload_feito($upload)
 {
 	$bd = CriaConexãoBd();
 
