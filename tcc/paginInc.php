@@ -42,7 +42,7 @@ session_start();
     header('Location:loginAluno.php');
   }
 ?>
-        <div class="logo"><img src="images/pedroii.png" class="escola" ></div>
+        <div class="logo"><img src="images/hig.jpg" class="escola" ></div>
     
       <div class="prof">
       <br>

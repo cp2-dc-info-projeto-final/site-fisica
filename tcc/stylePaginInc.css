@@ -9,8 +9,10 @@ body{
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color:#0E1635;
-	background-size:cover;
+
+  background-image: url(x5.jpg);
+
+
 	}
 
   slider{
@@ -86,13 +88,17 @@ border-radius: 30px;
 		position:relative;  
         background-color: #0E1635;
         text-align: center;
+        background-image: url("p2.JPG");
+        background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 	}
 .logo img {
     max-width:100%;
     max-height:100%;
     width: auto;
     height: auto;
-    left: 40%;
+    left: 44%;
     position: absolute;
 }
   ul{
