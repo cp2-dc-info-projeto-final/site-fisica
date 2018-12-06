@@ -1,4 +1,17 @@
-<?php
+<!DOCTYPE html>
+
+     
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercicios</title>
+  <link rel="stylesheet" type="text/css" href="styleFor_1.css">		
+</head>
+<body>
+	<div id="D1">	
+    <?php
  
 require_once('modelo/tabelausuario.php');
 require_once('modelo/tabelaupload.php');
@@ -12,7 +25,7 @@ session_start();
   {
     $id = $_SESSION['idUsuárioConectado'];
     $master = BuscaUsuarioPorId($id);
-	$upload = BuscauploadPorId($id);
+  $upload = BuscauploadPorId($id);
     $user_name = $_SESSION['username'];
     echo $user_name;
   }
@@ -23,17 +36,6 @@ session_start();
   }
   
 ?>
-     
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exercicios</title>
-  <link rel="stylesheet" type="text/css" href="styleFor_1.css">		
-</head>
-<body>
-	<div id="D1">	
        
       <div class="prof">
       <br>
@@ -48,7 +50,6 @@ session_start();
       <ul>
           <li><a href="paginInc.php">Home</a></li>
           <li><a href="formulas.php">Formulas</a></li>
-          <li><a href="Exercicios.php">Exercicios</a></li>
           <li><a href="videos.php">Videos</a></li>
       </ul>
 	<div class="box">
