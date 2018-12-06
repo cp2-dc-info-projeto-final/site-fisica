@@ -9,7 +9,7 @@ body{
 	width:100%;
 	margin: 0px;
 	padding: 0;
-	background-color:grey;
+	background-color:#c6e2ff;
 	background-size:cover;
 	
 	height: 100vh;
@@ -17,9 +17,16 @@ body{
 	}
 #D1{
 		width:100%;
-		height:15%;
-    background-color: blue;
-		position:relative;
+    height:15%;
+    position:relative;  
+        background-color: #0E1635;
+        text-align: left;
+        text-transform: capitalize;
+        font-size: 100%;
+        background-image: url("p2.JPG");
+        background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 		}
 .prof {
 	position: absolute;
@@ -28,6 +35,8 @@ body{
 	background: #A4A4A4;
 	left: 85%;
 	top:0;	
+  border-radius: 10px;
+  border: 2px solid #c0c0c0;
 }
  ul{
     list-style: none;
@@ -39,7 +48,7 @@ body{
  a:link,a:visited{
     display: block;
     front-weight: bold;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: black;
     text-align: center;
     padding: 0.5%;
@@ -49,7 +58,7 @@ body{
   }
 
  a:hover,a:active{
-    background-color:none;
+    background-color:#98bf21;
   }
  ul li{
     opacity: .8;
@@ -57,9 +66,13 @@ body{
     line-height: 100%;
     text-align: center;
     float: left;
+
   }
 .box {
   width: 30%;
+  position: relative;
+  top: 50%;
+  right: -2%;
   
 }
 
@@ -92,7 +105,7 @@ body{
 }
 
 .popup {
-  margin: 13% auto;
+  margin: 19% auto;
   padding: 3%;
   background: #fff;
   border-radius: 0%;
@@ -106,6 +119,7 @@ body{
   color: #333;
   font-family:"Times New Roman";
   text-align: center;
+  text-decoration: underline;
 }
 .popup .close {
   position: absolute;
