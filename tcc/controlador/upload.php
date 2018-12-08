@@ -54,7 +54,7 @@ if(isset($_FILES['arquivo'])):
 			$request['usuariosid'] = $master['id'];
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
-   			
+   			header('Location:../exercicios.php');
    			
 		else:
 			$menssagem = "Erro, não foi possivel fazer o upload!";

@@ -24,9 +24,9 @@ session_start();
       array_key_exists('idUsuárioConectado', $_SESSION))
   {
     $id = $_SESSION['idUsuárioConectado'];
+    $listaupload = ListadeUpload($usuario['id']);
     $master = BuscaUsuarioPorId($id);
-  $upload = BuscauploadPorId($id);
-    $user_name = $_SESSION['username'];
+ 	$user_name = $_SESSION['username'];
     echo $user_name;
   }
   else
@@ -77,8 +77,9 @@ session_start();
                         <a href="exercicios/IDS.docx">Integrado 1ª série - Fís - Lista 02 - Dilatação dos sólidos</a>
                         <a href="exercicios/ICSTC.docx">Integrado 1ª série - Fís - Lista 03 - Calor sensível e trocas de calor</a>
                         <a href="exercicios/IcalorLatente.doc">Integrado 1ª série - Fís - Lista 04 - Calor latente</a>
-                        
+                        <?php foreach ($listaupload as $Upload) { ?>
 						<a href="htdocs/<?= $upload['arquivo'] ?>"> <?= $upload['nome']?></a>
+					<?php } ?>
                 
 					</div>
           
