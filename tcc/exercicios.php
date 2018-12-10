@@ -24,7 +24,8 @@ session_start();
       array_key_exists('idUsuárioConectado', $_SESSION))
   {
     $id = $_SESSION['idUsuárioConectado'];
-    $listaupload = ListadeUpload($usuario['id']);
+    $listaupload = ListadeUpload($id);
+    
     $master = BuscaUsuarioPorId($id);
  	$user_name = $_SESSION['username'];
     echo $user_name;
@@ -60,11 +61,15 @@ session_start();
 				<div class="popup">
 					<h2>1ºano</h2>
 					<a class="close" href="#">&times;</a>
-					<form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
-            <input name="idUpload" value="<?= $upload['id']?>" type="hidden">
-            <input type="file" name = "arquivo"><br>
-            <input type="submit" name="enviar-lista">
-           </form>
+					
+        				<?php if($master['matricula'] != null){ ?>
+           					<form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
+            					<input name="idUpload" value="<?= $upload['id']?>" type="hidden">
+            					<input type="file" name = "arquivo"><br>
+            					<input type="submit" name="enviar-lista">
+            				</form>
+        				<?php } ?>
+           
           <div class="content">
 					    <a href="exercicios/temperatura.docx">1ºano - Fis 1 - Lista 1 - Temperatura</a>
 						<a href="exercicios/dilatacao.docx">1ºano - Fis 1 - Lista 02 - Dilatação</a>
@@ -77,9 +82,12 @@ session_start();
                         <a href="exercicios/IDS.docx">Integrado 1ª série - Fís - Lista 02 - Dilatação dos sólidos</a>
                         <a href="exercicios/ICSTC.docx">Integrado 1ª série - Fís - Lista 03 - Calor sensível e trocas de calor</a>
                         <a href="exercicios/IcalorLatente.doc">Integrado 1ª série - Fís - Lista 04 - Calor latente</a>
-                        <?php foreach ($listaupload as $Upload) { ?>
-						<a href="htdocs/<?= $upload['arquivo'] ?>"> <?= $upload['nome']?></a>
-					<?php } ?>
+                    	
+                    	<?php foreach ($listaupload as $Upload) { ?>
+                    		 <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>
+						
+						<?php } ?>
+
                 
 					</div>
           
@@ -93,6 +101,13 @@ session_start();
 				<div class="popup">
 					<h2>2ºano</h2>
 					<a class="close" href="#">&times;</a>
+					<?php if($master['matricula'] != null){ ?>
+           				<form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
+            				<input name="idUpload" value="<?= $upload['id']?>" type="hidden">
+            				<input type="file" name = "arquivo"><br>
+            				<input type="submit" name="enviar-lista">
+            			</form>
+        			<?php } ?>
 					<div class="content">
 						<a href="exercicios/QUESTAO_REVISAO_II_PFV_2_INT.pdf">QUESTAO_REVISAO_II_PFV_2_INT</a>
                         <a href="">Gabarito Lista 9 2 integrado</a>
@@ -105,6 +120,10 @@ session_start();
                         <a href="exercicios/2%C2%AA%20s%C3%A9rie%20Int%20-%20Fis%20%20-%20Lista%2005%20-%20Din%C3%A2mica%20e%20Leis%20de%20Newton.pdf">2ª série Int - Fis  - Lista 05 - Dinâmica e Leis de Newton</a>
                         <a href="exercicios/2%C2%AA%20s%C3%A9rie%20Int%20-%20Fis%20%20-%20Lista%2004%20-%20Vetores.docx">2ª série Int - Fis  - Lista 04 - Vetores</a>
                         <a href="exercicios/2%C2%AA%20s%C3%A9rie%20Int%20-%20Fis%20%20-%20Lista%2004%20-%20Vetores%20-pdf.pdf">2ª série Int - Fis  - Lista 04 - Vetores -pdf</a>
+                        <?php foreach ($listaupload as $Upload) { ?>
+                    		 <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>
+						
+						<?php } ?>
 					</div>
 				</div>
 			</div>
@@ -116,6 +135,13 @@ session_start();
 				<div class="popup">
 					<h2>3ºano</h2>
 					<a class="close" href="#">&times;</a>
+					<?php if($master['matricula'] != null){ ?>
+           				<form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
+            				<input name="idUpload" value="<?= $upload['id']?>" type="hidden">
+            				<input type="file" name = "arquivo"><br>
+            				<input type="submit" name="enviar-lista">
+            			</form>
+        			<?php } ?>
 					<div class="content">
 						<a href="exercicios/3° ANO Lista_de_Aprofundamento_Enem_Uerj_Eletromagnetismo.pdf">3° ANO Lista_de_Aprofundamento_Enem_Uerj_Eletromagnetismo</a>
 						<a href="exercicios/3ª série - Fis 1 - Lista 01 - Eletrização.docx">3ª série - Fis 1 - Lista 01 - Eletrização</a>
@@ -134,6 +160,10 @@ session_start();
                         <a href="exercicios/3º ANO - Fis 2 - Lista 7 -Indução eletromagnética- 2018.pdf">3º ANO - Fis 2 - Lista 7 -Indução eletromagnética- 2018</a>
                         <a href="exercicios/3º ANO - Fis 2 - Lista de revisão para o ENEM.pdf">3º ANO - Fis 2 - Lista de revisão para o ENEM</a>
                         <a href="exercicios/QUESTAO_Todas_as_questoes_de_ondas_do_ENEM.pdf">QUESTAO_Todas_as_questoes_de_ondas_do_ENEM</a>
+                        <?php foreach ($listaupload as $Upload) { ?>
+                    		 <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>
+						
+						<?php } ?>
                         
 					</div>
 				</div>
