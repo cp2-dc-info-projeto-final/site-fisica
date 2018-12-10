@@ -6,7 +6,7 @@ session_start();
 	{
 		$erros = $_SESSION['errosCadastrado'];
 		unset($_SESSION['errosCadastrado']);
-	
+
 	}
 	else
 	{
@@ -14,7 +14,7 @@ session_start();
 	}
 	require_once('modelo/tabelausuario.php');
 
- 	
+
  	if (array_key_exists('idUsuárioConectado',$_SESSION))
  	 {
  	 	$user_name = $_SESSION['username'];
@@ -37,8 +37,8 @@ session_start();
 <title>Cadastro</title>
 <link rel="stylesheet" type="text/css" href="styleCad.css">
 </head>
-<body> 
- 
+<body>
+
 	<div class="Cadastro">
 		<form name="signup" method="post" action="controlador/cadastrando.php">
 								<h2>Cadastro</h2>
@@ -54,35 +54,35 @@ session_start();
 
 			<label><b class="textcol">Nome</b></label>
 			<input type="text"minlength="3" maxlength="255" placeholder="Digite seu nome" name="nome" required="">
-								
+
 			<label><b class="textcol">Usuário</b></label>
 			<input type="text" minlength="6" maxlength="16" placeholder="Digite seu usuário" name="usuario" required="">
-			
+
 			<label><b class="textcol">Email</b></label>
 			<input type="email " placeholder="Digite seu email" name="email" required="">
-			
+
 			<label><b class="textcol">Senha</b></label>
 			<input type="password" minlength="7" maxlength="16" placeholder="Digite sua senha" name="senha" required="">
-			
+
 			<label><b class="textcol">Confirma senha</b></label>
 			<input type="password" minlength="7	" maxlength="16" placeholder="Digite novamente sua senha" name="confirmasenha" required="">
 			<br>
 			<?php if($usuario !=null  ||  $usuario['matricula'] != null){ ?>
 			<label><b class="textcol">Matrícula</b></label>
 			<input type="text" minlength="7" maxlength="9" placeholder="Digite sua matricula" name="matricula" required="">
-			<?php } ?> 
+			<?php } ?>
 			<input type="checkbox" name= "termo" value= "botao" checked class="checkbox" required><p class="Aceita">Você aceita os termos de uso ?</p>
 			<br>
-			
+
 			<button type="submit" class="btn2">Cadastrar</button>
       		<a href="login.php"> <button type="button" class="btn3" onclick="closeForm()">Fechar</button></a>
 
-    
-      		
+
+
 		</form>
-	
-	
+
+
 	</div>
-			
+
 </body>
 </html>

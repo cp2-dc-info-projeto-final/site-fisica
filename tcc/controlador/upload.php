@@ -7,17 +7,13 @@ $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
                $request,
                [ 
-             	
-               	'arquivo' => FILTER_DEFAULT,
-               	'nome' =>FILTER_DEFAULT,
-               	'usuariosid' =>FILTER_VALIDATE_INT
-                 
-
+                'ano' => FILTER_VALIDATE_INT
                  ]
            );
 
 
 
+$erro = [];
 
 session_start();
 
@@ -36,25 +32,33 @@ else
 	Redireciona('../login.php');
 }
 
+$ano = $request['ano'];
+if ($ano == false)
+{
+	$erros[] = "Deve ter ano;";
+}
+else if($ano <0 || $ano > 4)
+{
+	$erros = "Ano invalido";
+}
 
 
-$erro = null;
 
 
 if(isset($_FILES['arquivo'])):
-	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt"  );
+	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
 	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
 	if (in_array($extensao, $formatosPermitidos)):
 		$temporario	= $_FILES['arquivo']['tmp_name'];
 		$novoNome = $_FILES['arquivo']['name'];
-		$pasta = "../arquivos/$novoNome";
-		if(move_uploaded_file($temporario,$pasta.$novoNome)):
+		$pasta = "arquivos/$novoNome";
+		if(move_uploaded_file($temporario,"../$pasta")):
 			$request['arquivo'] = $pasta;
 			$request['nome'] = $novoNome;
 			$request['usuariosid'] = $master['id'];
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
-   			
+   			header('Location:../exercicios.php');
    			
 		else:
 			$menssagem = "Erro, não foi possivel fazer o upload!";

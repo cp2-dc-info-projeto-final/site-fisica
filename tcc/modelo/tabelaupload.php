@@ -20,14 +20,14 @@ function /*EntregaTarefa*/upload_feito($upload)
 {
 	$bd = CriaConexãoBd();
 
-	$sql = $bd->prepare('INSERT INTO upload ( nome, arquivo, usuariosid)
-	                     VALUES (:valnome,  :valArquivo,:valusuariosid)');
+	$sql = $bd->prepare('INSERT INTO upload ( nome, arquivo, usuariosid ,ano)
+	                     VALUES (:valnome,  :valArquivo,:valusuariosid ,:valano)');
 	
 	
 	$sql->bindValue(':valnome', $upload['nome']);
 	$sql->bindValue(':valArquivo', $upload['arquivo']);
 	$sql->bindValue(':valusuariosid', $upload['usuariosid']);
-	
+	$sql->bindValue(':valano',$upload['ano']);
 	$sql->execute();
 }
 
@@ -46,18 +46,22 @@ function /*ApagarTarefa*/ApagarUpload(int $usuarioid, int $idUpload)
 }
 
   
-  function BuscaUploadPorId($id)
+  function ListadeUpload($ano) : array
   {
   
     $bd = CriaConexãoBd();
 
-    $sql = $bd->prepare('SELECT * FROM upload WHERE id = :valId');
+    $sql = $bd->prepare('SELECT upload.* FROM upload 
+    					 INNER JOIN usuarios on usuarios.id = upload.usuariosid 
+    					 WHERE ano = :valId');
 
-    $sql->bindValue(':valId', $id);
+    
+
+    $sql->bindValue(':valId', $ano);
 
     $sql->execute();
 
-    return $sql->fetch();
+    return $sql->fetchAll();
   }
 
 
