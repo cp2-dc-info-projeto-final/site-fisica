@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formulas</title>
-  <link rel="stylesheet" type="text/css" href="styleFor_1.css">		
+  <link rel="stylesheet" type="text/css" href="styleFor_1.css">
 </head>
 <body>
-	<div id="D1">	
+	<div id="D1">
         <?php
- 
+
 require_once('modelo/tabelausuario.php');
 
 session_start();
@@ -17,7 +17,7 @@ session_start();
   if (array_key_exists('username', $_SESSION) &&
       array_key_exists('idUsuárioConectado', $_SESSION))
   {
-   
+
     $user_name = $_SESSION['username'];
     echo $user_name;
 
@@ -34,10 +34,10 @@ session_start();
      <br>
           <?php if($usuario['matricula'] != null){ ?>
              <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
-                   <?php } ?> 
+                   <?php } ?>
       <br>
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
-      </div>				
+      </div>
     </div>
       <ul>
         <li><a href="paginInc.php">Home</a></li>
@@ -51,11 +51,11 @@ session_start();
 			<div id="popup1" class="overlay">
 				<div class="popup">
 					<h2>Mecanica</h2>
-					<a class="close" href="#">&times;</a>
+					<a class="close" href="formulas.php">&times;</a>
 					<div class="content">
 					   <a href="images/mecanica/2%20lei%20de%20newton.pdf.pdf">Lei de Newton</a>
-                       <a href="images/mecanica/Histro.pdf">Pressao e Empuxo</a>    
-                       <a href="images/mecanica/img_5878.pdf">Força elastica, centripeta, trabalho e potencia</a>   
+                       <a href="images/mecanica/Histro.pdf">Pressao e Empuxo</a>
+                       <a href="images/mecanica/img_5878.pdf">Força elastica, centripeta, trabalho e potencia</a>
                        <a href="images/mecanica/equaes-e-formulas-da-fsica-1-638.pdf">Cinematica</a>
                        <a href="images/mecanica/frnulas-de-dinmica-1-638.pdf">Dinamica</a>
                        <a href="images/mecanica/Gravi.pdf">Força gravitacional</a>
@@ -119,7 +119,7 @@ session_start();
 					</div>
 				</div>
 			</div>
-	
-	
+
+
 </body>
 </html>

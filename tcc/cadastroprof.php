@@ -74,8 +74,12 @@ session_start();
 			<input type="checkbox" name= "termo" value= "botao" checked class="checkbox" required><p class="Aceita">Você aceita os termos de uso ?</p>
 
 			<button type="submit" class="btn2">Cadastrar</button><br>
+			<?php if($usuario !=null  ||  $usuario['matricula'] != null){ ?>
 			<a href="paginInc.php" > <button type="button" class="btn3" onclick="closeForm()">Fechar</button></a>
-
+			<?php } ?>
+			<?php if($usuario ==null  ||  $usuario['matricula'] == null){ ?>
+			<a href="login.php" > <button type="button" class="btn3" onclick="closeForm()">Fechar</button></a>
+			<?php } ?>
 
 
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
 
 	if (array_key_exists('erroLogin', $_SESSION))
@@ -6,7 +6,7 @@
 		$erros = $_SESSION['erroLogin'];
 		unset($_SESSION['erroLogin']);
 
-		
+
 	}
 	else
 	{
@@ -34,7 +34,7 @@
 
       		<button type="submit" class="btn3">Entrar</button>
 					<a href="EsqueceuSenha.html" class="a1">Esqueceu sua senha ?</a><br>
-					<a href="Cadastro.php" class="a2">Não possui cadastro ?</a><br>
+					<a href="cadastroprof.php" class="a2">Não possui cadastro ?</a><br>
 		</form>
 
 
