@@ -20,7 +20,7 @@ background-color: black;
 </head>
 
   <body>
-    <div id="D1"> 
+    <div id="D1">	
         <?php
  
 require_once('modelo/tabelausuario.php');
@@ -48,20 +48,20 @@ session_start();
       <br>
      <br>
           <?php if($usuario['matricula'] != null){ ?>
-             <a class = "linkpi" href="cadastroprof.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
+             <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
                    <?php } ?> 
       <br>
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
-      </div>        
+      </div>				
     </div>
-          
+	        
         <ul>
           <li><a href="formulas.php">Formulas</a></li>
           <li><a href="Exercicios.php">Exercicios</a></li>
           <li><a href="videos.php">Videos</a></li>
          
         </ul>
-    
+	  
           <div class="Slides">
 
       <slider>
