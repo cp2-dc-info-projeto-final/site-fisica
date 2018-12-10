@@ -13,6 +13,7 @@ $request = filter_var_array(
 
 
 
+$erro = [];
 
 session_start();
 
@@ -31,9 +32,17 @@ else
 	Redireciona('../login.php');
 }
 
-if 
+$ano = $request['ano'];
+if ($ano == false)
+{
+	$erros[] = "Deve ter ano;";
+}
+else if($ano <0 || $ano > 4)
+{
+	$erros = "Ano invalido";
+}
 
-$erro = null;
+
 
 
 if(isset($_FILES['arquivo'])):

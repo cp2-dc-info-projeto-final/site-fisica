@@ -46,18 +46,18 @@ function /*ApagarTarefa*/ApagarUpload(int $usuarioid, int $idUpload)
 }
 
   
-  function ListadeUpload($id) : array
+  function ListadeUpload($ano) : array
   {
   
     $bd = CriaConexãoBd();
 
     $sql = $bd->prepare('SELECT upload.* FROM upload 
     					 INNER JOIN usuarios on usuarios.id = upload.usuariosid 
-    					 WHERE usuariosid = :valId');
+    					 WHERE ano = :valId');
 
     
 
-    $sql->bindValue(':valId', $id);
+    $sql->bindValue(':valId', $ano);
 
     $sql->execute();
 
