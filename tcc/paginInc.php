@@ -43,7 +43,7 @@ session_start();
     header('Location:loginAluno.php');
   }
 ?>
-        <div class="logo"><img src="images/hig.jpg" class="escola" ></div>
+        <div class="logo"><img src="fisi.jpg" class="escola" ></div>
 
       <div class="prof">
         <br>
@@ -53,7 +53,7 @@ session_start();
           <?php if($usuario['matricula'] != null){ ?>
              <a class = "linkpi" href="cadastroprof.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
 
-                   <?php } ?> 
+                   <?php } ?>
 
       <br>
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>

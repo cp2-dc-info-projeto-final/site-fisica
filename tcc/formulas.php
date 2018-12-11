@@ -29,6 +29,8 @@ session_start();
     header('Location:loginAluno.php');
   }
 ?>
+<div class="logo"><img src="images/hig.jpg" class="escola" ></div>
+    
       <div class="prof">
       <br>
      <br>
@@ -102,6 +104,7 @@ session_start();
 					<div class="content">
 						<a href="images/eletromagnetismo/frmulas-de-eletrodinmica-1-638.pdf">Corrente, Resistência, Associaçao e Potência eletrica dissipada em um resistor.</a>
                         <a href="images/eletromagnetismo/frmulas-de-eletromagnetismo-1-638.pdf">Campo e Força magnetica</a>
+                        
                         <a href="images/eletromagnetismo/frmulas-de-eletrosttica-1-638.pdf">Eletrostatica</a>
 					</div>
 				</div>

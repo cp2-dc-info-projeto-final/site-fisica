@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formulas</title>
-  <link rel="stylesheet" type="text/css" href="styleFor_1.css">		
+  <link rel="stylesheet" type="text/css" href="styleFor_1.css">
 </head>
 <body>
-	<div id="D1">	
+	<div id="D1">
         <?php
- 
+
 require_once('modelo/tabelausuario.php');
 
 session_start();
@@ -17,7 +17,7 @@ session_start();
   if (array_key_exists('username', $_SESSION) &&
       array_key_exists('idUsuárioConectado', $_SESSION))
   {
-   
+
     $user_name = $_SESSION['username'];
     echo $user_name;
 
@@ -29,15 +29,17 @@ session_start();
     header('Location:loginAluno.php');
   }
 ?>
+<div class="logo"><img src="images/hig.jpg" class="escola" ></div>
+    
       <div class="prof">
       <br>
      <br>
           <?php if($usuario['matricula'] != null){ ?>
              <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
-                   <?php } ?> 
+                   <?php } ?>
       <br>
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
-      </div>				
+      </div>
     </div>
       <ul>
         <li><a href="paginInc.php">Home</a></li>
@@ -54,10 +56,10 @@ session_start();
 					<a class="close" href="#">&times;</a>
 					<div class="content">
 					   <a href="https://www.youtube.com/watch?v=1Yh3V87IAjc&list=PL1Dg4Oxxk_RK6PfpWLKisymx20Xw1aALd&index=18">Equilibrio estável (Creditos: Física Universitária)</a>
-                       <a href="https://www.youtube.com/watch?v=iCEMmQBgkY0">Transformação de Energia Mecânica em Elétrica (Creditos: Física Universitária)</a>   
-                       <a href="https://www.youtube.com/watch?v=OjP8bPaadEM&list=PL1Dg4Oxxk_RK6PfpWLKisymx20Xw1aALd">Movimento retilíneo uniforme (Creditos: Física Universitária)</a>   
-                       <a href="https://www.youtube.com/watch?v=9aidNpFcwt8&list=PL1Dg4Oxxk_RK6PfpWLKisymx20Xw1aALd&index=5">Força gravitacional (Creditos: Física Universitária)</a>    
-                      
+                       <a href="https://www.youtube.com/watch?v=iCEMmQBgkY0">Transformação de Energia Mecânica em Elétrica (Creditos: Física Universitária)</a>
+                       <a href="https://www.youtube.com/watch?v=OjP8bPaadEM&list=PL1Dg4Oxxk_RK6PfpWLKisymx20Xw1aALd">Movimento retilíneo uniforme (Creditos: Física Universitária)</a>
+                       <a href="https://www.youtube.com/watch?v=9aidNpFcwt8&list=PL1Dg4Oxxk_RK6PfpWLKisymx20Xw1aALd&index=5">Força gravitacional (Creditos: Física Universitária)</a>
+
 					</div>
 				</div>
 			</div>
@@ -119,13 +121,13 @@ session_start();
 					<a class="close" href="#">&times;</a>
 					<div class="content">
 					<a href="https://www.youtube.com/watch?v=uKN3X16f-ng&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln&index=5">Lentes e espelhos (Creditos: Física Universitária)</a>
-                    <a href="https://www.youtube.com/watch?v=sDcWsx00O48&index=7&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Espalhamento da luz (Creditos: Física Universitária)</a>  
-                    <a href="https://www.youtube.com/watch?v=zUZqSkWWgkw&index=6&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Decomposiçao da luz: Prisma (Creditos: Física Universitária)</a>  
-                    <a href="https://www.youtube.com/watch?v=EJ3mWMpNY5M&index=4&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Decomposiçao da visao (Creditos: Física Universitária)</a>    
+                    <a href="https://www.youtube.com/watch?v=sDcWsx00O48&index=7&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Espalhamento da luz (Creditos: Física Universitária)</a>
+                    <a href="https://www.youtube.com/watch?v=zUZqSkWWgkw&index=6&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Decomposiçao da luz: Prisma (Creditos: Física Universitária)</a>
+                    <a href="https://www.youtube.com/watch?v=EJ3mWMpNY5M&index=4&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Decomposiçao da visao (Creditos: Física Universitária)</a>
 					</div>
 				</div>
 			</div>
-	
-	
+
+
 </body>
 </html>
