@@ -1,5 +1,19 @@
 <?php
 require_once('acesso_ao_banco.php');
+
+/*
+function /AdicionarNovoAssunto/ InsereAssunto($novoassunto)
+{
+    $bd = CriaConexãoBd();
+
+	$sql = $bd -> prepare('INSERT INTO assunto (nome) VALUES (:valnome)');
+	
+	$sql -> bindValues(':valnome', $upload['nome']);
+
+	$sql -> execute();
+}
+*/
+
 function /*BuscaArquivoEntregue*/BuscaUpload(int $usuariosid, int $idUpload) : string
 {
 	$bd = CriaConexãoBd();
