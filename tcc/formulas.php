@@ -49,58 +49,12 @@ session_start();
       </ul>
 <br>
 <br>
-		<div class="box">
-    <a href="?ass=1">mecanica</a>
-    </div>
-    <?php if ($ass == 1) { ?>
-          
-    <?php } ?>
-
-    <div class="box">
-    <a class="button" href="?ass=2">termologia</a>
-  </div>
-    <?php if ($ass == 2) { ?>
-      <div id="popup2" class="overlay">
-        <div class="popup">
-          </div>
-        </div>
-      </div>
-    <?php } ?>
-
-  <div class="box">
-    <a class="button" href="?ass=3">onda</a>
-  </div>
-    <?php if ($ass == 3) { ?>
-      <div id="popup3" class="overlay">
-        <div class="popup">
-          </div>
-        </div>
-      </div>
-    <?php } ?>
-
-    <div class="box">
-    <a class="button" href="?ass=4">eletromagnetismo</a>
-  </div>
-    <?php if ($ass == 4) { ?>
-      <div id="popup4" class="overlay">
-        <div class="popup">
-          </div>
-        </div>
-      </div>
-    <?php } ?>
-
-    <div class="box">
-    <a class="button" href="?ass=5">optica</a>
-  </div>
-    <?php if ($ass == 5) { ?>
-      <div id="popup5" class="overlay">
-        <div class="popup">
-          </div>
-        </div>
-      </div>
-    <?php } ?>
-
-
+		<?php if($master['matricula'] != null){ ?>
+			<form action="controlador/upload.php" method="POST" enctype="multipart/form-data">
+				<input type="text" name="assunto">
+				<input type="submit" value="Criar">
+			</form>
+		<?php } ?>
     
 
     <?php if($master['matricula'] != null && $ass != false){ ?>
@@ -116,7 +70,7 @@ session_start();
 
                             <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>  </div> 
                <?php } ?>
-
+0
  
 </body>
 </html>

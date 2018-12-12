@@ -49,7 +49,7 @@ if ($ass == false)
 {
 	$erros[] = "Deve ter assunto;";
 }
-else if($ass <=0 || $ass => 20)
+else if($ass <=0 || $ass => 60)
 {
 	$erros = "Assunto invalido";
 }
@@ -80,6 +80,22 @@ if(isset($_FILES['arquivo'])):
 echo $menssagem;
 
 endif; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if(isset($_FILES['arquivo'])):
 	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
