@@ -54,6 +54,7 @@ else if($ass <0 || $ano > 6)
 	$erros = "Assunto invalido";
 }
 
+<<<<<<< HEAD
 
 
 
@@ -83,6 +84,8 @@ echo $menssagem;
 
 endif; 
 
+=======
+>>>>>>> 608939fadc59e71838c68e4de25c7dc7b0b5e228
 if(isset($_FILES['arquivo'])):
 	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
 	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);

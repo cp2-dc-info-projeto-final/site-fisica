@@ -43,6 +43,9 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    top:20%;
+    position: absolute;
+    width: 100%;
 
   }
  a:link,a:visited{
@@ -68,9 +71,91 @@ body{
     float: left;
 
   }
+<<<<<<< HEAD
  li #a{
   background-color: grey;
  } 
+=======
+.box {
+  width: 30%;
+  position: relative;
+  top: 50%;
+  right: -2%;
+  
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #FFC600;
+}
+
+.overlay {
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0.0.0.0.7);
+  transition: opacity 500ms;
+ 
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 19% auto;
+  padding: 3%;
+  background: #fff;
+  border-radius: 0%;
+  width: 90%;
+  position: relative;
+  transition: all 3s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family:"Times New Roman";
+  text-align: center;
+  text-decoration: underline;
+}
+.popup .close {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  transition: all 200ms;
+  font-size: 110%;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #fff;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 30%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+>>>>>>> 608939fadc59e71838c68e4de25c7dc7b0b5e228
 
 Button{
     background-color: #555555;
