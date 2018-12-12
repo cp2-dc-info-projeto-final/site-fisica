@@ -28,7 +28,7 @@ session_start();
     $id = $_SESSION['idUsuárioConectado'];
     $master = BuscaUsuarioPorId($id);
  	  $user_name = $_SESSION['username'];
-    echo $user_name;
+    
 
   	if (array_key_exists('ano', $_REQUEST))
   	{
@@ -45,8 +45,7 @@ session_start();
 ?>
        
       <div class="prof">
-      <br>
-     <br>
+     <div class="username"><?php   echo $user_name; ?></div>
           <?php if($master['matricula'] != null){ ?>
              <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
                    <?php } ?> 
@@ -184,5 +183,5 @@ session_start();
 				</div>
 			</div>
 		<?php } ?>
-</body>
+     </body>
 </html>

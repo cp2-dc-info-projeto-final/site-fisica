@@ -44,7 +44,6 @@ else if($ano <0 || $ano > 4)
 
 
 
-
 if(isset($_FILES['arquivo'])):
 	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
 	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
