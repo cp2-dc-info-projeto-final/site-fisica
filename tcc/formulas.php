@@ -104,7 +104,7 @@ session_start();
     
 
     <?php if($master['matricula'] != null && $ass != false){ ?>
-                    <h2> <?= $ass ?>º </h2>
+                    <h2> <?= $ass?>º </h2>
                     <form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
                           <input name="ass" value="<?= $_REQUEST['ass']?>" type="hidden">
                           <input type="file" name = "arquivo"><br>
@@ -113,17 +113,10 @@ session_start();
     <?php } ?>
     <br>
                <?php foreach ($listaupload as $Upload) { ?>
-                            
-                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>  </div> 
-                    <?php } ?>
 
-<?php foreach ($listaupload as $Upload) { ?>
-    <form action="/action_page.php">
-		  First name:<br>
-		  <input type="text" name="firstname" value="digite nome da nova materia">
-		  <br>
-		  <input type="submit" value="Submit">
-    </form> 
-<?php } ?>
+                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>  </div> 
+               <?php } ?>
+
+ 
 </body>
 </html>

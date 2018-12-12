@@ -8,7 +8,7 @@ $request = filter_var_array(
                $request,
                [ 
                 'ano' => FILTER_VALIDATE_INT,
-                'ass' => FILTER_DEFAULT
+                'ass' => FILTER_VALIDATE_INT
                  ]
            );
 
@@ -38,7 +38,7 @@ if ($ano == false)
 {
 	$erros[] = "Deve ter ano;";
 }
-else if($ano <0 || $ano > 4)
+else if($ano <= 0 || $ano >= 4)
 {
 	$erros = "Ano invalido";
 }
@@ -49,14 +49,11 @@ if ($ass == false)
 {
 	$erros[] = "Deve ter assunto;";
 }
-else if($ass <0 || $ano > 6)
+else if($ass <=0 || $ass => 20)
 {
 	$erros = "Assunto invalido";
 }
 
-<<<<<<< HEAD
-
-
 
 if(isset($_FILES['arquivo'])):
 	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
@@ -84,8 +81,6 @@ echo $menssagem;
 
 endif; 
 
-=======
->>>>>>> 608939fadc59e71838c68e4de25c7dc7b0b5e228
 if(isset($_FILES['arquivo'])):
 	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
 	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
@@ -99,7 +94,7 @@ if(isset($_FILES['arquivo'])):
 			$request['usuariosid'] = $master['id'];
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
-   			header("Location:../exercicios.php?ano=$ano");
+   			header("Location:../exercicios.php?ass=$ass");
    			
 		else:
 			$menssagem = "Erro, não foi possivel fazer o upload!";
@@ -111,4 +106,5 @@ if(isset($_FILES['arquivo'])):
 echo $menssagem;
 
 endif; 
+
 ?>
