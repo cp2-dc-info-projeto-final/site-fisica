@@ -47,7 +47,8 @@ session_start();
           <li><a class="a" href="exercicios.php">exercicios</a></li>
           <li><a class="a" href="videos.php">Videos</a></li>
       </ul>
-
+<br>
+<br>
 		<div class="box">
     <a href="?ass=1">mecanica</a>
     </div>
@@ -109,20 +110,20 @@ session_start();
                           <input type="file" name = "arquivo"><br>
                           <input type="submit" name="enviar-lista">
                     </form>
-                <?php } ?>
+    <?php } ?>
     <br>
                <?php foreach ($listaupload as $Upload) { ?>
                             
                             <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>  </div> 
                     <?php } ?>
 
-
+<?php foreach ($listaupload as $Upload) { ?>
     <form action="/action_page.php">
 		  First name:<br>
 		  <input type="text" name="firstname" value="digite nome da nova materia">
 		  <br>
 		  <input type="submit" value="Submit">
     </form> 
-
+<?php } ?>
 </body>
 </html>
