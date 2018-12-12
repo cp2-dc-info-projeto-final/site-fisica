@@ -60,10 +60,6 @@ function BuscaUsuarioPorMatricula(string $matricula)
     return $sql->fetch();
   }
 
-
-
-
-
   function PesquisaEmail($email)
   {
 

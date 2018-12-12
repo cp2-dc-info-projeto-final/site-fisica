@@ -35,16 +35,17 @@ session_start();
       <br>
      <br>
           <?php if($usuario['matricula'] != null){ ?>
-             <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
+             <a class = "linkpi" href="cadastroprof.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
                    <?php } ?>
       <br>
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
       </div>
     </div>
       <ul>
-        <li><a href="paginInc.php">Home</a></li>
-        <li><a href="exercicios.php">Exercicios</a></li>
-        <li><a href="formulas.php">Formulas</a></li>
+          <li><a class="a"  href="paginInc.php">Home</a></li>
+          <li><a class="a" href="formulas.php">Formulas</a></li>
+          <li><a class="a" href="exercicios.php">exercicios</a></li>
+          <li><a class="a" href="videos.php">Videos</a></li>
       </ul>
 	<div class="box">
 		<a class="button" href="?Mecanica">Mecanica</a>
@@ -63,6 +64,7 @@ session_start();
 					</div>
 				</div>
 			</div>
+			<iframe width="1019" height="573" src="https://www.youtube.com/embed/mqjWQYX6hxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<div class="box">
 		<a class="button" href="?Termologia">Termologia</a>
 	</div>

@@ -5,6 +5,22 @@
     email varchar(300) UNIQUE not null,
     senha varchar(150) not null,
     matricula varchar(30) null
+);
 
+CREATE TABLE upload (
+  id int PRIMARY key AUTO_INCREMENT not null,
+  nome varchar(150) NOT NULL,
+  arquivo varchar(255) NOT NULL,
+  usuariosid int(11) UNIQUE NOT NULL,
+  ano int(11) NOT NULL,
+  FOREIGN KEY (usuariosid) references usuarios(id)
+);
 
+CREATE TABLE uploadFor (
+  id int PRIMARY key AUTO_INCREMENT not null,
+  nome varchar(150) NOT NULL,
+  arquivo varchar(255) NOT NULL,
+  usuariosid int(11) UNIQUE NOT NULL,
+  ass int(11) NOT NULL,
+  FOREIGN KEY (usuariosid) references usuarios(id)
 );

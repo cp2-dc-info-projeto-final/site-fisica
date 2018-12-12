@@ -35,94 +35,94 @@ session_start();
       <br>
      <br>
           <?php if($usuario['matricula'] != null){ ?>
-             <a class = "linkpi" href="Cadastro.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
+             <a class = "linkpi" href="cadastroprof.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
                    <?php } ?>
       <br>
             <a href="controlador/sair.php"> <button id="Button" > Sair </button> </a>
       </div>
     </div>
       <ul>
-        <li><a href="paginInc.php">Home</a></li>
-        <li><a href="exercicios.php">Exercicios</a></li>
-        <li><a href="videos.php">Videos</a></li>
+          <li><a class="a"  href="paginInc.php">Home</a></li>
+          <li><a class="a" id="a" href="formulas.php">Formulas</a></li>
+          <li><a class="a" href="exercicios.php">exercicios</a></li>
+          <li><a class="a" href="videos.php">Videos</a></li>
       </ul>
+
 		<div class="box">
-		<a class="button" href="#popup1">Mecanica</a>
-	</div>
+    <a href="?ass=1">mecanica</a>
+    </div>
+    <?php if ($ass == 1) { ?>
+          
+    <?php } ?>
 
-			<div id="popup1" class="overlay">
-				<div class="popup">
-					<h2>Mecanica</h2>
-					<a class="close" href="formulas.php">&times;</a>
-					<div class="content">
-					   <a href="images/mecanica/2%20lei%20de%20newton.pdf.pdf">Lei de Newton</a>
-                       <a href="images/mecanica/Histro.pdf">Pressao e Empuxo</a>
-                       <a href="images/mecanica/img_5878.pdf">Força elastica, centripeta, trabalho e potencia</a>
-                       <a href="images/mecanica/equaes-e-formulas-da-fsica-1-638.pdf">Cinematica</a>
-                       <a href="images/mecanica/frnulas-de-dinmica-1-638.pdf">Dinamica</a>
-                       <a href="images/mecanica/Gravi.pdf">Força gravitacional</a>
-					</div>
-				</div>
-			</div>
-	<div class="box">
-		<a class="button" href="#popup2">Termologia</a>
-	</div>
+    <div class="box">
+    <a class="button" href="?ass=2">termologia</a>
+  </div>
+    <?php if ($ass == 2) { ?>
+      <div id="popup2" class="overlay">
+        <div class="popup">
+          </div>
+        </div>
+      </div>
+    <?php } ?>
 
-			<div id="popup2" class="overlay">
-				<div class="popup">
-					<h2>Termologia</h2>
-					<a class="close" href="#">&times;</a>
-					<div class="content">
-						<a href="images/termologia/calorimetria%201.pdf">Calor, Trocas de calor e processo de propagaçao de calor.</a>
-                        <a href="images/termologia/dilatao-trmica-4-638.pdf">dilataçao termica</a>
-                        <a href="images/termologia/frmulas-de-dilatao-2-638.pdf">Dilataçao em liquidos</a>
-                        <a href="images/termologia/frmulas-de-termometria-1-638.pdf">Escalas e conversoes termometricas</a>
-					</div>
-				</div>
-			</div>
-	<div class="box">
-		<a class="button" href="#popup3">Onda</a>
-	</div>
+  <div class="box">
+    <a class="button" href="?ass=3">onda</a>
+  </div>
+    <?php if ($ass == 3) { ?>
+      <div id="popup3" class="overlay">
+        <div class="popup">
+          </div>
+        </div>
+      </div>
+    <?php } ?>
 
-			<div id="popup3" class="overlay">
-				<div class="popup">
-					<h2>Onda</h2>
-					<a class="close" href="#">&times;</a>
-					<div class="content">
-						<a href="images/onda/frmula-de-ondas-1-638.pdf">Classificaçao e velocidade de propagaçao</a>
-					</div>
-				</div>
-			</div>
-	<div class="box">
-		<a class="button" href="#popup4">Eletromagnetismo</a>
-	</div>
+    <div class="box">
+    <a class="button" href="?ass=4">eletromagnetismo</a>
+  </div>
+    <?php if ($ass == 4) { ?>
+      <div id="popup4" class="overlay">
+        <div class="popup">
+          </div>
+        </div>
+      </div>
+    <?php } ?>
 
-			<div id="popup4" class="overlay">
-				<div class="popup">
-					<h2>Eletromagnetismo</h2>
-					<a class="close" href="#">&times;</a>
-					<div class="content">
-						<a href="images/eletromagnetismo/frmulas-de-eletrodinmica-1-638.pdf">Corrente, Resistência, Associaçao e Potência eletrica dissipada em um resistor.</a>
-                        <a href="images/eletromagnetismo/frmulas-de-eletromagnetismo-1-638.pdf">Campo e Força magnetica</a>
-                        
-                        <a href="images/eletromagnetismo/frmulas-de-eletrosttica-1-638.pdf">Eletrostatica</a>
-					</div>
-				</div>
-			</div>
-	<div class="box">
-		<a class="button" href="#popup5">Óptica</a>
-	</div>
+    <div class="box">
+    <a class="button" href="?ass=5">optica</a>
+  </div>
+    <?php if ($ass == 5) { ?>
+      <div id="popup5" class="overlay">
+        <div class="popup">
+          </div>
+        </div>
+      </div>
+    <?php } ?>
 
-			<div id="popup5" class="overlay">
-				<div class="popup">
-					<h2>Óptica</h2>
-					<a class="close" href="#">&times;</a>
-					<div class="content">
-					<a href="images/optica/frmula-de-ptica-geomtrica-1-638.pdf">Principios, Reflexao, Espelhos e lentes esfericas</a>
-					</div>
-				</div>
-			</div>
 
+    
+
+    <?php if($master['matricula'] != null && $ass != false){ ?>
+                    <h2> <?= $ass ?>º </h2>
+                    <form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
+                          <input name="ass" value="<?= $_REQUEST['ass']?>" type="hidden">
+                          <input type="file" name = "arquivo"><br>
+                          <input type="submit" name="enviar-lista">
+                    </form>
+                <?php } ?>
+    <br>
+               <?php foreach ($listaupload as $Upload) { ?>
+                            
+                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>  </div> 
+                    <?php } ?>
+
+
+    <form action="/action_page.php">
+		  First name:<br>
+		  <input type="text" name="firstname" value="digite nome da nova materia">
+		  <br>
+		  <input type="submit" value="Submit">
+    </form> 
 
 </body>
 </html>

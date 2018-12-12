@@ -10,24 +10,24 @@ body{
   margin: 0px;
   padding: 0;
   background-color:AliceBlue;
+
   background-image:url(x1.jpg);
   height: 100vh;
   display: table;
   }
 #D1{
     width:100%;
-    height:15%;
+    height:20%;
     position:relative;  
-        background-color: #0E1635;
-        text-align: left;
-        text-transform: capitalize;
-        font-size: 100%;
-        background-image: url("logo.jpg");
-        background-size: cover;
+    background-color: #0E1635;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 100%;
+    background-image: url("logo.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    }
-
+    }   
 .prof {
   position: absolute;
   width: 14.5%;
@@ -68,10 +68,9 @@ body{
     float: left;
 
   }
- li #a{
+li #a{
   background-color: grey;
- } 
-
+}
 Button{
     background-color: #555555;
     border: none;
