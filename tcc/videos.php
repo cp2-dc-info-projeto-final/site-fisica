@@ -62,8 +62,8 @@ session_start();
       <ul>
           <li><a class="a"  href="paginInc.php">Home</a></li>
           <li><a class="a" href="formulas.php">Formulas</a></li>
-          <li><a class="a" id="a" href="exercicios.php">exercicios</a></li>
-          <li><a class="a" href="videos.php">Videos</a></li>
+          <li><a class="a"  href="exercicios.php">exercicios</a></li>
+          <li><a class="a" id="a" href="videos.php">Videos</a></li>
       </ul>
 
 
