@@ -1,18 +1,18 @@
 html{
   height: 100%;
   width: 100%;
-  margin: 0px;
+  margin: 0;
   padding: 0;
   }
 body{
-  
-  width:100%;
-  margin: 0px;
-  padding: 0;
-  background-color:AliceBlue;
-  background-image:url(x1.jpg);
-  height: 100vh;
-  display: table;
+    width:100%;
+    margin: 0px;
+    padding: 0;
+    background-color:black;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: table;
+   background-image: url(x1.jpg);
   }
 #D1{
     width:100%;
@@ -43,9 +43,6 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    top:20%;
-    position: absolute;
-    width: 100%;
 
   }
  a:link,a:visited{
