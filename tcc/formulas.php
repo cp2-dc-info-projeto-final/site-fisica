@@ -80,34 +80,6 @@ session_start();
 		<?php } ?>
     
 
-    <?php foreach ($listauploadfor as $Uploadfor) { ?>
-       <div class="box">
-            </div>
-              <?php if ($ano == 2) { ?>
-                <div id="popup2" class="overlay">
-                  <div class="popup">
-                    </div>
-                  </div>
-                </div>
-              <?php } ?>            
-    <?php } ?>
-    
-
-    <?php if($master['matricula'] != null && $ass != false){ ?>
-                    <h2> <?= $ass?>º </h2>
-                    <form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
-                          <input name="ass" value="<?= $_REQUEST['ass']?>" type="hidden">
-                          <input type="file" name = "arquivo"><br>
-                          <input type="submit" name="enviar-lista">
-                    </form>
-    <?php } ?>
-    <br>
-               <?php foreach ($listaupload as $Upload) { ?>
-
-                            <div class="lista">  <a href="<?= $Upload['assunto'] ?>"><?= $Upload['POWW']?></a>  </div> 
-               <?php } ?>
-
- 
 
 
 
