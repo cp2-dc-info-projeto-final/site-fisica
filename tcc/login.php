@@ -1,3 +1,4 @@
+<!doctype html>
 <?php
 	session_start();
 
@@ -14,7 +15,7 @@
 	}
 
 ?>
-<!doctype html>
+
 <html>
 <head>
 <meta charset="utf-8">

@@ -147,7 +147,7 @@ if (empty($erros))
 else
 {
    $_SESSION['errosCadastrado'] = $erros;
-    header('Location: ../Cadastro.php');
+    header('Location: ../cadastroprof.php');
   }
 
   

@@ -49,7 +49,7 @@ if ($ass == false)
 {
 	$erros[] = "Deve ter assunto";
 }
-else if($ass < 0 || $ass > 60)
+else if($ass < 5 || $ass > 60)
 {
 	$erros = "Assunto invalido";
 }

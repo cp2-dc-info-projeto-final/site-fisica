@@ -135,30 +135,12 @@ session_start();
 				<div class="popup">
 					<h2>Eletromagnetismo</h2>
 					<a class="close" href="videos.php">&times;</a>
-					<div class="content">
-						<a href="https://www.youtube.com/watch?v=Li9ECwSyDFU&list=PL1Dg4Oxxk_RKMZdv6OPGdj6FQ-S5c8F3W">Eletrização por indução e aterramento (Creditos: Física Universitária)</a>
-                        <a href="https://www.youtube.com/watch?v=XhhZ2zRN4Lo&index=15&list=PL1Dg4Oxxk_RKMZdv6OPGdj6FQ-S5c8F3W">Campo eletrica e Força eletrica</a>
-                        <a href="https://www.youtube.com/watch?v=INC0G_hwXoc&index=13&list=PL1Dg4Oxxk_RKMZdv6OPGdj6FQ-S5c8F3W">Gerador eletrostatico</a>
-                        <a href="https://www.youtube.com/watch?v=voIcxwNj7qs&index=26&list=PL1Dg4Oxxk_RKMZdv6OPGdj6FQ-S5c8F3W">Corrente eletrica e lei de Ohm</a>
-					</div>
+					
 				</div>
 			</div>
 	<div class="box">
 		<a class="button" href="?Óptica">Óptica</a>
 	</div>
-
-			<div id="?Óptica" class="overlay">
-				<div class="popup">
-					<h2>Óptica</h2>
-					<a class="close" href="videos.php">&times;</a>
-					<div class="content">
-					<a href="https://www.youtube.com/watch?v=uKN3X16f-ng&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln&index=5">Lentes e espelhos (Creditos: Física Universitária)</a>
-                    <a href="https://www.youtube.com/watch?v=sDcWsx00O48&index=7&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Espalhamento da luz (Creditos: Física Universitária)</a>
-                    <a href="https://www.youtube.com/watch?v=zUZqSkWWgkw&index=6&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Decomposiçao da luz: Prisma (Creditos: Física Universitária)</a>
-                    <a href="https://www.youtube.com/watch?v=EJ3mWMpNY5M&index=4&list=PL1Dg4Oxxk_RIw4M-bT9bgTIv4MMBth-ln">Decomposiçao da visao (Creditos: Física Universitária)</a>
-					</div>
-				</div>
-			</div>
 
 
 </body>
