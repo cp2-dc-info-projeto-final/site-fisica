@@ -43,7 +43,7 @@ session_start();
 		<form name="signup" method="post" action="controlador/cadastrando.php">
 								<h2>Cadastro</h2>
 								<?php if ($erros != null) { ?>
-			<div class="alert alert-warning">
+			<div class="alertalert-warning">
 				<ul>
 					<?php foreach ($erros as $erro) { ?>
 						<li> <?= $erro ?> </li>
