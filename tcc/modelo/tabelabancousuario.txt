@@ -17,7 +17,7 @@ CREATE TABLE upload (
   id int PRIMARY key AUTO_INCREMENT not null,
   nome varchar(150) NOT NULL,
   arquivo varchar(255) NOT NULL,
-  usuariosid int(11) UNIQUE NOT NULL,
+  usuariosid int(11)  NOT NULL,
   ano int(11) NOT NULL,
   FOREIGN KEY (usuariosid) references usuarios(id)
 );
