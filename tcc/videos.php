@@ -71,73 +71,22 @@ session_start();
 		<a class="button" href="?Mecanica">Mecanica</a>
 	</div>
 
-			<div id="?Mecanica" class="overlay">
-				<div class="popup">
-					<h2>Mecanica</h2>
-					<a class="close" href="videos.php">&times;</a>
-					<div class="content">
-					   <a >Equilibrio estável (Creditos: Física Universitária)
-					   <iframe
-				            width="1100"
-				            height="500"
-				            id="iframe"
-				            src="https://www.google.com.br"
-				            scrolling="no">
-				    </iframe>
-
-						<input type="button" value="abrir" onclick="exibirIframe();" />
-						<input type="button" value="fechar" onclick="recolherIframe();" /> </a>
-                       <a href="">Transformação de Energia Mecânica em Elétrica (Creditos: Física Universitária)</a>
-                       <a href="https://www.youtube.com/watch?v=OjP8bPaadEM&list=PL1Dg4Oxxk_RK6PfpWLKisymx20Xw1aALd">Movimento retilíneo uniforme (Creditos: Física Universitária)</a>
-                       <a href="https://www.youtube.com/watch?v=9aidNpFcwt8&list=PL1Dg4Oxxk_RK6PfpWLKisymx20Xw1aALd&index=5">Força gravitacional (Creditos: Física Universitária)</a>
-
-					</div>
-				</div>
-			</div>
 
 	<div class="box">
 		<a class="button" href="?Termologia">Termologia</a>
 	</div>
 
-			<div id="?Termologia" class="overlay">
-				<div class="popup">
-					<h2>Termologia</h2>
-					<a class="close" href="videos.php">&times;</a>
-					<div class="content">
-						<a href="https://www.youtube.com/watch?v=aKwZDvq2nm0">Propagação de Calor por Condução (Creditos: Francisco Lavarda)</a>
-                        <a href="https://www.youtube.com/watch?v=c9utVkLBN9w">dilataçao termica no estato liquido (Creditos: Manual do Mundo)</a>
-                        <a href="https://www.youtube.com/watch?v=fzLihPjZZmk&index=5&list=PL1Dg4Oxxk_RLkHSt6inHJP6BLrZiPDWn5">Escala de temperatura fahreinheit (Creditos: Física Universitária)</a>
-                        <a href="https://www.youtube.com/watch?v=bH2eBu6lKUE">Calor específico (Creditos: fernanda alves)</a>
-					</div>
-				</div>
-			</div>
+			
 	<div class="box">
 		<a class="button" href="?Onda">Onda</a>
 	</div>
 
-			<div id="?Onda" class="overlay">
-				<div class="popup">
-					<h2>Onda</h2>
-					<a class="close" href="videos.php">&times;</a>
-					<div class="content">
-						<a href="https://www.youtube.com/watch?v=zYdho_gcCRE&index=11&list=PL1Dg4Oxxk_RI2Ppb541vQyaUbqUuXtiuJ">Ondas transversais e longitudinais (Creditos: Física Universitária)</a>
-                        <a href="https://www.youtube.com/watch?v=Ab9OB9Q6QNw&index=1&list=PL1Dg4Oxxk_RI2Ppb541vQyaUbqUuXtiuJ">Pendulos simples (Creditos: Física Universitária)</a>
-                        <a href="https://www.youtube.com/watch?v=qIXBnrSgbpQ&index=13&list=PL1Dg4Oxxk_RI2Ppb541vQyaUbqUuXtiuJ">Ondas em cordas tensionadas (Creditos: Física Universitária)</a>
-                        <a href="https://www.youtube.com/watch?v=h0kLMLRX9SY&index=19&list=PL1Dg4Oxxk_RI2Ppb541vQyaUbqUuXtiuJ">Ondas: o que sao e como se propagam (Creditos: Física Universitária)</a>
-					</div>
-				</div>
-			</div>
+			
 	<div class="box">
 		<a class="button" href="?Eletromagnetismo">Eletromagnetismo</a>
 	</div>
 
-			<div id="?Eletromagnetismo" class="overlay">
-				<div class="popup">
-					<h2>Eletromagnetismo</h2>
-					<a class="close" href="videos.php">&times;</a>
-					
-				</div>
-			</div>
+			
 	<div class="box">
 		<a class="button" href="?Óptica">Óptica</a>
 	</div>

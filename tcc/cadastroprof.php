@@ -20,7 +20,7 @@ session_start();
  	 	$user_name = $_SESSION['username'];
  		$id = $_SESSION['idUsuárioConectado'];
  		$usuario = BuscaUsuarioPorId($id);
-		echo $user_name;
+		
 
  	 }
  	else
@@ -38,7 +38,9 @@ session_start();
 <link rel="stylesheet" type="text/css" href="cadastroprof.css">
 </head>
 <body>
+			
 
+			
 	<div class="Cadastro">
 		<form name="signup" method="post" action="controlador/cadastrando.php">
 								<h2>Cadastro</h2>
