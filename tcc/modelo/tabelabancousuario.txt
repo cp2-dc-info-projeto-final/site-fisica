@@ -7,6 +7,12 @@
     matricula varchar(30) null
 );
 
+CREATE TABLE assuntos (
+  id int PRIMARY key AUTO_INCREMENT not null,
+  nome varchar(150) NOT NULL
+
+);
+
 CREATE TABLE upload (
   id int PRIMARY key AUTO_INCREMENT not null,
   nome varchar(150) NOT NULL,
@@ -28,9 +34,5 @@ CREATE TABLE uploadFor (
 
 
 
-CREATE TABLE assuntos (
-  id int PRIMARY key AUTO_INCREMENT not null,
-  nome varchar(150) NOT NULL
 
-);
 
