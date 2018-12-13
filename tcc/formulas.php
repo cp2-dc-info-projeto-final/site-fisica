@@ -73,7 +73,7 @@ session_start();
 
 
 		<?php if($master['matricula'] != null){ ?>
-			<form action ="formulas.php" method="POST" enctype="multipart/form-data">
+			<form action ="assuntos.php" method="POST" enctype="multipart/form-data">
 				<input type="text" name="assunto">
 				<input type="submit" value="Criar">
 			</form>
