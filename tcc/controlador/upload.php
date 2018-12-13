@@ -38,7 +38,7 @@ if ($ano == false)
 {
 	$erros[] = "Deve ter ano;";
 }
-else if($ano <= 0 || $ano >= 4)
+else if($ano < 0 || $ano > 4)
 {
 	$erros = "Ano invalido";
 }
@@ -47,9 +47,9 @@ else if($ano <= 0 || $ano >= 4)
 $ass = $request['ass'];
 if ($ass == false)
 {
-	$erros[] = "Deve ter assunto;";
+	$erros[] = "Deve ter assunto";
 }
-else if($ass <=0 || $ass => 60)
+else if($ass < 0 || $ass > 60)
 {
 	$erros = "Assunto invalido";
 }
@@ -92,25 +92,20 @@ endif;
 
 
 
-
-
-
-
-
-if(isset($_FILES['arquivo'])):
+if(isset($_FILES['assunto'])):
 	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
-	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
+	$extensao = pathinfo($_FILES['assunto']['name'], PATHINFO_EXTENSION);
 	if (in_array($extensao, $formatosPermitidos)):
-		$temporario	= $_FILES['arquivo']['tmp_name'];
-		$novoNome = $_FILES['arquivo']['name'];
+		$temporario	= $_FILES['assunto']['tmp_name'];
+		$novoNome = $_FILES['assunto']['name'];
 		$pasta = "arquivos/$novoNome";
 		if(move_uploaded_file($temporario,"../$pasta")):
-			$request['arquivo'] = $pasta;
-			$request['nome'] = $novoNome;
+			$request['assunto'] = $pasta;
+			$request['POWW'] = $novoNome;
 			$request['usuariosid'] = $master['id'];
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
-   			header("Location:../exercicios.php?ass=$ass");
+   			header("Location:../formulas.php?");
    			
 		else:
 			$menssagem = "Erro, não foi possivel fazer o upload!";
@@ -123,4 +118,6 @@ echo $menssagem;
 
 endif; 
 
-?>
+
+
+

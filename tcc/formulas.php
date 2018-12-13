@@ -11,30 +11,49 @@
         <?php
 
 require_once('modelo/tabelausuario.php');
+require_once('modelo/tabelaupload.php');
 
 session_start();
+
+  $ass = null;
+  $listauploadfor = [];
+  $listaupload = [];
 
   if (array_key_exists('username', $_SESSION) &&
       array_key_exists('idUsuárioConectado', $_SESSION))
   {
 
-    $user_name = $_SESSION['username'];
-    echo $user_name;
-
     $id = $_SESSION['idUsuárioConectado'];
+    $master = BuscaUsuarioPorId($id);
+    $user_name = $_SESSION['username'];
+    
+
+
     $usuario = BuscaUsuarioPorId($id);
+    if (array_key_exists('ass', $_REQUEST))
+    {
+      $ass = filter_var($_REQUEST['ass'], FILTER_VALIDATE_INT);
+      $listauploadfor = ListadeUpload($ass);
+    }
   }
   else
   {
-    header('Location:loginAluno.php');
+    $usuario = null;
+    header('Location:login.php');
   }
 ?>
+
+
+
+
+
 <div class="logo"><img src="images/hig.jpg" class="escola" ></div>
     
       <div class="prof">
       <br>
      <br>
           <?php if($usuario['matricula'] != null){ ?>
+            <?php echo $user_name; ?>
              <a class = "linkpi" href="cadastroprof.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
                    <?php } ?>
       <br>
@@ -49,12 +68,29 @@ session_start();
       </ul>
 <br>
 <br>
+
+
+
+
 		<?php if($master['matricula'] != null){ ?>
-			<form action="controlador/upload.php" method="POST" enctype="multipart/form-data">
+			<form action ="formulas.php" method="POST" enctype="multipart/form-data">
 				<input type="text" name="assunto">
 				<input type="submit" value="Criar">
 			</form>
 		<?php } ?>
+    
+
+    <?php foreach ($listauploadfor as $Uploadfor) { ?>
+       <div class="box">
+            </div>
+              <?php if ($ano == 2) { ?>
+                <div id="popup2" class="overlay">
+                  <div class="popup">
+                    </div>
+                  </div>
+                </div>
+              <?php } ?>            
+    <?php } ?>
     
 
     <?php if($master['matricula'] != null && $ass != false){ ?>
@@ -68,9 +104,18 @@ session_start();
     <br>
                <?php foreach ($listaupload as $Upload) { ?>
 
-                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a>  </div> 
+                            <div class="lista">  <a href="<?= $Upload['assunto'] ?>"><?= $Upload['POWW']?></a>  </div> 
                <?php } ?>
-0
+
  
+
+
+
+
+
+
+
+
+
 </body>
 </html>

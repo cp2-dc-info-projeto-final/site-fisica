@@ -12,6 +12,7 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     display: table;
+	 background-image: url(x1.jpg);
   }
   slider{
     display: block;
