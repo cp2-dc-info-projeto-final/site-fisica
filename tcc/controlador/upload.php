@@ -49,7 +49,7 @@ if ($ass == false)
 {
 	$erros[] = "Deve ter assunto";
 }
-else if($ass < 5 || $ass > 60)
+else if($ass < 0 || $ass > 60)
 {
 	$erros = "Assunto invalido";
 }
@@ -81,43 +81,4 @@ echo $menssagem;
 
 endif; 
 
-
-
-
-
-
-
-
-
-
-
-
-if(isset($_FILES['assunto'])):
-	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx" );
-	$extensao = pathinfo($_FILES['assunto']['name'], PATHINFO_EXTENSION);
-	if (in_array($extensao, $formatosPermitidos)):
-		$temporario	= $_FILES['assunto']['tmp_name'];
-		$novoNome = $_FILES['assunto']['name'];
-		$pasta = "arquivos/$novoNome";
-		if(move_uploaded_file($temporario,"../$pasta")):
-			$request['assunto'] = $pasta;
-			$request['POWW'] = $novoNome;
-			$request['usuariosid'] = $master['id'];
-			$menssagem = "Upload feito com sucesso!";
-			$id = upload_feito($request);
-   			header("Location:../formulas.php?");
-   			
-		else:
-			$menssagem = "Erro, não foi possivel fazer o upload!";
-
-		endif;
-	else:
-		$menssagem = "Formato invalido";
-	endif;
-echo $menssagem;
-
-endif; 
-
-
-
-
+?>

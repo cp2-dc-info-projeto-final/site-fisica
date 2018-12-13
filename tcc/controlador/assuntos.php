@@ -1,6 +1,6 @@
 <?php
 require_once('../modelo/acesso_ao_banco.php');
-require_once('../modelo/tabelausuario.php');
+require_once('../modelo/tabelaassunto.php');
 
 $request = array_map('trim', $_REQUEST);
 
@@ -21,9 +21,16 @@ $erros = [];
     }
 
 
-    if (empty($erros[]))
+    if (empty($erros))
     {
-       $id = add_assuntos($request);
-       header('Location: ../formulas.php')
+
+       $nome = add_assuntos($request);
+       header('Location:../formulas.php');
+    }
+    else
+    {
+      $_SESSION[' errosCadastrados'] = $erros;
+      header('Location:../formulas.php');
+
     }
 ?>

@@ -2,7 +2,7 @@
 require_once('acesso_ao_banco.php');
 
 
-function BuscaAssuntoPorId($id)
+function ListaAssuntos($id)
 {
 
   $bd = CriaConexãoBd();
@@ -13,20 +13,18 @@ function BuscaAssuntoPorId($id)
 
   $sql->execute();
 
-  return $sql->fetch();
+  return $sql->fetchAll();
 }
 
 
 
-function add_assuntos($nome)
+function add_assuntos($novoassunto)
 {
-
-	$sql = $bd->prepare('INSERT INTO assuntos ( nome)
-	                     VALUES (:valnome)');
-
-
-	$sql->bindValue(':valnome', $assuntos['nome']);
+  $bd = CriaConexãoBd();
+	$sql = $bd -> prepare('INSERT INTO assuntos(nome) VALUES (:valnome)');
+  $sql->bindValue(':valnome', $novoassunto['nome']);
   $sql->execute();
+  return $bd->lastInsertid();
 }
 
  ?>

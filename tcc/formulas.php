@@ -10,37 +10,38 @@
 	<div id="D1">
         <?php
 
-require_once('modelo/tabelausuario.php');
-require_once('modelo/tabelaupload.php');
-
 session_start();
+require_once('modelo/tabelausuario.php');
+require_once('modelo/tabelaassunto.php');
+	if (array_key_exists('errosCadastrado', $_SESSION))
+	{
+		$erros = $_SESSION['errosCadastrado'];
+		unset($_SESSION['errosCadastrado']);
 
-  $ass = null;
-  $listauploadfor = [];
-  $listaupload = [];
+	}
+	else
+	{
+		$erros = null;
+	}
 
-  if (array_key_exists('username', $_SESSION) &&
+
+  	if (array_key_exists('username', $_SESSION) &&
       array_key_exists('idUsuárioConectado', $_SESSION))
-  {
+  	{
 
-    $id = $_SESSION['idUsuárioConectado'];
-    $master = BuscaUsuarioPorId($id);
-    $user_name = $_SESSION['username'];
-    
-
-
-    $usuario = BuscaUsuarioPorId($id);
-    if (array_key_exists('ass', $_REQUEST))
-    {
-      $ass = filter_var($_REQUEST['ass'], FILTER_VALIDATE_INT);
-      $listauploadfor = ListadeUpload($ass);
-    }
-  }
-  else
-  {
-    $usuario = null;
-    header('Location:login.php');
-  }
+    	$user_name = $_SESSION['username'];
+    	$id = $_SESSION['idUsuárioConectado'];
+    	$master = BuscaUsuarioPorId($id);
+  	}
+  	else if (ListaAssuntos($id) != null)
+  	{
+  		$listaassuntos = ListaAssuntos($id);
+  	}
+  
+  	else
+  	{
+    	header('Location:login.php');
+  	}
 ?>
 
 
@@ -52,7 +53,7 @@ session_start();
       <div class="prof">
       <br>
      <br>
-          <?php if($usuario['matricula'] != null){ ?>
+          <?php if($master['matricula'] != null){ ?>
             <?php echo $user_name; ?>
              <a class = "linkpi" href="cadastroprof.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
                    <?php } ?>
@@ -73,20 +74,21 @@ session_start();
 
 
 		<?php if($master['matricula'] != null){ ?>
-			<form action ="assuntos.php" method="POST" enctype="multipart/form-data">
-				<input type="text" name="assunto">
+			<form name="assuntonovo" method="post" action ="controlador/assuntos.php" >
+				<input type="text" name="nome">
 				<input type="submit" value="Criar">
 			</form>
 		<?php } ?>
-    
+		<?php foreach ($listaassuntos as $ass) { ?>
+			<div class="box">
+    			<a href="?ass=<?php$ass['id']?>"><?= $ass['nome']?></a>
+    		</div>
+    	<?php if ($ass['id']) { ?>	
+          
+    	<?php } ?>
+    	<?php } ?>
 
-
-
-
-
-
-
-
+		
 
 
 </body>
