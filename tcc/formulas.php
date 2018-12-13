@@ -19,18 +19,16 @@ session_start();
 
 
   	if (array_key_exists('username', $_SESSION) &&
-      array_key_exists('idUsuárioConectado', $_SESSION))
+      array_key_exists('idUsuárioConectado', $_SESSION) && 
+  	   array_key_exists('idassuntos', $_SESSION))
   	{
 
     	$user_name = $_SESSION['username'];
     	$id = $_SESSION['idUsuárioConectado'];
+    	$idassuntos = $_SESSION['idassuntos'];
     	$master = BuscaUsuarioPorId($id);
+    	$listaassuntos = ListaAssuntos($id);
   	}
-  	else if (empty(ListaAssuntos($id)) == false)
-  	{
-  		$listaassuntos = ListaAssuntos($id);
-  	}
-  
   	else
   	{
     	header('Location:login.php');
