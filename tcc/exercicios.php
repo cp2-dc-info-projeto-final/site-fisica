@@ -97,18 +97,17 @@ session_start();
     
 
     <?php if($master['matricula'] != null && $ano != false){ ?>
-                    <h2> <?= $ano ?>º Ano </h2>
-                    <form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
-                          <input name="ano" value="<?= $_REQUEST['ano']?>" type="hidden">
-                          <input type="file" name = "arquivo"><br>
-                          <input type="submit" name="enviar-lista">
-                    </form>
-                <?php } ?>
-    <br>
-               <?php foreach ($listaupload as $Upload) { ?>
-                            
-                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
-                    <?php } ?>
+      <h2> <?= $ano ?>º Ano </h2>
+      <form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
+        <input name="ano" value="<?= $_REQUEST['ano']?>" type="hidden">
+        <input type="file" name = "arquivo"><br>
+        <input type="submit" name="enviar-lista">
+      </form>
+    <?php } ?>
+  <br>
+    <?php foreach ($listaupload as $Upload) { ?>                        
+      <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+    <?php } ?>
                        
                      
      </body>
