@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formulas</title>
-  <link rel="stylesheet" type="text/css" href="styleFor_1.css">
-</head>
-<body>
-	<div id="D1">
-        <?php
+<?php
 
-session_start();
 require_once('modelo/tabelausuario.php');
 require_once('modelo/tabelaassunto.php');
+
+session_start();
+
+
 	if (array_key_exists('errosCadastrado', $_SESSION))
 	{
 		$erros = $_SESSION['errosCadastrado'];
@@ -33,7 +26,7 @@ require_once('modelo/tabelaassunto.php');
     	$id = $_SESSION['idUsuárioConectado'];
     	$master = BuscaUsuarioPorId($id);
   	}
-  	else if (ListaAssuntos($id) != null)
+  	else if (empty(ListaAssuntos($id)) == false)
   	{
   		$listaassuntos = ListaAssuntos($id);
   	}
@@ -45,9 +38,17 @@ require_once('modelo/tabelaassunto.php');
 ?>
 
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulas</title>
+  <link rel="stylesheet" type="text/css" href="styleFor_1.css">
+</head>
+<body>
 
-
-
+<div id="D1">
 <div class="logo"><img src="images/hig.jpg" class="escola" ></div>
     
       <div class="prof">
