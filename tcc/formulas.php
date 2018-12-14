@@ -19,17 +19,16 @@ session_start();
 
 
   	if (array_key_exists('username', $_SESSION) &&
-      array_key_exists('idUsuárioConectado', $_SESSION) && 
-  	   array_key_exists('idassuntos', $_SESSION))
+      array_key_exists('idUsuárioConectado', $_SESSION) )
   	{
 
     	$user_name = $_SESSION['username'];
     	$id = $_SESSION['idUsuárioConectado'];
-    	$idassuntos = $_SESSION['idassuntos'];
+    	
     	$master = BuscaUsuarioPorId($id);
-    	$listaassuntos = ListaAssuntos($id);
+    	
   	}
-  	else
+    else
   	{
     	header('Location:login.php');
   	}
@@ -78,17 +77,21 @@ session_start();
 				<input type="submit" value="Criar">
 			</form>
 		<?php } ?>
-		<?php foreach ($listaassuntos as $ass) { ?>
-			<div class="box">
-    			<a href="?ass=<?php$ass['id']?>"><?= $ass['nome']?></a>
-    		</div>
-    	<?php if ($ass['id']) { ?>	
-          
-    	<?php } ?>
-    	<?php } ?>
 
-		
+		<?php if(empty(ListaAssuntos($id)) ){ 		  	  
+     echo "Sem assuntos";?>
 
+    <?php } else {
+        $listaassuntos = ListaAssuntos($id);
+        foreach ($listaassuntos as $ass) { ?>
+           <div class="box">
+              <a href="?ass=<?php $ass['id']?>"><?= $ass['nome']?></a>
+            </div>
+            <?php if ($ass['id']) { ?>
+            <?php }?>
+		    <?php } ?>
+    <?php } ?>
 
+ 
 </body>
 </html>

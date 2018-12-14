@@ -2,18 +2,16 @@
 require_once('acesso_ao_banco.php');
 
 
-function ListaAssuntos($id)  
+function ListaAssuntos()  
 {
 
   $bd = CriaConexãoBd();
 
-  $sql = $bd->prepare('SELECT * FROM assuntos WHERE id = :valId');
-
-  $sql->bindValue(':valId', $id);
+  $sql = $bd->prepare("SELECT * FROM assuntos ");
 
   $sql->execute();
 
-  return $sql->fetch();
+  return $sql->FetchAll();
 }
 
 

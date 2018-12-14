@@ -25,7 +25,6 @@ $erros = [];
     {
 
        $nome = add_assuntos($request);
-       $_SESSION['idassuntos'] = $idassuntos;
        header('Location:../formulas.php');
     }
     else
