@@ -61,9 +61,7 @@ session_start();
       </slider>
     </div>
 
-    <div id="D2">
-
-    </div>
+   
 
     <div id="D3">
         <h1>ATENÇÃO</h1>
