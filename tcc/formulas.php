@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-
+require_once('modelo/tabelauploadfor.php');
 require_once('modelo/tabelausuario.php');
 require_once('modelo/tabelaassunto.php');
 

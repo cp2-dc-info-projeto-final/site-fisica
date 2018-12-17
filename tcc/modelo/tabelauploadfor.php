@@ -2,7 +2,9 @@
 require_once('acesso_ao_banco.php');
 
 
-function /*BuscaArquivoEntregue*/BuscaUploadFor(int $usuariosid, int $idUpload) : string
+
+
+function BuscaUploadFor(int $usuariosid, int $idUpload) : string
 {
 	$bd = CriaConexãoBd();
 
@@ -18,7 +20,7 @@ function /*BuscaArquivoEntregue*/BuscaUploadFor(int $usuariosid, int $idUpload) 
 }
 
 
-function /*EntregaTarefa*/upload_feito($upload)
+function upload_feito($upload)
 {
 	$bd = CriaConexãoBd();
 
@@ -34,7 +36,7 @@ function /*EntregaTarefa*/upload_feito($upload)
 }
 
 
-function /*ApagarTarefa*/ApagarUploadFor(int $usuarioid, int $idUpload)
+function ApagarUploadFor(int $usuarioid, int $idUpload)
 {
 	$bd = CriaConexãoBd();
 
@@ -53,11 +55,9 @@ function /*ApagarTarefa*/ApagarUploadFor(int $usuarioid, int $idUpload)
   
     $bd = CriaConexãoBd();
 
-    $sql = $bd->prepare('SELECT * FROM uploadfor 
+    $sql = $bd->prepare('SELECT uploadfor.* FROM uploadfor 
     					 JOIN usuarios ON usuarios.id = uploadfor.usuariosid 
     					 WHERE ass = :valass');
-
-    
 
     $sql->bindValue(':valass', $ass);
 
@@ -66,7 +66,7 @@ function /*ApagarTarefa*/ApagarUploadFor(int $usuarioid, int $idUpload)
     return $sql->fetchAll();
   }
 
- function /*ApagarTarefa*/RelacaoUpForAssuntos(int $usuarioid, int $idUpload)
+ function RelacaoUpForAssuntos(int $usuarioid, int $idUpload)
 {
 	$bd = CriaConexãoBd();
 
