@@ -7,9 +7,9 @@ require_once('../modelo/tabelausuario.php');
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
                $request,
-               [ 
-                'ano' => FILTER_VALIDATE_INT,
-                
+               [
+                'ano' => FILTER_VALIDATE_INT
+
                  ]
            );
 
@@ -25,7 +25,7 @@ if (array_key_exists('idUsuárioConectado', $_SESSION))
 
 	$id = $_SESSION['idUsuárioConectado'];
 	$master = BuscaUsuarioPorId($id);
-	
+
 
 }
 else
@@ -41,9 +41,8 @@ if ($ano == false)
 }
 else if($ano < 0 || $ano > 4)
 {
-	$erros = "Ano invalido";
+	$erros = "Ano inválido";
 }
-
 
 
 if(isset($_FILES['arquivo'])):
@@ -60,17 +59,17 @@ if(isset($_FILES['arquivo'])):
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
    			header("Location:../exercicios.php?ano=$ano");
-   			
+
 		else:
 			$menssagem = "Erro, não foi possivel fazer o upload!";
 
 		endif;
 	else:
-		$menssagem = "Formato invalido";
+		$menssagem = "Formato inválido";
 	endif;
 echo $menssagem;
 
-endif; 
+endif;
 
 
 ?>
