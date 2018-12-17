@@ -46,7 +46,7 @@ else if($ass < 0 || $ass > 60)
 
 
 if(isset($_FILES['arquivo'])):
-	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx","jpg" );
+	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx","jpg" , "png" );
 	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
 	if (in_array($extensao, $formatosPermitidos)):
 		$temporario	= $_FILES['arquivo']['tmp_name'];

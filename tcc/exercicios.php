@@ -19,6 +19,17 @@ session_start();
   
   $ano = null;
   $listaupload = [];
+  
+  if (array_key_exists('errosup', $_SESSION))
+  {
+    $erros[] = $_SESSION['errosup'];
+    unset($_SESSION['errosup']);
+
+  }
+  else
+  {
+    $erros = null;
+  }
 
   if (array_key_exists('username', $_SESSION) &&
       array_key_exists('idUsuárioConectado', $_SESSION))
@@ -61,6 +72,7 @@ session_start();
 
 
 
+
     <div class="box">
     <a href="?ano=1">1ºano</a>
     </div>
@@ -95,6 +107,15 @@ session_start();
 
     <?php if($master['matricula'] != null && $ano != false){ ?>
       <h2> <?= $ano ?>º Ano </h2>
+         <?php if ($erros != null) { ?>
+      <div class="alertalert-wa 'rning">
+        <ul>
+          <?php foreach ($erros as $erro) { ?>
+            <li> <?= $erro ?> </li>
+          <?php } ?>
+        </ul>
+      </div>
+    <?php } ?>
       <form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
         <input name="ano" value="<?= $_REQUEST['ano']?>" type="hidden">
         <input type="file" name = "arquivo"><br>

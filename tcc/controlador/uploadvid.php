@@ -43,9 +43,11 @@ else if($vid < 0 || $vid > 60)
 {
   $erros = "Assunto invalido";
 }
+if (empty($erros))
+    {
 
 if(isset($_FILES['arquivo'])):
-  $formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx","jpg" );
+  $formatosPermitidos =  array("mp4", "avi" , "mov" , "wmv" , "3gp", "3g2" , "rmvb" , "flv" , "mkv" , "rm");
   $extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
   if (in_array($extensao, $formatosPermitidos)):
     $temporario = $_FILES['arquivo']['tmp_name'];
@@ -57,17 +59,24 @@ if(isset($_FILES['arquivo'])):
       $request['usuariosid'] = $master['id'];
       $menssagem = "Upload feito com sucesso!";
       $id = upload_feito($request);
-        header("Location:../videos.php");
+        
         
     else:
-      $menssagem = "Erro, não foi possivel fazer o upload!";
+      $erros = "Erro, não foi possivel fazer o upload!";
 
     endif;
   else:
-    $menssagem = "Formato invalido";
+    $erros = "Formato invalido";
   endif;
-echo $menssagem;
+endif;
+      header('Location:../videos.php');
+    }
+    else
+    {
+      $_SESSION['errosupvideos'] = $erros;
+      header('Location:../videos.php');
 
-endif; 
+    }
+
 
 ?>

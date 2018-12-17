@@ -58,18 +58,29 @@ if(isset($_FILES['arquivo'])):
 			$request['usuariosid'] = $master['id'];
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
-   			header("Location:../exercicios.php?ano=$ano");
+   			
 
 		else:
-			$menssagem = "Erro, não foi possivel fazer o upload!";
+			$erros = "Erro, não foi possivel fazer o upload!";
 
 		endif;
 	else:
-		$menssagem = "Formato inválido";
+		$erros = "Formato inválido";
 	endif;
-echo $menssagem;
-
 endif;
+ if (empty($erros))
+    {
+		
+		header('Location:../exercicios.php');
+    }
+    else
+    {
+     
+      $_SESSION['errosup'] = $erros;
+      header("Location:../exercicios.php?ano=$ano");
+      header('Location:../exercicios.php');
+
+    }
 
 
 ?>

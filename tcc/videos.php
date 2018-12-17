@@ -22,16 +22,30 @@ require_once('modelo/tabelaassuntov.php');
 session_start();
 
   $listaupload = [];
-  if (array_key_exists('errosCadastrado', $_SESSION))
+  if (array_key_exists('errosurl', $_SESSION))
   {
-    $erros = $_SESSION['errosCadastrado'];
-    unset($_SESSION['errosCadastrado']);
+    $erros = $_SESSION['errosurl'];
+    unset($_SESSION['errosurl']);
 
   }
   else
   {
     $erros = null;
   }
+  
+  if (array_key_exists('errosassv', $_SESSION))
+  {
+    $erra = $_SESSION['errosassv'];
+    unset($_SESSION['errosassv']);
+
+  }
+  else
+  {
+    $erra = null;
+  }
+ 
+ 
+
 
 
     if (array_key_exists('username', $_SESSION) &&
@@ -66,6 +80,15 @@ session_start();
           <li><a class="a"  href="exercicios.php">exercicios</a></li>
           <li><a class="a" id="a" href="videos.php">Videos</a></li>
       </ul>
+              <?php if ($erra != null) { ?>
+      <div class="alertalert-warning">
+        <ul>
+          <?php foreach ($erra as $erras) { ?>
+            <li> <?= $erras ?> </li>
+          <?php } ?>
+        </ul>
+      </div>
+    <?php } ?>
 
             <?php if($master['matricula'] != null){ ?>
                       <form name="assuntonovo" method="post" action ="controlador/assuntosv.php" >
@@ -83,8 +106,27 @@ session_start();
            <div class="box">
               <a href="?vid=<?php $vid['id']?>"><?= $vid['nome']?></a>
 
+               <?php if ($erros != null) { ?>
+      <div class="alertalert-warning">
+        <ul>
+          <?php foreach ($erros as $erro) { ?>
+            <li> <?= $erro ?> </li>
+          <?php } ?>
+        </ul>
+      </div>
+    <?php } ?>
 
                           <?php if($master['matricula'] != null && $vid != false){ ?>
+                            <form action = "controlador/urlvideo.php" method="post" name = "url">
+                              <label><b class="textcol">Nome</b></label><br>
+                                <input class="input" type="text" minlength="3" maxlength="255" placeholder="Digite o nome do video" name="nome" required=""><br>
+                              <label><b class="textcol">URL do video</b></label><br>
+                                <input class="input" type="text" minlength="6" maxlength="16" placeholder="Digite o url do video" name="url" required=""><br>
+                              <input type="submit" name="Salvar URL"><br>
+
+
+                              
+                            </form><br><br>
                             <form action ="controlador/uploadvid.php" method  ="POST"  enctype="multipart/form-data">
                               <input name="vid" value="<?= $vid['id']?>" type="hidden">
                               <input type="file" name = "arquivo"><br>

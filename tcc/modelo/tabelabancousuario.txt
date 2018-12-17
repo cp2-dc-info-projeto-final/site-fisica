@@ -47,6 +47,12 @@ CREATE TABLE uploadvid (
   FOREIGN KEY (usuariosid) references usuarios(id),
   FOREIGN KEY (vid) references assuntosv(id)
 );
+CREATE TABLE assuntosv(
+
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nome VARCHAR(255) NOT NULL UNIQUE,
+url varchar(255) not null UNIQUE
+);
 
 
 
