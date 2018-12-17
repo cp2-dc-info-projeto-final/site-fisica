@@ -40,7 +40,7 @@ if ($ano == false)
 }
 else if($ano < 0 || $ano > 4)
 {
-	$erros = "Ano invalido";
+	$erros = "Ano inválido";
 }
 
 
@@ -51,7 +51,7 @@ if ($ass == false)
 }
 else if($ass < 0 || $ass > 60)
 {
-	$erros = "Assunto invalido";
+	$erros = "Assunto inválido";
 }
 
 
@@ -75,7 +75,7 @@ if(isset($_FILES['arquivo'])):
 
 		endif;
 	else:
-		$menssagem = "Formato invalido";
+		$menssagem = "Formato inválido";
 	endif;
 echo $menssagem;
 
