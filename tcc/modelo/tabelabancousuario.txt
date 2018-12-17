@@ -32,6 +32,21 @@ CREATE TABLE uploadFor (
   FOREIGN KEY (ass) references assuntos(id)
 );
 
+CREATE TABLE assuntosv(
+
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nome VARCHAR(150) NOT NULL 
+);
+
+CREATE TABLE uploadvid (
+  id int PRIMARY key AUTO_INCREMENT not null,
+  nome varchar(150) NOT NULL,
+  arquivo varchar(255) NOT NULL,
+  usuariosid int(11)  NOT NULL,
+  vid int(11) NOT NULL,
+  FOREIGN KEY (usuariosid) references usuarios(id),
+  FOREIGN KEY (vid) references assuntos(id)
+);
 
 
 

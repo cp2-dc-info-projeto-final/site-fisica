@@ -15,38 +15,39 @@
   <div id="D1"> 
     <?php
  
+require_once('modelo/tabelauploadvid.php');
 require_once('modelo/tabelausuario.php');
-require_once('modelo/tabelaupload.php');
-
-
+require_once('modelo/tabelaassuntov.php');
 
 session_start();
-  
-	
 
-  $ano = null;
   $listaupload = [];
-
-  if (array_key_exists('username', $_SESSION) &&
-      array_key_exists('idUsuárioConectado', $_SESSION))
+  if (array_key_exists('errosCadastrado', $_SESSION))
   {
-    $id = $_SESSION['idUsuárioConectado'];
-    $master = BuscaUsuarioPorId($id);
-    $user_name = $_SESSION['username'];
-    
+    $erros = $_SESSION['errosCadastrado'];
+    unset($_SESSION['errosCadastrado']);
 
-    if (array_key_exists('ano', $_REQUEST))
-    {
-      $ano = filter_var($_REQUEST['ano'], FILTER_VALIDATE_INT);
-      $listaupload = ListadeUpload($ano);
-    }
   }
   else
   {
-    $usuario = null;
-    header('Location:login.php');
+    $erros = null;
   }
-  
+
+
+    if (array_key_exists('username', $_SESSION) &&
+      array_key_exists('idUsuárioConectado', $_SESSION) )
+    {
+
+      $user_name = $_SESSION['username'];
+      $id = $_SESSION['idUsuárioConectado'];
+      
+      $master = BuscaUsuarioPorId($id);
+
+    }
+    else
+    {
+      header('Location:login.php');
+    }
 ?>
        
       <div class="prof">
@@ -66,30 +67,44 @@ session_start();
           <li><a class="a" id="a" href="videos.php">Videos</a></li>
       </ul>
 
+            <?php if($master['matricula'] != null){ ?>
+                      <form name="assuntonovo" method="post" action ="controlador/assuntosv.php" >
+                            <input type="text" name="nome">
+                            <input type="submit" value="Criar">
+                      </form>
+            <?php } ?>
 
-	<div class="box">
-		<a class="button" href="?Mecanica">Mecanica</a>
-	</div>
+                  <?php if(empty(ListaAssuntosv($id)) ){           
+                       echo "Sem assuntos";?>
+
+    <?php } else {
+        $listaassuntos = ListaAssuntosv($id);
+        foreach ($listaassuntos as $vid) { ?>
+           <div class="box">
+              <a href="?vid=<?php $vid['id']?>"><?= $vid['nome']?></a>
 
 
-	<div class="box">
-		<a class="button" href="?Termologia">Termologia</a>
-	</div>
+                          <?php if($master['matricula'] != null && $vid != false){ ?>
+                            <form action ="controlador/uploadvid.php" method  ="POST"  enctype="multipart/form-data">
+                              <input name="vid" value="<?= $vid['id']?>" type="hidden">
+                              <input type="file" name = "arquivo"><br>
+                              <input type="submit" name="enviar-lista">
+                            </form>
+                          <?php } ?>
+              <br>
+                          <?php $listaupload = ListadeUpload($vid['id']); ?>
+                          <?php foreach ($listaupload as $Upload) { ?>     
 
-			
-	<div class="box">
-		<a class="button" href="?Onda">Onda</a>
-	</div>
+                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+                          <?php } ?>
 
-			
-	<div class="box">
-		<a class="button" href="?Eletromagnetismo">Eletromagnetismo</a>
-	</div>
 
-			
-	<div class="box">
-		<a class="button" href="?Óptica">Óptica</a>
-	</div>
+          
+            </div>
+            <?php if ($vid['id']) { ?>
+            <?php }?>
+        <?php } ?>
+    <?php } ?>
 
 
 </body>
@@ -99,16 +114,5 @@ session_start();
 }
 	
 </style>
-<script>
-	
-	function exibirIframe()
-{
-    document.getElementById("iframe").style.display = "block";
-}
-	function recolherIframe()
-{
-    document.getElementById("iframe").style.display = "";
-}
-</script>
 </html>
 
