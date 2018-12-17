@@ -27,7 +27,7 @@ session_start();
     	$id = $_SESSION['idUsuárioConectado'];
     	
     	$master = BuscaUsuarioPorId($id);
-    	
+
   	}
     else
   	{
@@ -91,14 +91,16 @@ session_start();
 
                           <?php if($master['matricula'] != null && $ass != false){ ?>
                             <form action ="controlador/uploadfor.php" method  ="POST"  enctype="multipart/form-data">
-                              <input name="ass" value="<?= $_REQUEST['ass']?>" type="hidden">
+                              <input name="ass" value="<?= $ass['id']?>" type="hidden">
                               <input type="file" name = "arquivo"><br>
                               <input type="submit" name="enviar-lista">
                             </form>
                           <?php } ?>
               <br>
-                          <?php foreach ($listaupload as $Upload) { ?>                        
-                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+                          <?php $listaupload = ListadeUpload($ass['id']); ?>
+                          <?php foreach ($listaupload as $Upload) { ?>     
+
+                            <div class="lista">  <a href="<?php= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
                           <?php } ?>
 
 

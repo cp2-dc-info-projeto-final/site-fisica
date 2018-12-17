@@ -3,7 +3,6 @@ require_once('../modelo/tabelauploadfor.php');
 require_once('../modelo/tabelausuario.php');
 
 
-
 $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
                $request,
