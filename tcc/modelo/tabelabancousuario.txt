@@ -45,7 +45,7 @@ CREATE TABLE uploadvid (
   usuariosid int(11)  NOT NULL,
   vid int(11) NOT NULL,
   FOREIGN KEY (usuariosid) references usuarios(id),
-  FOREIGN KEY (vid) references assuntos(id)
+  FOREIGN KEY (vid) references assuntosv(id)
 );
 
 
