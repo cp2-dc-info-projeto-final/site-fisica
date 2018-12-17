@@ -30,7 +30,8 @@ function add_url($novourl)
   
   return $bd->lastInsertid();
 }
-      function Pesquisanome($nome)
+      
+  function Pesquisanome($nome)
   {
 
     $bd = CriaConexãoBd();
@@ -51,7 +52,9 @@ function add_url($novourl)
 
     }
    }
-          function Pesquisaurl($url)
+  
+
+  function Pesquisaurl($url)
   {
 
     $bd = CriaConexãoBd();

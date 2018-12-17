@@ -18,8 +18,11 @@
 require_once('modelo/tabelauploadvid.php');
 require_once('modelo/tabelausuario.php');
 require_once('modelo/tabelaassuntov.php');
+require_once('modelo/tabelaurlvideos.php');
+
 
 session_start();
+ $listaurl = [];
 
   $listaupload = [];
   if (array_key_exists('errosurl', $_SESSION))
@@ -139,6 +142,18 @@ session_start();
 
                             <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
                           <?php } ?>
+                          <?php if(empty(listaurl($id)) )
+                           { 
+                            echo "Sem videos";
+                             } 
+                             else {
+                              $listaurl = Listaurl($id); 
+                              foreach ($listaurl as $lurl) { ?>
+                               <iframe src="<?= $lurl['url']?>"><?= $lurl['nome']?></iframe> 
+                             <?php if ($lurl['id']) { ?>
+                             <?php }?>
+                             <?php }?>
+                             <?php }?>
 
 
           
@@ -147,6 +162,9 @@ session_start();
             <?php }?>
         <?php } ?>
     <?php } ?>
+
+  
+
 
 
 </body>

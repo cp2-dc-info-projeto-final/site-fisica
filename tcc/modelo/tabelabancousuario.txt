@@ -9,14 +9,14 @@
 
 CREATE TABLE assuntos (
   id int PRIMARY key AUTO_INCREMENT not null,
-  nome varchar(150) NOT NULL
+  nome varchar(150) unique NOT NULL
 
 );
 
 CREATE TABLE upload (
   id int PRIMARY key AUTO_INCREMENT not null,
-  nome varchar(150) NOT NULL,
-  arquivo varchar(255) NOT NULL,
+  nome varchar(150) unique NOT NULL,
+  arquivo varchar(255) unique NOT NULL,
   usuariosid int(11)  NOT NULL,
   ano int(11) NOT NULL,
   FOREIGN KEY (usuariosid) references usuarios(id)
@@ -24,8 +24,8 @@ CREATE TABLE upload (
 
 CREATE TABLE uploadFor (
   id int PRIMARY key AUTO_INCREMENT not null,
-  nome varchar(150) NOT NULL,
-  arquivo varchar(255) NOT NULL,
+  nome varchar(150) unique NOT NULL,
+  arquivo varchar(255) unique NOT NULL,
   usuariosid int(11)  NOT NULL,
   ass int(11) NOT NULL,
   FOREIGN KEY (usuariosid) references usuarios(id),
@@ -35,19 +35,19 @@ CREATE TABLE uploadFor (
 CREATE TABLE assuntosv(
 
 id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-nome VARCHAR(150) NOT NULL 
+nome VARCHAR(150) unique NOT NULL 
 );
 
 CREATE TABLE uploadvid (
   id int PRIMARY key AUTO_INCREMENT not null,
-  nome varchar(150) NOT NULL,
-  arquivo varchar(255) NOT NULL,
+  nome varchar(150) unique NOT NULL,
+  arquivo varchar(255) unique NOT NULL,
   usuariosid int(11)  NOT NULL,
   vid int(11) NOT NULL,
   FOREIGN KEY (usuariosid) references usuarios(id),
   FOREIGN KEY (vid) references assuntosv(id)
 );
-CREATE TABLE assuntosv(
+CREATE TABLE urlvideos(
 
 id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 nome VARCHAR(255) NOT NULL UNIQUE,

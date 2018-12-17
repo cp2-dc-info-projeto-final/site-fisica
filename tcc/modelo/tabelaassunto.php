@@ -29,5 +29,26 @@ function add_assuntos($novoassunto)
   
   return $bd->lastInsertid();
 }
+function Pesquisaurl($nome)
+  {
+
+    $bd = CriaConexãoBd();
+    $sql = $bd -> prepare('SELECT nome FROM assuntos WHERE nome = :valnome;');
+    $sql -> bindValue(':valnome', $nome);
+    $sql -> execute();
+
+    if ($sql -> rowCount() == 0)
+    {
+
+      return 0;
+
+    } 
+    else 
+    { 
+
+      return 1;
+
+    }
+   }
 
 ?>
