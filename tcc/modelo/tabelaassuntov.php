@@ -7,7 +7,7 @@ function ListaAssuntosv()
 
   $bd = CriaConexãoBd();
 
-  $sql = $bd->prepare("SELECT * FROM assuntos ");
+  $sql = $bd->prepare("SELECT * FROM assuntosv ");
 
   $sql->execute();
 
@@ -21,7 +21,7 @@ function add_assuntosv($novoassunto)
  
   $bd = CriaConexãoBd();
 	
-  $sql = $bd -> prepare('INSERT INTO assuntos(nome) VALUES (:valnome)');
+  $sql = $bd -> prepare('INSERT INTO assuntosv(nome) VALUES (:valnome)');
   
   $sql->bindValue(':valnome', $novoassunto['nome']);
   

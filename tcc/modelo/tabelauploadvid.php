@@ -71,7 +71,7 @@ function ApagarUploadFor(int $usuarioid, int $idUpload)
 	$bd = CriaConexãoBd();
 
 	$sql = $bd-> prepare('SELECT uploadvid.* FROM uploadvid
-	                     INNER JOIN assuntos ON assuntos.id = uploadvid.id');
+	                     INNER JOIN assuntosv ON assuntosv.id = uploadvid.id');
 
 	$sql->bindValue(':valusuariosid', $usuariosid);
 	$sql->bindValue(':valIdUpload', $idUpload);
