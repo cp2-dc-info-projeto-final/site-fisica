@@ -100,7 +100,7 @@ session_start();
                           <?php $listaupload = ListadeUpload($ass['id']); ?>
                           <?php foreach ($listaupload as $Upload) { ?>     
 
-                            <div class="lista">  <a href="<?php= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
                           <?php } ?>
 
 
