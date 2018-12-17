@@ -23,7 +23,7 @@ function /*EntregaTarefa*/upload_feito($upload)
 	$bd = CriaConexãoBd();
 
 	$sql = $bd->prepare('INSERT INTO uploadfor ( nome, arquivo, usuariosid ,ass)
-	                     VALUES (:valnome,  :valArquivo,:valusuariosid ,:valass)');
+	                     VALUES (:valnome,:valArquivo,:valusuariosid ,:valass)');
 	
 	
 	$sql->bindValue(':valnome', $upload['nome']);

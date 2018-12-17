@@ -1,5 +1,5 @@
 <?php
-require_once('../modelo/tabelaupload.php');
+require_once('../modelo/tabelauploadfor.php');
 require_once('../modelo/tabelausuario.php');
 
 
@@ -8,8 +8,7 @@ $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
                $request,
                [ 
-                'ano' => FILTER_VALIDATE_INT,
-                
+                'ass' => FILTER_VALIDATE_INT
                  ]
            );
 
@@ -34,16 +33,17 @@ else
 	Redireciona('../login.php');
 }
 
-$ano = $request['ano'];
-if ($ano == false)
-{
-	$erros[] = "Deve ter ano;";
-}
-else if($ano < 0 || $ano > 4)
-{
-	$erros = "Ano invalido";
-}
 
+
+$ass = $request['ass'];
+if ($ass == false)
+{
+	$erros[] = "Deve ter assunto";
+}
+else if($ass < 0 || $ass > 60)
+{
+	$erros = "Assunto invalido";
+}
 
 
 if(isset($_FILES['arquivo'])):
@@ -59,7 +59,7 @@ if(isset($_FILES['arquivo'])):
 			$request['usuariosid'] = $master['id'];
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
-   			header("Location:../exercicios.php?ano=$ano");
+   			header("Location:../formulas.php");
    			
 		else:
 			$menssagem = "Erro, não foi possivel fazer o upload!";

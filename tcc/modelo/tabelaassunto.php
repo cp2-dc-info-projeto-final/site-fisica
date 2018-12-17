@@ -30,4 +30,4 @@ function add_assuntos($novoassunto)
   return $bd->lastInsertid();
 }
 
- ?>
+?>

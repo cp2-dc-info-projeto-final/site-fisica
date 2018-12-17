@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 
 require_once('modelo/tabelausuario.php');
@@ -5,7 +6,7 @@ require_once('modelo/tabelaassunto.php');
 
 session_start();
 
-
+  $listaupload = [];
 	if (array_key_exists('errosCadastrado', $_SESSION))
 	{
 		$erros = $_SESSION['errosCadastrado'];
@@ -35,7 +36,7 @@ session_start();
 ?>
 
 
-<!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -86,6 +87,22 @@ session_start();
         foreach ($listaassuntos as $ass) { ?>
            <div class="box">
               <a href="?ass=<?php $ass['id']?>"><?= $ass['nome']?></a>
+
+
+                          <?php if($master['matricula'] != null && $ass != false){ ?>
+                            <form action ="controlador/uploadfor.php" method  ="POST"  enctype="multipart/form-data">
+                              <input name="ass" value="<?= $_REQUEST['ass']?>" type="hidden">
+                              <input type="file" name = "arquivo"><br>
+                              <input type="submit" name="enviar-lista">
+                            </form>
+                          <?php } ?>
+              <br>
+                          <?php foreach ($listaupload as $Upload) { ?>                        
+                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+                          <?php } ?>
+
+
+          
             </div>
             <?php if ($ass['id']) { ?>
             <?php }?>
