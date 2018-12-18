@@ -17,7 +17,7 @@
    
 ## Casos de uso:
 - ### Diagrama de casos de uso:
-      ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/casosDeUsos.PNG?raw=true)
+        ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/casosDeUsos.PNG?raw=true)
 - ### Link para descrição dos casos de uso:
    https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/casosDeUso.md
    
