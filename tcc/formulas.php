@@ -49,10 +49,10 @@ session_start();
 <div class="logo"><img src="images/hig.jpg" class="escola" ></div>
     
       <div class="prof">
-      <br>
-     <br>
+      
+     
           <?php if($master['matricula'] != null){ ?>
-            <?php echo $user_name; ?>
+            <div class="nome"> <?php echo $user_name; ?> </div>
              <a class = "linkpi" href="cadastroprof.php"> <button id="CadButton" > Fazer o Cadastro </button> </a>
                    <?php } ?>
       <br>
