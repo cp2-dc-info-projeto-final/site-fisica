@@ -31,26 +31,17 @@ function add_assuntosv($novoassunto)
 }
 function Pesquisanomeassv($nome)
   {
-
+  
     $bd = CriaConexãoBd();
     $sql = $bd -> prepare('SELECT nome FROM assuntosv WHERE nome = :valnome;');
     $sql -> bindValue(':valnome', $nome);
     $sql -> execute();
 
-    if ($sql -> rowCount() == 0)
-    {
-
-      return 0;
-
-    } 
-    else 
-    { 
-
-      return 1;
-
-    }
-   }
-function Apagarassuntovid(int $idassunto)
+    return $sql->fetch();
+  }
+    
+    
+   function Apagarassuntovid(int $idassunto)
 {
   $bd = CriaConexãoBd();
 

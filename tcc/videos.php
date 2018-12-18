@@ -46,6 +46,16 @@ session_start();
   {
     $erra = null;
   }
+   if (array_key_exists('errosupvideos', $_SESSION))
+  {
+    $erros = $_SESSION['errosupvideos'];
+    unset($_SESSION['errosupvideos']);
+
+  }
+  else
+  {
+    $erros = null;
+  }
  
  
 
