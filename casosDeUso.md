@@ -22,7 +22,7 @@ Pré-condicoes: Ter realizado cadastro no site ou ter cadastro master.
 
 Fluxo principal:
 
-  1. Informar o nome de gmail e a senha.
+  1. Informar o usuario e a senha.
   2. Clicar no botao de autenticaçao.
 
 ### CDU 03 - Visualizar Links
