@@ -32,11 +32,11 @@ body{
   position: absolute;
   width: 14.5%;
   height: 100%;
-  background: #A4A4A4;
+  background: black;
   left: 85.28%;
   top:0;  
   border-radius: 0;
-  border: 2px solid #c0c0c0;
+  border: 2px solid grey;
 }
  ul{
     list-style: none;
@@ -47,7 +47,6 @@ body{
   }
  a:link,a:visited{
     display: block;
-    front-weight: bold;
     color: #ffffff;
     background-color: black;
     text-align: center;
@@ -74,23 +73,23 @@ body{
  } 
 
 .box {
-  width: 90%;
+  width: 30%;
   position: relative;
   top: 50%;
-  margin-top: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
+  right: -2%;
   
 }
 
 .button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
+  background-color: #555555;
+    border: none;
+    color: white;
+    padding: 6.5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .button:hover {
   background: #FFC600;
@@ -110,7 +109,12 @@ body{
   visibility: visible;
   opacity: 1;
 }
-
+img {
+  position: absolute;
+  left: 43%;
+  height: 151px;
+  width: 180px;
+}
 .popup {
   margin: 19% auto;
   padding: 3%;
@@ -155,8 +159,6 @@ body{
     width: 70%;
   }
 }
-
-
 Button{
     background-color: #555555;
     border: none;
@@ -184,11 +186,10 @@ button:hover {
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
-.CadButton:hover {
+ #CadButton:hover {
     background-color: #0a6129;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    
 }
 .username{
   color: white;
@@ -203,4 +204,28 @@ button:hover {
 
 .lista a {
   background-color: grey;
+}
+.nome{
+  color: white;
+  text-align: center;
+  font-size: 150%;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }

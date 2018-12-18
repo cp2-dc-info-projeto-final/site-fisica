@@ -52,6 +52,7 @@ session_start();
   }
   
 ?>
+<div class="logo"><img src="images/hig.jpg" class="escola" ></div>
        
       <div class="prof">
      <div class="username"><?php   echo $user_name; ?></div>
@@ -79,6 +80,7 @@ session_start();
     <?php if ($ano == 1) { ?>
           
     <?php } ?>
+
 
     <div class="box">
     <a class="button" href="?ano=2">2ºano</a>
@@ -116,6 +118,7 @@ session_start();
         </ul>
       </div>
     <?php } ?>
+    <h1> Adicionar Exercícios </h1>
       <form action ="controlador/upload.php" method  ="POST"  enctype="multipart/form-data">
         <input name="ano" value="<?= $_REQUEST['ano']?>" type="hidden">
         <input type="file" name = "arquivo"><br>

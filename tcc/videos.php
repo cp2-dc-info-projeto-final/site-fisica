@@ -66,7 +66,7 @@ session_start();
       header('Location:login.php');
     }
 ?>
-       
+       <div class="logo"><img src="images/hig.jpg" class="escola" ></div>
       <div class="prof">
      <div class="username"><?php   echo $user_name; ?></div>
           <?php if($master['matricula'] != null){ ?>
@@ -92,7 +92,7 @@ session_start();
         </ul>
       </div>
     <?php } ?>
-
+<h1> Adicionar Vídeos </h1>
             <?php if($master['matricula'] != null){ ?>
                       <form name="assuntonovo" method="post" action ="controlador/assuntosv.php" >
                             <input type="text" name="nome">
@@ -114,6 +114,7 @@ session_start();
                             <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
                           </form>
                             <?php } ?>
+                            <h1> Adicionar Vídeos </h1>
 
               <?php if ($erros != null) { ?>
                 <div class="alertalert-warning">

@@ -65,9 +65,6 @@ session_start();
           <li><a class="a" href="exercicios.php">exercicios</a></li>
           <li><a class="a" href="videos.php">Videos</a></li>
       </ul>
-<br>
-<br>
-
 
     <?php if ($erros != null) { ?>
        <div class="alertalert-warning">
@@ -79,7 +76,7 @@ session_start();
        </div>
     <?php } ?>
 
-
+<h1> Cadastrar Fórmulas </h1>
 
     <!-- Cadastro de assuntos: -->
 		<?php if($master['matricula'] != null){ ?>

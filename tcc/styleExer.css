@@ -28,15 +28,21 @@ body{
     background-repeat: no-repeat;
     background-position: 50% 50%;
     }   
+    img {
+  position: absolute;
+  left: 43%;
+  height: 151px;
+  width: 180px;
+}
 .prof {
   position: absolute;
   width: 14.5%;
   height: 100%;
-  background: #A4A4A4;
+  background: black;
   left: 85.28%;
   top:0;  
   border-radius: 0;
-  border: 2px solid #c0c0c0;
+  border: 2px solid grey;
 }
  ul{
     list-style: none;
@@ -47,7 +53,6 @@ body{
   }
  a:link,a:visited{
     display: block;
-    front-weight: bold;
     color: #ffffff;
     background-color: black;
     text-align: center;
@@ -68,6 +73,11 @@ body{
     float: left;
 
   }
+  #CadButton:hover {
+    background-color: #0a6129;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 li #a{
   background-color: grey;
 }
@@ -117,4 +127,39 @@ button:hover {
 
 .lista a {
   background-color: grey;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+input[type=file] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
