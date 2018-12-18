@@ -29,7 +29,7 @@ function add_assuntosv($novoassunto)
   
   return $bd->lastInsertid();
 }
-function Pesquisaurl($nome)
+function Pesquisanomeassv($nome)
   {
 
     $bd = CriaConexãoBd();

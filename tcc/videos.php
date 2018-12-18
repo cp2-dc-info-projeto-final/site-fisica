@@ -109,51 +109,54 @@ session_start();
            <div class="box">
               <a href="?vid=<?php $vid['id']?>"><?= $vid['nome']?></a>
 
-               <?php if ($erros != null) { ?>
-      <div class="alertalert-warning">
-        <ul>
-          <?php foreach ($erros as $erro) { ?>
-            <li> <?= $erro ?> </li>
-          <?php } ?>
-        </ul>
-      </div>
-    <?php } ?>
+              <?php if ($erros != null) { ?>
+                <div class="alertalert-warning">
+                <ul>
+                    <?php foreach ($erros as $erro) { ?>
+                     <li> <?= $erro ?> </li>
+                     <?php } ?>
+                </ul>
+                </div>
+              <?php } ?>
 
-                          <?php if($master['matricula'] != null && $vid != false){ ?>
-                            <form action = "controlador/urlvideo.php" method="post" name = "url">
-                              <label><b class="textcol">Nome</b></label><br>
-                                <input class="input" type="text" minlength="3" maxlength="255" placeholder="Digite o nome do video" name="nome" required=""><br>
-                              <label><b class="textcol">URL do video</b></label><br>
-                                <input class="input" type="text" minlength="6" maxlength="16" placeholder="Digite o url do video" name="url" required=""><br>
-                              <input type="submit" name="Salvar URL"><br>
+              <?php if($master['matricula'] != null && $vid != false){ ?>
+                <form action = "controlador/urlvideo.php" method="post" name = "url">
+                  <label><b class="textcol">Nome</b></label><br>
+                    <input class="input" type="text" minlength="3" maxlength="255" placeholder="Digite o nome do video" name="nome" required=""><br>
+                  <label><b class="textcol">URL do video</b></label><br>
+                    <input class="input" type="text" minlength="6" maxlength="255" placeholder="Digite o url do video" name="url" required=""><br>
+                  <input type="submit" name="Salvar URL"><br>
 
 
-                              
-                            </form><br><br>
-                            <form action ="controlador/uploadvid.php" method  ="POST"  enctype="multipart/form-data">
-                              <input name="vid" value="<?= $vid['id']?>" type="hidden">
-                              <input type="file" name = "arquivo"><br>
-                              <input type="submit" name="enviar-lista">
-                            </form>
-                          <?php } ?>
-              <br>
-                          <?php $listaupload = ListadeUpload($vid['id']); ?>
-                          <?php foreach ($listaupload as $Upload) { ?>     
+                  
+                </form><br><br>
+                <form action ="controlador/uploadvid.php" method  ="POST"  enctype="multipart/form-data">
+                  <input name="vid" value="<?= $vid['id']?>" type="hidden">
+                  <input type="file" name = "arquivo"><br>
+                  <input type="submit" name="enviar-lista">
+                </form>
+              <?php } ?>
+                   <br>
+              <?php $listaupload = ListadeUpload($vid['id']); ?>
+              <?php foreach ($listaupload as $Upload) { ?>     
 
-                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
-                          <?php } ?>
-                          <?php if(empty(listaurl($id)) )
-                           { 
-                            echo "Sem videos";
-                             } 
-                             else {
-                              $listaurl = Listaurl($id); 
-                              foreach ($listaurl as $lurl) { ?>
-                               <iframe src="<?= $lurl['url']?>"><?= $lurl['nome']?></iframe> 
-                             <?php if ($lurl['id']) { ?>
-                             <?php }?>
-                             <?php }?>
-                             <?php }?>
+                <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+              <?php } ?>
+              <?php if(empty(listaurl($id)) )
+               { 
+                echo "Sem videos";
+                 } 
+                 else {
+
+/* <iframe width="1019" height="573" src="https://www.youtube.com/embed/L2QTtdeL3dE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
+
+                  $listaurl = Listaurl($id); 
+                  foreach ($listaurl as $lurl) { ?>
+                   <iframe src="<?= $lurl['url']?>"><?= $lurl['nome']?></iframe> 
+                 <?php if ($lurl['id']) { ?>
+                 <?php }?>
+                 <?php }?>
+                 <?php }?>
 
 
           
