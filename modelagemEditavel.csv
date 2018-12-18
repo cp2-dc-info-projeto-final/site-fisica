@@ -1,0 +1,18 @@
+Id,Nome,Biblioteca de formas,ID da p´ágina,Contido por,Grupo,Origem da linha,Destino da linha,Seta de origem,Seta de destino,Área de texto 1,Área de texto 2,Área de texto 3,Área de texto 4,Área de texto 5,Área de texto 6,Área de texto 7
+1,Página,,,,,,,,,Padrão,,,,,,
+2,Entidade,Entidade relacionamento,1,,,,,,,usuarios,PK  id  int,nome  string,usuario  string,email  string,senha  string,matricula string
+3,Entidade,Entidade relacionamento,1,,,,,,,assuntosv,PK  id  int,nome  string,,,,
+4,Entidade,Entidade relacionamento,1,,,,,,,upload,PK  id int,ano  int,arquivo  string,nome  string,FK  usuariosid int,
+5,Entidade,Entidade relacionamento,1,,,,,,,uploadfor,PK  id  int,nome  string,arquivo  string,FK  ass  int,FK usuariosid int,
+6,Entidade,Entidade relacionamento,1,,,,,,,assuntos,PK  id  int,nome  string,,,,
+7,Entidade,Entidade relacionamento,1,,,,,,,urlvideos,PK  id  int,nome  string,url string,FK vid int,,
+8,Texto,Padrão,1,,,,,,,Cópia de ERD de hóquei,,,,,,
+9,Texto,Padrão,1,,,,,,,"wyctor    |   December 18, 2018",,,,,,
+10,Entidade,Entidade relacionamento,1,,,,,,,uploadvid,PK  id  int,nome  string,arquivo  string,FK  vid  int,FK usuariosid int,
+11,Linha,,1,,,10,2,CFN ERD Zero Or More Arrow,CFN ERD Exactly One Arrow,,,,,,,
+12,Linha,,1,,,3,7,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,,,,,,
+13,Linha,,1,,,,,None,None,,,,,,,
+14,Linha,,1,,,2,4,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,,,,,,
+15,Linha,,1,,,2,5,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,,,,,,
+16,Linha,,1,,,5,6,CFN ERD Zero Or More Arrow,CFN ERD Exactly One Arrow,,,,,,,
+17,Linha,,1,,,3,10,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,,,,,,
