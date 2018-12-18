@@ -68,16 +68,19 @@ body{
     float: left;
 
   }
-<<<<<<< HEAD
+
  li #a{
   background-color: grey;
  } 
-=======
+
 .box {
-  width: 30%;
+  width: 90%;
   position: relative;
   top: 50%;
-  right: -2%;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
   
 }
 
@@ -152,7 +155,7 @@ body{
     width: 70%;
   }
 }
->>>>>>> 608939fadc59e71838c68e4de25c7dc7b0b5e228
+
 
 Button{
     background-color: #555555;

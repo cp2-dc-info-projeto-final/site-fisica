@@ -50,5 +50,26 @@ function Pesquisanomeass($nome)
 
     }
    }
+   function Apagarassunto(int $idassunto)
+{
+  $bd = CriaConexãoBd();
+
+  $sql = $bd->prepare('DELETE FROM uploadfor 
+                       WHERE ass = :valIdUpload');
+
+  
+  $sql->bindValue(':valIdUpload', $idassunto);
+
+  $sql->execute();
+  $sql = $bd->prepare('DELETE FROM assuntos 
+                       WHERE id = :valIdUpload');
+
+  
+  $sql->bindValue(':valIdUpload', $idassunto);
+
+  $sql->execute();
+
+}
+
 
 ?>

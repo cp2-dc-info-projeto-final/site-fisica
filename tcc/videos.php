@@ -108,6 +108,12 @@ session_start();
         foreach ($listaassuntos as $vid) { ?>
            <div class="box">
               <a href="?vid=<?php $vid['id']?>"><?= $vid['nome']?></a>
+              <?php if($master['matricula'] != null && $vid != false){ ?>
+                            <form class="delete" action="controlador/removerassv.php" method="POST">
+                            <input name="id" type="hidden" value="<?= $vid['id'] ?>">
+                            <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
+                          </form>
+                            <?php } ?>
 
               <?php if ($erros != null) { ?>
                 <div class="alertalert-warning">
@@ -143,12 +149,25 @@ session_start();
               <?php foreach ($listaupload as $Upload) { ?>     
 
                 <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+                <?php if($master['matricula'] != null && $ass != false){ ?>
+                            <form class="delete" action="controlador/removerupv.php" method="POST">
+                            <input name="id" type="hidden" value="<?= $Upload['id'] ?>">
+                            <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
+                          </form>
+                            <?php } ?>
               <?php } ?>
               <?php
                $listaurl = Listadeurlvid($vid['id']);
                foreach ($listaurl as $lurl) { ?>
                    
-                   <iframe src="<?= $lurl['url']?>"><?= $lurl['nome']?></iframe> 
+                  <iframe src="<?= $lurl['url']?>"><?= $lurl['nome']?></iframe> 
+                  <?php if($master['matricula'] != null && $vid != false){ ?>
+                  <form action="controlador/removerurl.php" method="POST">
+                    <input name="id" type="hidden" value="<?= $lurl['id'] ?>">
+                    <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
+                  </form>
+                     <?php } ?>
+
                  <?php if ($lurl['id']) { ?>
               
 

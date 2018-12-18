@@ -8,7 +8,7 @@ $request = filter_var_array(
                $request,
                [ 
                 'nome' => FILTER_DEFAULT,
-                'url' => FILTER_DEFAULT,
+                'url' => FILTER_VALIDATE_URL,
                 'vid' => FILTER_VALIDATE_INT
                  ]
            );
@@ -51,16 +51,18 @@ else if (Pesquisanome($nome) != false )
 }
 
 
+$componentesUrl = [];
 
 $url = $request['url'];
 if ($url == false)
 {
   $erros[] = "O campo do url deve ser preenchido";
 }
-else if(strlen($url) < 5 || strlen($url)>256)
+else if(preg_match('/youtube\.com.*\/watch\?v=([^&]+)/', $url, $componentesUrl) ||
+        preg_match('/youtu\.be\/([^?]+)/', $url, $componentesUrl))
 {
-  $erros = " O nome deve ter entre 6 a 255 caractéres ";
-
+  $request['url'] = "https://www.youtube.com/embed/{$componentesUrl[1]}";
+  $url = $request['url'];
 }
 
 else if (Pesquisaurl($url) != false )

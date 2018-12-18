@@ -7,7 +7,8 @@ $request = array_map('trim', $_REQUEST);
 $request = filter_var_array(
                $request,
                [ 
-                'ass' => FILTER_VALIDATE_INT
+                'ass' => FILTER_VALIDATE_INT,
+                'nome' => FILTER_DEFAULT
                  ]
            );
 
@@ -33,8 +34,6 @@ else
 	exit();
 }
 
-
-
 $ass = $request['ass'];
 if ($ass == false)
 {
@@ -50,9 +49,13 @@ else if(isset($_FILES['arquivo']))
 	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
 	if (in_array($extensao, $formatosPermitidos)):
 		$temporario	= $_FILES['arquivo']['tmp_name'];
-		$novoNome = $_FILES['arquivo']['name'];
+		$novoNome = basename($_FILES['arquivo']['name']);
 		$pasta = "arquivos/$novoNome";
-		if(move_uploaded_file($temporario,"../$pasta")):
+		if (Pesquisaarquivofor($novoNome) != false)
+		{		
+			$erros[] = "o arquvo do mesmo nome ja foi adicionado";
+  		}
+		else if(move_uploaded_file($temporario,"../$pasta")):
 			$request['arquivo'] = $pasta;
 			$request['nome'] = $novoNome;
 			$request['usuariosid'] = $master['id'];
@@ -60,7 +63,7 @@ else if(isset($_FILES['arquivo']))
 			$id = upload_feito($request);
    			header("Location:../formulas.php");
    			exit();
-   			
+   				
 		else:
 			$erros[] = "Erro, não foi possivel fazer o upload!";
 

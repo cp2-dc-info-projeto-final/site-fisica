@@ -36,14 +36,14 @@ function upload_feito($upload)
 }
 
 
-function ApagarUploadFor(int $usuarioid, int $idUpload)
+function ApagarUploadFor(int $idUpload)
 {
 	$bd = CriaConexãoBd();
 
 	$sql = $bd->prepare('DELETE FROM uploadfor
-	                     WHERE $usuariosid = :valusuariosid AND $idUpload = :valIdUpload');
+	                     WHERE id = :valIdUpload');
 
-	$sql->bindValue(':valusuariosid', $usuariosid);
+	
 	$sql->bindValue(':valIdUpload', $idUpload);
 
 	$sql->execute();
@@ -78,4 +78,14 @@ function ApagarUploadFor(int $usuarioid, int $idUpload)
 
 	$sql->execute();
 }
+  function Pesquisaarquivofor($pasta)
+  {
+
+    $bd = CriaConexãoBd();
+    $sql = $bd -> prepare('SELECT * FROM uploadfor WHERE nome = :valnome;');
+    $sql -> bindValue(':valnome', $pasta);
+    $sql -> execute();
+
+    return $sql->fetch();
+  }
 ?>

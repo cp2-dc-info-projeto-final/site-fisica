@@ -121,10 +121,17 @@ session_start();
         <input type="file" name = "arquivo"><br>
         <input type="submit" name="enviar-lista">
       </form>
+
     <?php } ?>
   <br>
     <?php foreach ($listaupload as $Upload) { ?>                        
       <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
+          <?php if($master['matricula'] != null ){ ?>
+          <form action="controlador/removerup.php" method="POST">
+            <input name="idUpload" type="hidden" value="<?= $Upload['id'] ?>">
+            <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
+          </form>
+              <?php } ?>
     <?php } ?>
                        
                      

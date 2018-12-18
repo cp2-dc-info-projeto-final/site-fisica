@@ -50,6 +50,37 @@ function Pesquisanomeassv($nome)
 
     }
    }
+function Apagarassuntovid(int $idassunto)
+{
+  $bd = CriaConexãoBd();
 
+  $sql = $bd->prepare('DELETE FROM  uploadvid
+                       WHERE vid = :valIdUpload');
+
+  
+  $sql->bindValue(':valIdUpload', $idassunto);
+
+  $sql->execute();
+  
+  $sql = $bd->prepare('DELETE FROM urlvideos 
+                       WHERE vid = :valIdUpload');
+
+  
+  $sql->bindValue(':valIdUpload', $idassunto);
+
+  $sql->execute();
+
+
+  $sql = $bd->prepare('DELETE FROM assuntosv 
+                       WHERE id = :valIdUpload');
+
+  
+  $sql->bindValue(':valIdUpload', $idassunto);
+
+  $sql->execute();
+
+
+
+}
 
 ?>

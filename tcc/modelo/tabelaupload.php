@@ -34,14 +34,13 @@ function /*EntregaTarefa*/upload_feito($upload)
 }
 
 
-function /*ApagarTarefa*/ApagarUpload(int $usuarioid, int $idUpload)
+function /*ApagarTarefa*/ApagarUpload( int $idUpload)
 {
 	$bd = CriaConexãoBd();
 
 	$sql = $bd->prepare('DELETE FROM upload
-	                     WHERE $usuariosid = :valusuariosid AND $idUpload = :valIdUpload');
+	                     WHERE  id = :valIdUpload');
 
-	$sql->bindValue(':valusuariosid', $usuariosid);
 	$sql->bindValue(':valIdUpload', $idUpload);
 
 	$sql->execute();
@@ -64,5 +63,17 @@ function /*ApagarTarefa*/ApagarUpload(int $usuarioid, int $idUpload)
     $sql->execute();
 
     return $sql->fetchAll();
+}
+
+      function Pesquisaarquivos($pasta)
+  {
+
+    $bd = CriaConexãoBd();
+    $sql = $bd -> prepare('SELECT * FROM upload WHERE nome = :valnome;');
+    $sql -> bindValue(':valnome', $pasta);
+    $sql -> execute();
+
+    return $sql->fetch();
   }
+  
 ?>

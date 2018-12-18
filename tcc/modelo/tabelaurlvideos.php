@@ -2,6 +2,19 @@
 require_once('acesso_ao_banco.php');
 
 
+function ApagarUploadvidurl(int $id)
+{
+  $bd = CriaConexãoBd();
+
+  $sql = $bd->prepare('DELETE FROM urlvideos 
+                       WHERE id = :valIdUpload');
+
+  
+  $sql->bindValue(':valIdUpload', $id);
+
+  $sql->execute();
+}
+
 function Listaurl()  
 {
 

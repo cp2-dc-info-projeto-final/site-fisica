@@ -101,6 +101,12 @@ session_start();
         foreach ($listaassuntos as $ass) { ?>
            <div class="box">
               <a href="?ass=<?php $ass['id']?>"><?= $ass['nome']?></a>
+               </a><?php if($master['matricula'] != null && $ass != false){ ?>
+                            <form class="delete" action="controlador/removerass.php" method="POST">
+                            <input name="id" type="hidden" value="<?= $ass['id'] ?>">
+                            <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
+                          </form>
+                            <?php } ?>
                           <?php if($master['matricula'] != null && $ass != false){ ?>
                             <form action ="controlador/uploadfor.php" method  ="POST"  enctype="multipart/form-data">
                               <input name="ass" value="<?= $ass['id']?>" type="hidden">
@@ -112,8 +118,16 @@ session_start();
                           <?php $listaupload = ListadeUpload($ass['id']); ?>
                           <?php foreach ($listaupload as $Upload) { ?>     
 
-                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
-                          <?php } ?>
+                            <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?>
+                            
+                           </a><?php if($master['matricula'] != null && $ass != false){ ?>
+                            <form class="delete" action="controlador/removerupfor.php" method="POST">
+                            <input name="idUpload" type="hidden" value="<?= $Upload['id'] ?>">
+                            <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
+                          </form>
+                            <?php } ?></div> 
+                            
+                  <?php } ?>
 
 
           
