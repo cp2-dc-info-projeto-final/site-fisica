@@ -1,9 +1,0 @@
-﻿CREATE table usuarios(
-	id int PRIMARY key AUTO_INCREMENT not null,
-	nome varchar(255) not null,
-    usuario varchar (150) UNIQUE not null,
-    email varchar(300) UNIQUE not null,
-    senha varchar(150) not null,
-    matricula varchar(30) unique not null
-
-);
