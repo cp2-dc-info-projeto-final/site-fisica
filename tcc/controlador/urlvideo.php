@@ -79,7 +79,7 @@ else if (Pesquisaurl($url) != false )
     }
     else
     {
-      $_SESSION['errosurl'] = $erros;
+      $_SESSION['errosvid'] = $erros;
       header('Location:../videos.php');
 
     }

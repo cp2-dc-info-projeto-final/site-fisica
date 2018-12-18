@@ -33,7 +33,7 @@ function Pesquisanomeassv($nome)
   {
   
     $bd = CriaConexãoBd();
-    $sql = $bd -> prepare('SELECT nome FROM assuntosv WHERE nome = :valnome;');
+    $sql = $bd -> prepare('SELECT * FROM assuntosv WHERE nome = :valnome;');
     $sql -> bindValue(':valnome', $nome);
     $sql -> execute();
 

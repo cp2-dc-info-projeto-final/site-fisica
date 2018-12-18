@@ -25,10 +25,10 @@ session_start();
  $listaurl = [];
 
   $listaupload = [];
-  if (array_key_exists('errosurl', $_SESSION))
+  if (array_key_exists('errosvid', $_SESSION))
   {
-    $erros = $_SESSION['errosurl'];
-    unset($_SESSION['errosurl']);
+    $erros = $_SESSION['errosvid'];
+    unset($_SESSION['errosvid']);
 
   }
   else
@@ -36,26 +36,7 @@ session_start();
     $erros = null;
   }
   
-  if (array_key_exists('errosassv', $_SESSION))
-  {
-    $erra = $_SESSION['errosassv'];
-    unset($_SESSION['errosassv']);
-
-  }
-  else
-  {
-    $erra = null;
-  }
-   if (array_key_exists('errosupvideos', $_SESSION))
-  {
-    $erros = $_SESSION['errosupvideos'];
-    unset($_SESSION['errosupvideos']);
-
-  }
-  else
-  {
-    $erros = null;
-  }
+  
  
  
 
@@ -93,11 +74,11 @@ session_start();
           <li><a class="a"  href="exercicios.php">exercicios</a></li>
           <li><a class="a" id="a" href="videos.php">Videos</a></li>
       </ul>
-              <?php if ($erra != null) { ?>
+              <?php if ($erros != null) { ?>
       <div class="alertalert-warning">
         <ul>
-          <?php foreach ($erra as $erras) { ?>
-            <li> <?= $erras ?> </li>
+          <?php foreach ($erros as $erro) { ?>
+            <li> <?= $erro ?> </li>
           <?php } ?>
         </ul>
       </div>
@@ -126,16 +107,7 @@ session_start();
                             <?php } ?>
                             <h1> Adicionar Vídeos </h1>
 
-              <?php if ($erros != null) { ?>
-                <div class="alertalert-warning">
-                <ul>
-                    <?php foreach ($erros as $erro) { ?>
-                     <li> <?= $erro ?> </li>
-                     <?php } ?>
-                </ul>
-                </div>
-              <?php } ?>
-            
+             
               <?php if($master['matricula'] != null && $vid != false){ ?>
                
                 <form action = "controlador/urlvideo.php" method="post" name = "url">

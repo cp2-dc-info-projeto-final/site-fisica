@@ -15,9 +15,9 @@ $erros = [];
     {
       $erros[] = "O campo deve ser preenchido para adicionar assunto";
     }
-    else if (strlen($nome) < 4 || strlen($nome )>61)
+    else if (Pesquisanomeass($nome) != false)
     {
-      $erros[] = "A quantidade do campo nome deve ser entre 5 e 60.";
+      $erros[] = "Ja existe esse campo";
     }
 
 

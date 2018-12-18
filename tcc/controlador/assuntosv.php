@@ -29,7 +29,7 @@ $erros = [];
     }
     else
     {
-      $_SESSION[' errosassv'] = $erros;
+      $_SESSION['errosvid'] = $erros;
       header('Location:../videos.php');
 
     }

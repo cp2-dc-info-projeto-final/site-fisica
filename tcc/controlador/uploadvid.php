@@ -77,7 +77,7 @@ endif;
     }
     else
     {
-      $_SESSION['errosupvideos'] = $erros;
+      $_SESSION['errosvid'] = $erros;
       header('Location:../videos.php');
 
     }

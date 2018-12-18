@@ -32,23 +32,13 @@ function add_assuntos($novoassunto)
 function Pesquisanomeass($nome)
   {
 
+   
     $bd = CriaConexãoBd();
-    $sql = $bd -> prepare('SELECT nome FROM assuntos WHERE nome = :valnome;');
+    $sql = $bd -> prepare('SELECT * FROM assuntos WHERE nome = :valnome;');
     $sql -> bindValue(':valnome', $nome);
     $sql -> execute();
 
-    if ($sql -> rowCount() == 0)
-    {
-
-      return 0;
-
-    } 
-    else 
-    { 
-
-      return 1;
-
-    }
+    return $sql->fetch();
    }
    function Apagarassunto(int $idassunto)
 {
