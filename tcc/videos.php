@@ -92,7 +92,7 @@ session_start();
         </ul>
       </div>
     <?php } ?>
-<h1> Adicionar Vídeos </h1>
+<h1> Escreva o assunto/matéria </h1>
             <?php if($master['matricula'] != null){ ?>
                       <form name="assuntonovo" method="post" action ="controlador/assuntosv.php" >
                             <input type="text" name="nome">
