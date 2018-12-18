@@ -8,7 +8,8 @@ $request = filter_var_array(
                $request,
                [ 
                 'nome' => FILTER_DEFAULT,
-                'url' => FILTER_DEFAULT
+                'url' => FILTER_DEFAULT,
+                'vid' => FILTER_VALIDATE_INT
                  ]
            );
 

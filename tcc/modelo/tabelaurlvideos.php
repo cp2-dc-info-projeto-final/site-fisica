@@ -21,10 +21,12 @@ function add_url($novourl)
  
   $bd = CriaConexãoBd();
 	
-  $sql = $bd -> prepare('INSERT INTO urlvideos(nome , url) VALUES (:valnome , :valurl)');
+  $sql = $bd -> prepare('INSERT INTO urlvideos(nome , url , vid) VALUES (:valnome , :valurl , :valvid)');
   
   $sql->bindValue(':valnome', $novourl['nome']);
   $sql->bindValue(':valurl', $novourl['url']);
+  $sql->bindValue(':valvid', $novourl['vid']);
+  
   
   $sql->execute();
   
@@ -75,5 +77,21 @@ function add_url($novourl)
 
     }
    }
+    function Listadeurlvid($vid) : array
+  {
+  
+    $bd = CriaConexãoBd();
+
+    $sql = $bd->prepare('SELECT urlvideos.* FROM urlvideos 
+    					 JOIN assuntosv ON assuntosv.id = urlvideos.vid 
+    					 WHERE vid = :valvid');
+
+    $sql->bindValue(':valvid', $vid);
+
+    $sql->execute();
+
+    return $sql->fetchAll();
+  }
+
 
 ?>

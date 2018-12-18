@@ -30,6 +30,7 @@ else
 {
 	$_SESSION['erroLogin'] = 'Identifique-se para poder carregar um arquivo';
 	Redireciona('../login.php');
+	exit();
 }
 
 
@@ -41,11 +42,10 @@ if ($ass == false)
 }
 else if($ass < 0 || $ass > 60)
 {
-	$erros = "Assunto invalido";
+	$erros[] = "Assunto invalido";
 }
-
-
-if(isset($_FILES['arquivo'])):
+else if(isset($_FILES['arquivo']))
+{
 	$formatosPermitidos =  array("pdf" ,"zip" , "docx" ,"doc","txt" ,"xlsx" ,"pptx","jpg" , "png" );
 	$extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
 	if (in_array($extensao, $formatosPermitidos)):
@@ -59,17 +59,20 @@ if(isset($_FILES['arquivo'])):
 			$menssagem = "Upload feito com sucesso!";
 			$id = upload_feito($request);
    			header("Location:../formulas.php");
+   			exit();
    			
 		else:
-			$menssagem = "Erro, não foi possivel fazer o upload!";
+			$erros[] = "Erro, não foi possivel fazer o upload!";
 
 		endif;
 	else:
-		$menssagem = "Formato invalido";
+		$erros[] = "Formato invalido";
 	endif;
-echo $menssagem;
+}
 
-endif; 
 
+session_start();
+$_SESSION['errosformulas'] = $erros;
+header('Location:../formulas.php');
 
 ?>

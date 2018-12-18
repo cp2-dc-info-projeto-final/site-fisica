@@ -29,7 +29,8 @@ $erros = [];
     }
     else
     {
-      $_SESSION[' errosCadastrados'] = $erros;
+      session_start();
+      $_SESSION['errosformulas'] = $erros;
       header('Location:../formulas.php');
 
     }

@@ -7,11 +7,10 @@ require_once('modelo/tabelaassunto.php');
 session_start();
 
   $listaupload = [];
-	if (array_key_exists('errosCadastrado', $_SESSION))
+	if (array_key_exists('errosformulas', $_SESSION))
 	{
-		$erros = $_SESSION['errosCadastrado'];
-		unset($_SESSION['errosCadastrado']);
-
+		$erros = $_SESSION['errosformulas'];
+		unset($_SESSION['errosformulas']);
 	}
 	else
 	{
@@ -70,14 +69,29 @@ session_start();
 <br>
 
 
+    <?php if ($erros != null) { ?>
+       <div class="alertalert-warning">
+          <ul>
+            <?php foreach ($erros as $erro) { ?>
+              <li> <?= $erro ?> </li>
+            <?php } ?>
+          </ul>
+       </div>
+    <?php } ?>
 
 
+
+    <!-- Cadastro de assuntos: -->
 		<?php if($master['matricula'] != null){ ?>
+
 			<form name="assuntonovo" method="post" action ="controlador/assuntos.php" >
 				<input type="text" name="nome">
 				<input type="submit" value="Criar">
 			</form>
+
 		<?php } ?>
+
+
 
 		<?php if(empty(ListaAssuntos($id)) ){ 		  	  
      echo "Sem assuntos";?>
@@ -87,8 +101,6 @@ session_start();
         foreach ($listaassuntos as $ass) { ?>
            <div class="box">
               <a href="?ass=<?php $ass['id']?>"><?= $ass['nome']?></a>
-
-
                           <?php if($master['matricula'] != null && $ass != false){ ?>
                             <form action ="controlador/uploadfor.php" method  ="POST"  enctype="multipart/form-data">
                               <input name="ass" value="<?= $ass['id']?>" type="hidden">
