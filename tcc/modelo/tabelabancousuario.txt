@@ -56,6 +56,6 @@ vid INT ,
 FOREIGN KEY (vid) REFERENCES assuntosv(id)
 );
 
-INSERT INTO usuarios (id, nome, usuario, email, senha, matricula) VALUES (7, "Joao Victor", "jvsxp123", "bbb@gmail.com", "$2y$10$bhwT4YUrX/DVDDJgZYy1oOFtGAioYPgx/UluV7KuzHP8rTSOfMVXe");
+INSERT INTO usuarios (id, nome, usuario, email, senha, matricula) VALUES (7, "Joao Victor", "jvsxp123", "bbb@gmail.com", "$2y$10$bhwT4YUrX/DVDDJgZYy1oOFtGAioYPgx/UluV7KuzHP8rTSOfMVXe", NULL);
 
 INSERT INTO usuarios (id, nome, usuario, email, senha, matricula) VALUES (1, "thiago", "ThiagoVrauu", "aaa@gmail.com", "$2y$10$bhwT4YUrX/DVDDJgZYy1oOFtGAioYPgx/UluV7KuzHP8rTSOfMVXe", 15042000);
