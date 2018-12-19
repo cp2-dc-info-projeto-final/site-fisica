@@ -29,3 +29,10 @@
 
 ## Manual:
 - ### Breve manual de utilização com prints:
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
+   Aqui é a página inicial onde os alunos e professores serão redirecionados após feito o login.
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT222222222.png)
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
