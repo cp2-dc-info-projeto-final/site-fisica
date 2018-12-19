@@ -31,9 +31,13 @@
 - ### Breve manual de utilização com prints:
    Aqui é a página inicial onde os alunos e professores serão redirecionados após feito o login:
 ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
-   Aqui é a página de formulas onde os alunos poderão visualizar apenas os arquivos enviados dos professores e os professores terão a permissão exclusiva para enviar imagens de formulas para o site onde os mesmos também podem visualizar os arquivos enviados:
+   Aqui é a página de formulas onde os alunos poderão visualizar apenas os arquivos enviados dos professores e os professores terão a permissão exclusiva para enviar imagens de formulas para o site onde os mesmos também podem visualizar os arquivos enviados e caso entre uma novo conteudo no currículo escolar no ensino médio o professor poderá adicioná-lo: 
 ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT222222222.png)
-![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
-![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
-![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
-![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
+   Aqui é a página de exercicios onde os alunos poderão visualizar somente os arquivos enviados dos professores e os professores terão a permissão exclusiva para enviar listas de exercicios para o site onde os mesmos também podem visualizar os arquivos enviados:
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT33333333.png)
+   Nesta página ocorrerá o mesmo processo da pagina de formulas, onde o professor poderá escrever o nome do assunto em questão e poderá utilizar videos do youtube para mostrar experimentos ou ele mesmo postar um video dele:
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT4444444444.png)
+   Aqui vemos a página onde o professor poderá cadastrar outros professores onde ele preencherá todos os campos e a respectiva matrícula do professor que ele deseja cadastrar:
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT5555555555.png)
+   Nesta página é onde ocorrerá o login dos professores e alunos para poderem acessar o conteúdo do site:
+![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT666666666.png)
