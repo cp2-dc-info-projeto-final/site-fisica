@@ -1,0 +1,112 @@
+CREATE TABLE assuntos 
+(
+       id int PRIMARY key AUTO_INCREMENT not null,
+  
+	nome varchar(150) unique NOT NULL
+
+
+);
+
+CREATE TABLE upload 
+(
+  id int PRIMARY key AUTO_INCREMENT not null,
+
+   nome varchar(150) unique NOT NULL,
+
+  arquivo varchar(255) unique NOT NULL,
+
+  usuariosid int(11)  NOT NULL,
+
+  ano int(11) NOT NULL,
+
+  FOREIGN KEY (usuariosid) references usuarios(id)
+
+);
+
+CREATE TABLE uploadFor 
+(
+  id int PRIMARY key AUTO_INCREMENT not null,
+
+  nome varchar(150) unique NOT NULL,
+ 
+ arquivo varchar(255) unique NOT NULL,
+
+  usuariosid int(11)  NOT NULL,
+
+  ass int(11) NOT NULL,
+ 
+ FOREIGN KEY (usuariosid) references usuarios(id),
+
+  FOREIGN KEY (ass) references assuntos(id)
+
+);
+
+CREATE TABLE assuntosv
+(
+
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+
+nome VARCHAR(150) unique NOT NULL 
+
+);
+
+CREATE TABLE uploadvid (
+ 
+ id int PRIMARY key AUTO_INCREMENT not null,
+
+  nome varchar(150) unique NOT NULL,
+
+  arquivo varchar(255) unique NOT NULL,
+
+  usuariosid int(11)  NOT NULL,
+
+  vid int(11) NOT NULL,
+
+  FOREIGN KEY (usuariosid) references usuarios(id),
+
+  FOREIGN KEY (vid) references assuntosv(id)
+
+);
+
+CREATE TABLE urlvideos
+(
+
+
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+
+nome VARCHAR(255) NOT NULL UNIQUE,
+
+url varchar(255) not null UNIQUE,
+
+vid INT ,
+
+FOREIGN KEY (vid) REFERENCES assuntosv(id)
+
+);
+
+INSERT INTO usuarios (id, nome, usuario, email, senha, matricula) VALUES (7, "Joao Victor", "jvsxp123", "bbb@gmail.com", "$2y$10$bhwT4YUrX/DVDDJgZYy1oOFtGAioYPgx/UluV7KuzHP8rTSOfMVXe");
+INSERT INTO usuarios (id, nome, usuario, email, senha, matricula) VALUES (1, "thiago", "ThiagoVrauu", "aaa@gmail.com", "$2y$10$bhwT4YUrX/DVDDJgZYy1oOFtGAioYPgx/UluV7KuzHP8rTSOfMVXe", 15042000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
