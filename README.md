@@ -29,8 +29,9 @@
 
 ## Manual:
 - ### Breve manual de utilização com prints:
+   Aqui é a página inicial onde os alunos e professores serão redirecionados após feito o login:
 ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
-   Aqui é a página inicial onde os alunos e professores serão redirecionados após feito o login.
+   Aqui é a página de formulas onde os alunos poderão visualizar apenas os arquivos enviados dos professores e os professores terão a permissão exclusiva para enviar imagens de formulas para o site onde os mesmos também podem visualizar os arquivos enviados:
 ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT222222222.png)
 ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
 ![](https://github.com/cp2-dc-info-projeto-final-2018/requisitos-grp2/blob/master/tcc/PRINT1111111111.png)
