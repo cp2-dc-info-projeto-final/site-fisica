@@ -133,7 +133,7 @@ session_start();
               <?php foreach ($listaupload as $Upload) { ?>     
 
                 <div class="lista">  <a href="<?= $Upload['arquivo'] ?>"><?= $Upload['nome']?></a></div> 
-                <?php if($master['matricula'] != null && $ass != false){ ?>
+                <?php if($master['matricula'] != null ){ ?>
                             <form class="delete" action="controlador/removerupv.php" method="POST">
                             <input name="id" type="hidden" value="<?= $Upload['id'] ?>">
                             <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
