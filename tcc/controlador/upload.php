@@ -75,14 +75,15 @@ endif;
  if (empty($erros))
     {
 		
-		header('Location:../exercicios.php');
-    }
+		 header("Location:../exercicios.php?ano=$ano");
+	}
+	
     else
     {
      
       $_SESSION['errosup'] = $erros;
       header("Location:../exercicios.php?ano=$ano");
-      header('Location:../exercicios.php');
+      
 
     }
 

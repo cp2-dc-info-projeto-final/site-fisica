@@ -22,7 +22,7 @@ session_start();
   
   if (array_key_exists('errosup', $_SESSION))
   {
-    $erros[] = $_SESSION['errosup'];
+    $erros = $_SESSION['errosup'];
     unset($_SESSION['errosup']);
 
   }
@@ -110,7 +110,7 @@ session_start();
     <?php if($master['matricula'] != null && $ano != false){ ?>
       <h2> <?= $ano ?>º Ano </h2>
          <?php if ($erros != null) { ?>
-      <div class="alertalert-wa 'rning">
+      <div class="alertalert-warning">
         <ul>
           <?php foreach ($erros as $erro) { ?>
             <li> <?= $erro ?> </li>

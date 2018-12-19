@@ -74,15 +74,7 @@ session_start();
           <li><a class="a"  href="exercicios.php">exercicios</a></li>
           <li><a class="a" id="a" href="videos.php">Videos</a></li>
       </ul>
-              <?php if ($erros != null) { ?>
-      <div class="alertalert-warning">
-        <ul>
-          <?php foreach ($erros as $erro) { ?>
-            <li> <?= $erro ?> </li>
-          <?php } ?>
-        </ul>
-      </div>
-    <?php } ?>
+              
 <h1> Escreva o assunto/matéria </h1>
             <?php if($master['matricula'] != null){ ?>
                       <form name="assuntonovo" method="post" action ="controlador/assuntosv.php" >
@@ -90,7 +82,15 @@ session_start();
                             <input type="submit" value="Criar">
                       </form>
             <?php } ?>
-
+  <?php if ($erros != null) { ?>
+                <div class="alertalert-warning">
+                <ul>
+                  <?php foreach ($erros as $erro) { ?>
+                   <li> <?= $erro ?> </li>
+                   <?php } ?>
+                </ul>
+               </div>
+               <?php } ?>
                   <?php if(empty(ListaAssuntosv($id)) ){           
                        echo "Sem assuntos";?>
 
@@ -99,7 +99,8 @@ session_start();
         foreach ($listaassuntos as $vid) { ?>
            <div class="box">
               <a href="?vid=<?php $vid['id']?>"><?= $vid['nome']?></a>
-              <?php if($master['matricula'] != null && $vid != false){ ?>
+            
+                 <?php if($master['matricula'] != null && $vid != false){ ?>
                             <form class="delete" action="controlador/removerassv.php" method="POST">
                             <input name="id" type="hidden" value="<?= $vid['id'] ?>">
                             <input type="submit" value="Remover" class="btn btn-sm btn-outline-danger">
